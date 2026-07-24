@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "bgThumb": "075a97_3a1bc1bcee4f4135b92233795ff0c332~mv2.jpg",
+        "title": "Meet Consulting",
+        "title1": "Financial Analysis",
+        "title2": "Developing Meeting.",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 2,
+        "bgThumb": "075a97_4ebcb54cfe434e9a8564294123e08d1a~mv2.jpg",
+        "title": "Coaching & Consulting",
+        "title1": "Strategies for",
+        "title2": "Enduring Success",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 3,
+        "bgThumb": "075a97_15da9ff8401c483dace7fa5e81aa068e~mv2_d_5184_2912_s_4_2.jpg",
+        "title": "Business Solutions",
+        "title1": "Growth &",
+        "title2": "Innovation",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    },
+    {
+        "id": 4,
+        "bgThumb": "075a97_7147b02ffdc74cdfa8c30c8abcbd498f~mv2_d_6000_4000_s_4_2.jpg",
+        "title": "Expert Guidance",
+        "title1": "Professional",
+        "title2": "Consulting",
+        "btnText": "Our Services",
+        "shapeThumb": "4.png",
+        "videoId": "owhuBrGIOsEdsk"
+    }
+]
