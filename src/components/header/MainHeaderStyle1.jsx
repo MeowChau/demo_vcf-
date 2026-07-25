@@ -36,7 +36,7 @@ const MainHeaderStyle1 = () => {
                                     <div className="d-block d-lg-none" style={{ height: '40px' }}></div>
                                     <MainMenu navbarPlacement="navbar-center" isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} />
                                     <div className="d-lg-none" style={{ padding: '20px 15px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
-                                        <Link href="/sign-up" style={{ backgroundColor: '#e20613', color: '#fff', padding: '10px 20px', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Sign Up</Link>
+                                        <Link href="/join-us" style={{ backgroundColor: '#e20613', color: '#fff', padding: '10px 20px', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Sign Up</Link>
                                         <a href="#" onClick={(e) => { e.preventDefault(); setLoginModalOpen(true); }} style={{ backgroundColor: '#e20613', color: '#fff', padding: '10px 20px', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Login</a>
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@ const MainHeaderStyle1 = () => {
                             <div className="col-xl-2 col-lg-2 col-md-6 col-sm-7 col-7 d-flex justify-content-end align-items-center">
                                 <ul className="d-none d-lg-flex" style={{ flexDirection: 'row', alignItems: 'center', gap: '15px', margin: 0, padding: 0, listStyle: 'none' }}>
                                     <li className="button">
-                                        <Link href="/sign-up" style={{ whiteSpace: 'nowrap', backgroundColor: '#e20613', color: '#fff', padding: '8px 20px', borderRadius: '4px', fontWeight: 'bold' }}>Sign Up</Link>
+                                        <Link href="/join-us" style={{ whiteSpace: 'nowrap', backgroundColor: '#e20613', color: '#fff', padding: '8px 20px', borderRadius: '4px', fontWeight: 'bold' }}>Sign Up</Link>
                                     </li>
                                     <li className="button">
                                         <a href="#" onClick={(e) => { e.preventDefault(); setLoginModalOpen(true); }} style={{ whiteSpace: 'nowrap', backgroundColor: '#e20613', color: '#fff', padding: '8px 20px', borderRadius: '4px', fontWeight: 'bold' }}>Login</a>

@@ -29,7 +29,7 @@ const UpcomingEvents = () => {
                         <h6 style={{ color: '#003366', fontWeight: 700, textTransform: 'uppercase', marginBottom: '20px', lineHeight: '1.5' }}>
                             GALA DINNER 2026 - KL MALAYSIA <br /> (NETWORKING EVENT) <br /> MALAYSIA
                         </h6>
-                        <Link href="#" className="btn" style={{ backgroundColor: '#3b9bf0', color: '#fff', borderRadius: '30px', padding: '10px 30px', fontWeight: 'bold', border: 'none' }}>
+                        <Link href="/gala-dinner-2026" className="btn" style={{ backgroundColor: '#3b9bf0', color: '#fff', borderRadius: '30px', padding: '10px 30px', fontWeight: 'bold', border: 'none' }}>
                             Register Now
                         </Link>
                     </div>
@@ -52,7 +52,7 @@ const UpcomingEvents = () => {
                         <h6 style={{ color: '#003366', fontWeight: 700, textTransform: 'uppercase', marginBottom: '20px', lineHeight: '1.5' }}>
                             Co-Investment & Strategic Partnerships <br /> (LUNCHEON EVENT) <br /> HONG KONG
                         </h6>
-                        <Link href="#" className="btn" style={{ backgroundColor: '#3b9bf0', color: '#fff', borderRadius: '30px', padding: '10px 30px', fontWeight: 'bold', border: 'none' }}>
+                        <Link href="/hk-monthly-event" className="btn" style={{ backgroundColor: '#3b9bf0', color: '#fff', borderRadius: '30px', padding: '10px 30px', fontWeight: 'bold', border: 'none' }}>
                             Register Now
                         </Link>
                     </div>

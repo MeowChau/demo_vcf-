@@ -69,7 +69,9 @@ const MembersDirectory = () => {
                             {announcementImages.map((imgSrc, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="announcement-card text-center">
-                                        <img src={imgSrc} alt={`Announcement ${index + 1}`} style={{ width: '100%', height: 'auto', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                                        <Link href={`/member-directory/${index + 1}`}>
+                                            <img src={imgSrc} alt={`Announcement ${index + 1}`} style={{ width: '100%', height: 'auto', boxShadow: '0 4px 10px rgba(0,0,0,0.1)' }} />
+                                        </Link>
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -105,8 +107,8 @@ const MembersDirectory = () => {
                         </div>
                         
                         <div className="d-flex flex-column flex-md-row justify-content-center gap-4">
-                            <button className="btn" style={{ backgroundColor: '#f2e46c', color: '#333', fontWeight: 'bold', padding: '10px 40px', borderRadius: '25px', whiteSpace: 'nowrap' }}>JOIN CHAT GROUP &gt;</button>
-                            <button className="btn" style={{ backgroundColor: '#f2e46c', color: '#333', fontWeight: 'bold', padding: '10px 40px', borderRadius: '25px', whiteSpace: 'nowrap' }}>CONTACT MEMBERS &gt;</button>
+                            <button style={{ backgroundColor: '#f2e46c', color: '#333', fontWeight: 'bold', padding: '10px 40px', borderRadius: '25px', whiteSpace: 'nowrap', border: 'none', cursor: 'pointer' }}>JOIN CHAT GROUP &gt;</button>
+                            <button style={{ backgroundColor: '#f2e46c', color: '#333', fontWeight: 'bold', padding: '10px 40px', borderRadius: '25px', whiteSpace: 'nowrap', border: 'none', cursor: 'pointer' }}>CONTACT MEMBERS &gt;</button>
                         </div>
                     </div>
                 </div>

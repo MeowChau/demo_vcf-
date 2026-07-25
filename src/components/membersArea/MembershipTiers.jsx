@@ -78,14 +78,14 @@ const MembershipTiers = () => {
                     <div className="row text-center mb-4">
                         {tiers.map(tier => (
                             <div className="col-4" key={`title-${tier.id}`}>
-                                <h4 style={{ color: '#666', lineHeight: '1.4', whiteSpace: 'pre-line' }}>{tier.title}</h4>
+                                <h4 style={{ color: '#666', lineHeight: '1.4', whiteSpace: 'pre-line', minHeight: '85px', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>{tier.title}</h4>
                             </div>
                         ))}
                     </div>
                     <div className="row text-center mb-5">
                         {tiers.map(tier => (
                             <div className="col-4" key={`btn-${tier.id}`}>
-                                <Link href="/contact-us" className="btn" style={{ backgroundColor: '#00c3b3', color: '#fff', padding: '10px 40px', fontSize: '18px', fontWeight: 'bold', boxShadow: '0 5px 15px rgba(0, 195, 179, 0.4)' }}>
+                                <Link href={tier.id === 'standard' ? '/global-business-registration' : tier.id === 'clevel' ? '/c-level-registration' : '/corporate-membership-registration'} className="btn" style={{ backgroundColor: '#00c3b3', color: '#fff', padding: '10px 40px', fontSize: '18px', fontWeight: 'bold', boxShadow: '0 5px 15px rgba(0, 195, 179, 0.4)' }}>
                                     Join Now
                                 </Link>
                             </div>
@@ -151,9 +151,11 @@ const MembershipTiers = () => {
                             <div className="col-md-12 mb-5 text-center" key={tier.id}>
                                 <h4 style={{ color: '#666', lineHeight: '1.4', whiteSpace: 'pre-line' }}>{tier.title}</h4>
                                 
-                                <Link href="/contact-us" className="btn mt-3 mb-5" style={{ backgroundColor: '#00c3b3', color: '#fff', padding: '10px 40px', fontSize: '18px', fontWeight: 'bold', boxShadow: '0 5px 15px rgba(0, 195, 179, 0.4)' }}>
-                                    Join Now
-                                </Link>
+                                <div className="text-center mb-4">
+                                    <Link href={tier.id === 'standard' ? '/global-business-registration' : tier.id === 'clevel' ? '/c-level-registration' : '/corporate-membership-registration'} className="btn mt-3 mb-5" style={{ backgroundColor: '#00c3b3', color: '#fff', padding: '10px 40px', fontSize: '18px', fontWeight: 'bold', boxShadow: '0 5px 15px rgba(0, 195, 179, 0.4)' }}>
+                                        Join Now
+                                    </Link>
+                                </div>
 
                                 <p style={{ fontWeight: 'bold', fontSize: '15px', padding: '0 15px' }}>
                                     {tier.intro}

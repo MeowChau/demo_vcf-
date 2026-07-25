@@ -1,19 +1,19 @@
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
 import React from 'react';
-import ContactUs from '@/components/contactUs/ContactUs';
+import MediaCoverage from '@/components/mediaCoverage/MediaCoverage';
 
 export const metadata = {
-    title: "Consua - Contact Us"
+    title: "Consua - Media Coverage"
 }
 
-const ContactUsPage = () => {
+const page = () => {
     return (
         <>
             <LayoutStyle1>
-                <ContactUs />
+                <MediaCoverage />
             </LayoutStyle1>
         </>
     );
 };
 
-export default ContactUsPage;
+export default page;

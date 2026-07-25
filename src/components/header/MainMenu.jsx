@@ -100,16 +100,16 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                     </ul>
                 </li>
                 <li className="dropdown d-block d-lg-none">
-                    <Link href="#" className="text-uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>ABOUT US</Link>
+                    <Link href="/about-us" className="text-uppercase" style={{ fontSize: '13px', fontWeight: 600 }}>ABOUT US</Link>
                     <span className="d-lg-none" onClick={toggleSubMenu} style={{ position: 'absolute', right: 0, top: 0, height: '45px', width: '50px', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', zIndex: 10, fontSize: '16px', color: '#333' }}><i className="fas fa-angle-down"></i></span>
                     <ul className="dropdown-menu mobile-scroll-menu">
-                        <li><Link href="#">MEDIA COVERAGE</Link></li>
-                        <li><Link href="#">SOCIAL RESPONSIBILITY</Link></li>
-                        <li><Link href="#">TESTIMONIALS</Link></li>
-                        <li><Link href="#">TERMS AND CONDITIONS</Link></li>
-                        <li><Link href="#">PRIVACY POLICY</Link></li>
-                        <li><Link href="#">CONTACT US</Link></li>
-                        <li><Link href="#">SUBMIT ARTICLES</Link></li>
+                        <li><Link href="/media-coverage">MEDIA COVERAGE</Link></li>
+                        <li><Link href="/social-responsibility">SOCIAL RESPONSIBILITY</Link></li>
+                        <li><Link href="/testimonials">TESTIMONIALS</Link></li>
+                        <li><Link href="/terms-and-conditions">TERMS AND CONDITIONS</Link></li>
+                        <li><Link href="/privacy-policy">PRIVACY POLICY</Link></li>
+                        <li><Link href="/contact-us">CONTACT US</Link></li>
+                        <li><Link href="/submit-articles">SUBMIT ARTICLES</Link></li>
                     </ul>
                 </li>
                 <li className="dropdown d-block d-lg-none">

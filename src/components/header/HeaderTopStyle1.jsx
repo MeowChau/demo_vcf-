@@ -14,15 +14,15 @@ const HeaderTopStyle1 = () => {
                         <div className="col-xl-6 col-lg-8 offset-xl-3 pl-30 pl-md-15 pl-xs-15">
                             <ul className="item-flex" style={{ gap: '25px', listStyle: 'none', padding: 0, margin: 0, display: 'flex' }}>
                                 <li className="dropdown">
-                                    <Link href="#" className="text-light text-uppercase font-weight-bold" style={{ fontSize: '13px', fontWeight: 600 }}>ABOUT US</Link>
+                                    <Link href="/about-us" className="text-light text-uppercase font-weight-bold" style={{ fontSize: '13px', fontWeight: 600 }}>ABOUT US</Link>
                                     <ul className="dropdown-menu" style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-                                        <li><Link href="#">MEDIA COVERAGE</Link></li>
-                                        <li><Link href="#">SOCIAL RESPONSIBILITY</Link></li>
-                                        <li><Link href="#">TESTIMONIALS</Link></li>
-                                        <li><Link href="#">TERMS AND CONDITIONS</Link></li>
-                                        <li><Link href="#">PRIVACY POLICY</Link></li>
-                                        <li><Link href="#">CONTACT US</Link></li>
-                                        <li><Link href="#">SUBMIT ARTICLES</Link></li>
+                                        <li><Link href="/media-coverage">MEDIA COVERAGE</Link></li>
+                                        <li><Link href="/social-responsibility">SOCIAL RESPONSIBILITY</Link></li>
+                                        <li><Link href="/testimonials">TESTIMONIALS</Link></li>
+                                        <li><Link href="/terms-and-conditions">TERMS AND CONDITIONS</Link></li>
+                                        <li><Link href="/privacy-policy">PRIVACY POLICY</Link></li>
+                                        <li><Link href="/contact-us">CONTACT US</Link></li>
+                                        <li><Link href="/submit-articles">SUBMIT ARTICLES</Link></li>
                                     </ul>
                                 </li>
                                 <li className="dropdown">

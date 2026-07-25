@@ -1,19 +1,19 @@
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
 import React from 'react';
-import ContactUs from '@/components/contactUs/ContactUs';
+import MemberDetail from '@/components/membersDirectory/MemberDetail';
 
 export const metadata = {
-    title: "Consua - Contact Us"
+    title: "Consua - Member Directory"
 }
 
-const ContactUsPage = () => {
+const page = ({ params }) => {
     return (
         <>
             <LayoutStyle1>
-                <ContactUs />
+                <MemberDetail id={params.id} />
             </LayoutStyle1>
         </>
     );
 };
 
-export default ContactUsPage;
+export default page;

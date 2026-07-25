@@ -37,11 +37,11 @@ const BlogStyle1 = ({ sectionClass }) => {
                     
                     <div className="row mt-40">
                         <div className="col-12 text-center">
-                            <Link href="#" style={{ display: 'inline-block', padding: '10px 30px', border: '1px solid #000', color: '#000', fontWeight: 'bold', fontSize: '18px', marginBottom: '30px' }}>
+                            <Link href="/member-benefits" style={{ display: 'inline-block', padding: '10px 30px', border: '1px solid #000', color: '#000', fontWeight: 'bold', fontSize: '18px', marginBottom: '30px' }}>
                                 More Benefits..
                             </Link>
                             <br />
-                            <Link href="#" style={{ display: 'inline-block', padding: '15px 50px', backgroundColor: '#E20613', color: '#fff', fontWeight: 800, fontSize: '24px', textTransform: 'uppercase' }}>
+                            <Link href="/join-us" style={{ display: 'inline-block', padding: '15px 50px', backgroundColor: '#E20613', color: '#fff', fontWeight: 800, fontSize: '24px', textTransform: 'uppercase' }}>
                                 JOIN ASIA CEO COMMUNITY
                             </Link>
                         </div>

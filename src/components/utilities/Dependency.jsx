@@ -1,11 +1,12 @@
 "use client"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ScrollToTop } from 'react-simple-scroll-up';
 
 const Dependency = () => {
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-
+    setMounted(true);
     // Dynamically import Bootstrap JS to avoid SSR issues
     import('bootstrap/dist/js/bootstrap.bundle.min.js').then(() => {
 
@@ -16,7 +17,7 @@ const Dependency = () => {
 
   return (
     <>
-      <ScrollToTop symbol={<i className="fal fa-long-arrow-up"></i>} />
+      {mounted && <ScrollToTop symbol={<i className="fal fa-long-arrow-up"></i>} />}
     </>
   );
 };
