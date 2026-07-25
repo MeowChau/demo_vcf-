@@ -1,5 +1,5 @@
 "use client"
-import { cloneElement, useState, useEffect, useRef } from 'react';
+import { cloneElement, isValidElement, useState, useEffect, useRef } from 'react';
 
 const Animate = ({ delay = '0s', duration = '1s', className, children }) => {
     const [isInView, setIsInView] = useState(false);
@@ -25,6 +25,8 @@ const Animate = ({ delay = '0s', duration = '1s', className, children }) => {
         };
     }, []);
 
+    if (!children || !isValidElement(children)) return children || null;
+
     const style = isInView ? {
         animationDelay: delay,
         animationDuration: duration,
@@ -47,8 +49,6 @@ const Animate = ({ delay = '0s', duration = '1s', className, children }) => {
             }
         }
     };
-
-    if (!children) return null;
 
     return cloneElement(children, {
         ...(children.props || {}),
