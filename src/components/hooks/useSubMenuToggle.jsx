@@ -3,8 +3,8 @@ const useSubMenuToggle = () => {
 
     const toggleSubMenu = (e) => {
         e.preventDefault();
-        const listItem = e.target.parentElement;
-        const subMenu = listItem.querySelector('ul.dropdown-menu');
+        const listItem = e.target.closest('li.dropdown');
+        const subMenu = listItem ? listItem.querySelector('ul.dropdown-menu') : null;
 
         if (subMenu) {
             listItem.classList.toggle('on');
