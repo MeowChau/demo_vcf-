@@ -33,7 +33,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                         <li>
                             <a href="#" onClick={(e) => { e.preventDefault(); setMembershipModalOpen(true); }}>MY MEMBERSHIP</a>
                         </li>
-                        <li><Link href="/member-requests">MEMBER REQUESTS</Link></li>
+                        <li><Link href="/member-requests">MENTORING REQUESTS</Link></li>
                         <li><Link href="/weekly-newsletter">WEEKLY NEWSLETTER</Link></li>
                         <li><Link href="/member-benefits">MEMBER BENEFITS</Link></li>
                         <li><Link href="/ceo-business-awards">CEO BUSINESS AWARDS</Link></li>

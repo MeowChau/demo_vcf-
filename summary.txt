@@ -1,0 +1,311 @@
+Tóm tắt cuộc họp: Xác định phạm vi và lộ trình triển khai website/ cổng thông tin cho diễn đàn CEO Việt Nam
+Date created: June 24, 2026 at 09:57
+──────────────────────────────────────────────────────────────────────
+#Nam
+Tóm tắt cuộc họp: Xác định phạm vi và lộ trình triển khai website/ cổng thông tin cho diễn đàn CEO Việt Nam
+1. Mục đích cuộc họp
+Cuộc họp nhằm làm rõ phạm vi nghiệp vụ, định hướng sản phẩm và lộ trình triển khai giai đoạn đầu cho website/cổng thông tin của diễn đàn CEO Việt Nam, trong đó bao gồm:
+Quản trị thông tin cho các hoạt động của diễn đàn.
+Đăng ký thành viên và phân vai người dùng.
+Tích hợp các hoạt động CEO Mentoring, tri thức, xuất bản, sự kiện, networking.
+Xem xét khả năng xây dựng nền tảng học tập và khai thác dữ liệu CEO theo hướng mở, có cập nhật liên tục.
+Thống nhất các việc ưu tiên trước để có thể ra sản phẩm sớm, tránh triển khai quá rộng ngay từ đầu.
+2. Bối cảnh và định hướng tổng thể
+2.1. Các nhóm tác nhân và luồng chính
+Bên trao đổi xác định hệ thống có nhiều tác nhân và vai trò khác nhau, gồm:
+CEO
+Quản lý
+Chuyên gia
+Mentor
+Các vai trò phụ trợ khác như quản trị, admin, v.v.
+Luồng tổng quát được mô tả như sau:
+CEO đăng ký tham gia.
+Thanh toán phí nếu có.
+Đặt câu hỏi / mô tả vấn đề.
+Kết nối với mentor phù hợp.
+Theo dõi quá trình giải quyết vấn đề và kết quả sau mentoring.
+2.2. Tầm nhìn sản phẩm được làm rõ
+Người trình bày từ phía nghiệp vụ làm rõ rằng hệ thống không chỉ là một website thông tin đơn giản mà là một hệ sinh thái gồm nhiều mảng:
+Quản trị thông tin của diễn đàn CEO Việt Nam.
+Hoạt động tri thức:
+chuyên san,
+ấn phẩm online/offline,
+sách chuyên khảo,
+video ngắn,
+nội dung khái quát từ các buổi mentoring.
+Hoạt động đào tạo:
+một phần đang dùng LMS hiện có,
+một phần là CEO Hub mang tính học tập thực tiễn, rút ra từ mentoring.
+CEO Mentoring:
+chỉ là một hoạt động trong diễn đàn, nhưng là hoạt động trung tâm để tạo dữ liệu và tri thức.
+Khai thác dữ liệu CEO:
+tạo hồ sơ CEO mở, liên tục cập nhật,
+theo dõi vấn đề, quá trình giải quyết, kết quả sau 30 ngày / 90 ngày.
+“Cái gốc của vấn đề vẫn là ở trên đấy thì mình có rất nhiều case study, rồi có thể có những khóa học, có thể có những buổi 1:1 hay là 1:N.”
+“Mục tiêu là tạo thành một hệ thống mà sau này nó xuất ra được cái gọi là chân dung của CEO.”
+3. Các nội dung thảo luận chính
+3.1. Phạm vi hệ thống và mức độ phức tạp
+Phía kỹ thuật ban đầu nêu băn khoăn về việc phạm vi hệ thống còn lớn và chưa rõ:
+Khóa học được quản lý ở đâu.
+Ai có quyền đẩy nội dung lên.
+Website chỉ là trang thông tin hay có cả nghiệp vụ:
+giảng dạy,
+LMS,
+quản lý tài liệu,
+thanh toán.
+Kết luận thảo luận là không triển khai toàn bộ ngay lập tức, mà sẽ chia nhỏ thành các mốc để ra sản phẩm sớm, từng bước làm rõ nghiệp vụ.
+“Làm đến đâu là mình sẽ làm rõ đến đấy.”
+3.2. CEO Mentoring là nguồn dữ liệu và tri thức trung tâm
+Người trình bày nêu rõ hành trình phát triển từ chương trình CEO Mentoring ban đầu:
+Ban đầu là một hoạt động trong diễn đàn CEO Việt Nam.
+Sau một số số tổ chức, bắt đầu thấy cần:
+hệ thống hóa quy trình,
+quản trị dữ liệu CEO,
+mở rộng sang các hoạt động khác.
+Các điểm quan trọng:
+Dữ liệu CEO phải là hệ thống mở, liên tục có input.
+Mỗi buổi mentoring khái quát từ vấn đề thực tế của doanh nghiệp thành các nhóm vấn đề lớn.
+Sau mentoring cần theo dõi tiếp:
+doanh nghiệp đã áp dụng được gì,
+trong 30 ngày hoặc 90 ngày sau có kết quả ra sao.
+Một số mentor vẫn tiếp tục nhận câu hỏi của CEO sau lớp để giải quyết tiếp.
+3.3. CEO Hub và LMS hiện có
+Có hai hướng học tập song song:
+CEO Hub
+Là trang học tập dành cho CEO.
+Nội dung mang tính thực tiễn, đúc kết từ:
+quá trình mentoring,
+peer group,
+các vấn đề CEO gặp phải.
+Có thể được hỗ trợ bởi AI.
+Không thay thế toàn bộ hệ thống đào tạo hiện có.
+Hệ thống LMS hiện tại
+Đang sử dụng LMS của trung tâm chỗ Đoàn Hiếu.
+Phục vụ mảng đào tạo thuần túy, mang tính chính thống hơn.
+Đây là luồng song song với CEO Hub.
+3.4. Luồng đăng ký thành viên và phân vai
+Hệ thống cần cho phép người dùng đăng nhập/đăng ký tài khoản để tham gia các chức năng khác nhau.
+Các vai trò/nhóm thành viên được nhắc đến:
+CEO
+Mentor
+Admin / quản trị
+Các vai trò thành viên khác
+Một người có thể vừa là CEO, vừa có thể là mentor trong một số lĩnh vực. Vì vậy cần thiết kế luồng đăng ký có thể:
+xác định loại thành viên,
+có thể có bước duyệt hồ sơ,
+xác định ai là người duyệt,
+quy định biểu mẫu đăng ký,
+yêu cầu ảnh / thông tin đi kèm nếu cần.
+3.5. Luồng CEO Mentoring: từ khai báo vấn đề đến ghép mentor
+Người trình bày mô tả rõ yêu cầu nghiệp vụ:
+CEO đăng ký vào hệ thống.
+Khi đăng ký mentoring, họ phải:
+mô tả vấn đề,
+đặt câu hỏi cho mentor,
+khai báo thêm thông tin như:
+quy mô doanh nghiệp,
+quy mô nhân sự,
+doanh thu,
+mô tả vấn đề chi tiết.
+Hệ thống cần hỗ trợ phân tích và phân nhóm vấn đề:
+một lớp khoảng 10–15 CEO có thể được chia thành nhiều nhóm vấn đề.
+Cần ưu tiên các câu hỏi tốt / phù hợp hơn.
+Cần chọn mentor phù hợp trong danh sách hơn 12 mentor tham gia chương trình.
+Mục tiêu là giảm thao tác thủ công hiện tại:
+thay vì dùng Google Form,
+lọc và xử lý bằng tay,
+chuyển dữ liệu qua Word,
+rồi mới theo dõi.
+Hệ thống mới cần tự động hỗ trợ:
+tiếp nhận thông tin,
+ghi nhận hồ sơ,
+phân tích,
+ưu tiên danh sách học viên,
+phục vụ follow-up.
+“Thay vì người làm như bọn em bây giờ cứ làm tay, làm kiểu chạy AI cứ lấy danh sách lấy đăng ký qua Google Form xong bọn em phân tích ra.”
+3.6. Theo dõi sau mentoring và tạo hồ sơ CEO
+Một yêu cầu quan trọng được nhấn mạnh là sau khi CEO tham gia mentoring:
+cần follow-up xem họ đã áp dụng được gì,
+ghi nhận vào hệ thống các kết quả thực tế,
+dùng để tạo ra một profile CEO đầy đủ hơn.
+Các yếu tố profile được đề cập:
+họ là ai,
+đang có vấn đề gì,
+ai đã giải đáp,
+giải đáp là gì,
+họ đã áp dụng được gì,
+kết quả sau mentoring / sau khảo sát.
+Phía nghiệp vụ cho biết:
+hiện tại đã làm được phần khái quát vấn đề từ các buổi mentoring,
+nhưng dữ liệu chưa được đưa vào hệ thống,
+cần chuẩn hóa ngay từ đầu vào để đầu ra và theo dõi tiến trình được tốt hơn.
+“Cái gốc của vấn đề nó vẫn là cần một cái profile của CEO đấy.”
+3.7. Peer group, networking và cộng đồng
+Sau khi có dữ liệu từ mentoring, hệ thống còn có thể phục vụ:
+CEO peer group
+CEO club
+networking
+Ý tưởng là:
+dựa trên problem feed / nhóm vấn đề,
+ngành nghề,
+lĩnh vực,
+mức độ tương đồng,
+để ghép các CEO thành nhóm nhỏ khoảng 10–15 người cùng vấn đề hoặc cùng ngành,
+từ đó họ có thể trao đổi, hỗ trợ và kết nối với nhau.
+Bên trình bày cho rằng phần networking này có thể triển khai sau, tránh làm quá rộng ngay từ đầu, nhưng vẫn cần thiết kế để người dùng có thể tìm thấy nhau trong hệ thống.
+3.8. Sự kiện, ấn phẩm, video và nội dung truyền thông
+Khi người dùng đăng nhập, hệ thống cần hiển thị:
+tin tức,
+sự kiện,
+ấn phẩm,
+video,
+tài liệu tri thức.
+Các dạng nội dung được đề cập:
+Text
+PDF
+Hình ảnh
+Video
+Có thể có Audio nếu cần
+Các loại nội dung/ấn phẩm đã có hoặc đang có kế hoạch:
+chuyên san,
+ấn bản sau mentoring,
+sách chuyên khảo,
+video ngắn kiểu TikTok/short video,
+các đoạn video xuất sắc từ mentor.
+Ngoài ra, một số sự kiện như:
+forum
+summit
+có thể dự kiến thu phí trong tương lai.
+3.9. Thanh toán
+Có nhắc tới việc nếu có thu phí cho một số sự kiện thì thanh toán trực tuyến trên website có thể khá phức tạp.
+Phương án được nêu:
+có thể không cần thanh toán online đầy đủ ngay từ đầu,
+có thể dùng:
+thông tin,
+QR code,
+tài khoản chuyển khoản,
+hướng người dùng quét và thanh toán bên ngoài.
+4. Quyết định chính của cuộc họp
+4.1. Chia phạm vi thành giai đoạn nhỏ
+Hai bên thống nhất không cố làm toàn bộ ngay, mà chia thành các phần nhỏ, bắt đầu từ các chức năng nền tảng nhất.
+4.2. Ưu tiên 4 nhóm việc giai đoạn đầu
+Phía kỹ thuật đề xuất và hai bên đồng thuận về việc triển khai trước 4 nội dung chính:
+Tham khảo concept/giao diện website
+Dựa trên mẫu Azure CEO Community mà bên nghiệp vụ gửi.
+Cần thêm 1–2 mẫu nữa để có thêm góc nhìn về layout và template.
+Xây dựng phần đăng ký thành viên
+Bao gồm CEO, mentor và các loại thành viên khác.
+Có thể cần duyệt hồ sơ.
+Xác định biểu mẫu, trường thông tin, ảnh, email xác nhận.
+Xây dựng phần hiển thị nội dung sau đăng nhập
+Tin tức, hình ảnh, ấn phẩm, video, sự kiện.
+Dùng các dạng multimedia: text, PDF, hình ảnh, video, có thể thêm audio.
+Xây dựng phần khai báo vấn đề / follow-up
+Người dùng nhập pain point / bài toán họ đang vướng.
+Sau đó ghi nhận bài học đã áp dụng.
+Tạo dữ liệu để sau này phân nhóm, ghép mentor, theo dõi tiến trình.
+4.3. Không mở rộng sang các luồng xa hơn ở giai đoạn đầu
+Các nội dung như:
+peer group tự động phức tạp,
+networking nâng cao,
+thanh toán online đầy đủ,
+hệ sinh thái đào tạo rất rộng,
+được thống nhất là chưa làm sâu ngay, chỉ giữ trong tầm nhìn tổng thể.
+5. Các action items
+[ ] Tạo nhóm trao đổi chung trên Zalo
+Người phụ trách: phía nghiệp vụ
+Mục đích: tập trung trao đổi, phối hợp nghiệp vụ và kỹ thuật
+[ ] Bổ sung thêm 1–2 mẫu website tham khảo ngoài Azure CEO Community
+Người phụ trách: phía nghiệp vụ
+Mục đích: giúp bên kỹ thuật hình dung rõ hơn concept, layout, template
+[ ] Chốt concept tổng thể của website
+Người phụ trách: hai bên cùng phối hợp
+Nội dung cần chốt:
+giao diện,
+template,
+mức độ hiển thị nội dung,
+phong cách trình bày
+[ ] Xác định các loại đối tượng người dùng
+Người phụ trách: phía nghiệp vụ chủ trì, kỹ thuật hỗ trợ
+Đối tượng cần liệt kê:
+CEO
+Mentor
+Admin
+Các vai trò khác nếu có
+[ ] Lập danh sách biểu mẫu đăng ký cho từng đối tượng
+Người phụ trách: phía nghiệp vụ
+Nội dung cần chuẩn bị:
+thông tin bắt buộc,
+ảnh,
+mô tả hồ sơ,
+tiêu chí duyệt,
+luồng email xác nhận / từ chối / yêu cầu bổ sung
+[ ] Chuẩn bị các mẫu email cho các luồng hệ thống
+Người phụ trách: phía nghiệp vụ
+Bao gồm:
+email xác nhận đăng ký thành công,
+email yêu cầu chỉnh sửa hồ sơ,
+email thông báo duyệt,
+email báo cáo / nhắc nhở khác
+[ ] Tập hợp folder ấn phẩm và tin bài hiện có
+Người phụ trách: phía nghiệp vụ
+Mục đích: để bên kỹ thuật và thiết kế sắp xếp layout phù hợp
+[ ] Bên kỹ thuật chuẩn bị hạ tầng công nghệ thông tin
+Người phụ trách: phía kỹ thuật
+Mục đích: sẵn sàng triển khai các luồng đầu tiên
+[ ] Thiết kế các form đầu vào cho follow-up sau mentoring
+Người phụ trách: phía nghiệp vụ
+Mục đích: thu thập dữ liệu về:
+kiến thức đã áp dụng,
+kết quả đạt được,
+phản hồi / tiến triển của CEO
+[ ] Làm rõ cơ chế ghép nhóm và phân nhóm theo problem feed
+Người phụ trách: hai bên cùng phối hợp
+Mục đích: hỗ trợ peer group, mentoring và theo dõi dữ liệu
+6. Số liệu, dữ liệu và chi tiết đáng chú ý
+4 nhóm tác nhân chính được nêu: CEO, quản lý, chuyên gia, mentor.
+Danh sách mentor tham gia chương trình: hơn 12 mentor.
+Quy mô một lớp mentoring: khoảng 10–15 người.
+Dữ liệu hiện tại:
+sau khoảng 2 tháng chạy chương trình,
+đã có 170 CEO tham gia lớp mentoring.
+Mốc follow-up:
+30 ngày
+90 ngày
+Sự kiện có thể thu phí trong tương lai:
+forum
+summit
+7. Quan điểm làm việc được thống nhất
+7.1. Làm rõ nghiệp vụ trước, kỹ thuật sau
+Hai bên thống nhất:
+nghiệp vụ phải được làm rõ qua biểu mẫu, flow và concept,
+sau đó kỹ thuật mới code nhanh và đúng.
+“Ít nhất là nghiệp vụ bọn em clear đã, biểu mẫu clear đã thì mình ngồi với nhau nó nhanh.”
+7.2. Ưu tiên sản phẩm chạy được sớm
+Mục tiêu ngắn hạn là:
+vài tuần tới có sản phẩm cơ bản,
+đủ để trình bày và lấy ý kiến góp ý,
+sau đó mới mở rộng thêm.
+“Đừng nên tham vọng quá.”
+7.3. Kỹ thuật và nghiệp vụ sẽ phối hợp đồng tốc
+Bên kỹ thuật đề nghị:
+nếu bên nghiệp vụ có template hay concept hay thì gửi để tham khảo,
+hai bên cùng dựng layout và design phù hợp,
+không chờ “có mẫu hoàn hảo mới làm”.
+8. Kết luận cuộc họp
+Cuộc họp đã làm rõ khá đầy đủ:
+mục tiêu sản phẩm,
+phạm vi chức năng lớn,
+cách chia nhỏ giai đoạn đầu,
+nhu cầu dữ liệu đầu vào/đầu ra,
+định hướng follow-up sau mentoring,
+vai trò của website trong hệ sinh thái CEO Việt Nam.
+Kết luận chính:
+Website/cổng thông tin sẽ là nền tảng trung tâm cho diễn đàn CEO Việt Nam.
+Giai đoạn đầu tập trung vào 4 việc cốt lõi:
+concept giao diện,
+đăng ký thành viên,
+hiển thị nội dung sau đăng nhập,
+khai báo vấn đề và follow-up.
+Các phần phức tạp hơn như peer group, networking, thanh toán, LMS mở rộng sẽ được xem xét sau khi có nền tảng đầu tiên.
+“Làm đến đâu là rõ đến đấy.”
