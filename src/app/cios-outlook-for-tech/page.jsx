@@ -3,7 +3,7 @@ import React from 'react';
 import CiosOutlookForTech from '@/components/ciosOutlookForTech/CiosOutlookForTech';
 
 export const metadata = {
-    title: "Consua - CIOs Outlook For Tech 2021"
+    title: "Diễn đàn CEO Việt Nam - CIOs Outlook For Tech 2021"
 }
 
 const CiosOutlookForTechPage = () => {

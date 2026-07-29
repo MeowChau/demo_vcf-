@@ -3,7 +3,7 @@ import React from 'react';
 import AseanBusinessHub from '@/components/aseanBusinessHub/AseanBusinessHub';
 
 export const metadata = {
-    title: "Consua - ASEAN Business Hub Selangor Malaysia"
+    title: "Diễn đàn CEO Việt Nam - ASEAN Business Hub Selangor Malaysia"
 }
 
 const AseanBusinessHubPage = () => {

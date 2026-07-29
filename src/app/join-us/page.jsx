@@ -6,7 +6,7 @@ import JoinUsTiers from '@/components/joinUs/JoinUsTiers';
 import JoinUsCards from '@/components/joinUs/JoinUsCards';
 
 export const metadata = {
-    title: "Consua - Join Us"
+    title: "Diễn đàn CEO Việt Nam - Join Us"
 }
 
 const JoinUsPage = () => {

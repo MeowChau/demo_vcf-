@@ -3,7 +3,7 @@ import React from 'react';
 import PartnerWithUs from '@/components/partnerWithUs/PartnerWithUs';
 
 export const metadata = {
-    title: "Consua - Partner With Us"
+    title: "Diễn đàn CEO Việt Nam - Partner With Us"
 }
 
 const page = () => {

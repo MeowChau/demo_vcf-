@@ -3,7 +3,7 @@ import React from 'react';
 import GlobalBusinessRegistrationForm from '@/components/registrationForms/GlobalBusinessRegistrationForm';
 
 export const metadata = {
-    title: "Consua - Global Business Alliance Membership Registration"
+    title: "Diễn đàn CEO Việt Nam - Global Business Alliance Membership Registration"
 }
 
 const page = () => {

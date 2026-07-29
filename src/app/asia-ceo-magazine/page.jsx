@@ -3,7 +3,7 @@ import React from 'react';
 import AsiaCeoMagazine from '@/components/asiaCeoMagazine/AsiaCeoMagazine';
 
 export const metadata = {
-    title: "Consua - Asia CEO Magazine"
+    title: "Diễn đàn CEO Việt Nam - Asia CEO Magazine"
 }
 
 const page = () => {

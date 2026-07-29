@@ -3,7 +3,7 @@ import BlogWithSidebarContent from '@/components/blog/BlogWithSidebarContent';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Blog With Sidebar"
+    title: "Diễn đàn CEO Việt Nam - Consulting Business - Blog With Sidebar"
 }
 
 const BlogWithSidebarPage = () => {

@@ -10,7 +10,7 @@ import TeamStyle1 from '@/components/team/TeamStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business React-NextJS Template"
+    title: "Diễn đàn CEO Việt Nam - Consulting Business React-NextJS Template"
 }
 
 const Home1 = () => {

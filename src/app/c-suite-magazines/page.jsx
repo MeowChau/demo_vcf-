@@ -3,7 +3,7 @@ import React from 'react';
 import CSuiteMagazines from '@/components/cSuiteMagazines/CSuiteMagazines';
 
 export const metadata = {
-    title: "Consua - C-Suite Magazines"
+    title: "Diễn đàn CEO Việt Nam - C-Suite Magazines"
 }
 
 const page = () => {

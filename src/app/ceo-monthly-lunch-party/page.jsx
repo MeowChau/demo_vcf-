@@ -3,7 +3,7 @@ import React from 'react';
 import CeoMonthlyLunchParty from '@/components/ceoMonthlyLunchParty/CeoMonthlyLunchParty';
 
 export const metadata = {
-    title: "Consua - CEO Monthly Lunch Party"
+    title: "Diễn đàn CEO Việt Nam - CEO Monthly Lunch Party"
 }
 
 const page = () => {

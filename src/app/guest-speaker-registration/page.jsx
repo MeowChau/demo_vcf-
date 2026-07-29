@@ -3,7 +3,7 @@ import React from 'react';
 import GuestSpeakerRegistration from '@/components/guestSpeakerRegistration/GuestSpeakerRegistration';
 
 export const metadata = {
-    title: "Consua - Guest Speaker Registration"
+    title: "Diễn đàn CEO Việt Nam - Guest Speaker Registration"
 }
 
 const page = () => {

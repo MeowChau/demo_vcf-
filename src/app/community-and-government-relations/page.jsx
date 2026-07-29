@@ -3,7 +3,7 @@ import React from 'react';
 import CommunityGovRelations from '@/components/community/CommunityGovRelations';
 
 export const metadata = {
-    title: "Consua - Community & Government Relations"
+    title: "Diễn đàn CEO Việt Nam - Community & Government Relations"
 }
 
 const CommunityGovRelationsPage = () => {

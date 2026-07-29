@@ -3,7 +3,7 @@ import React from 'react';
 import SubmitArticles from '@/components/submitArticles/SubmitArticles';
 
 export const metadata = {
-    title: "Consua - Submit Articles"
+    title: "Diễn đàn CEO Việt Nam - Submit Articles"
 }
 
 const page = () => {

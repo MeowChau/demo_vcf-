@@ -7,7 +7,7 @@ import StudentMember from '@/components/membersArea/StudentMember';
 import CustomTestimonial from '@/components/membersArea/CustomTestimonial';
 
 export const metadata = {
-    title: "Consua - Members Area"
+    title: "Diễn đàn CEO Việt Nam - Members Area"
 }
 
 const MembersAreaPage = () => {

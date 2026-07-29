@@ -3,7 +3,7 @@ import React from 'react';
 import SocialResponsibility from '@/components/socialResponsibility/SocialResponsibility';
 
 export const metadata = {
-    title: "Consua - Social Responsibility"
+    title: "Diễn đàn CEO Việt Nam - Social Responsibility"
 }
 
 const page = () => {

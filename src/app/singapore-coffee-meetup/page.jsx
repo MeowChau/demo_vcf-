@@ -3,7 +3,7 @@ import React from 'react';
 import SingaporeCoffeeMeetup from '@/components/singaporeCoffeeMeetup/SingaporeCoffeeMeetup';
 
 export const metadata = {
-    title: "Consua - Singapore Coffee Meetup"
+    title: "Diễn đàn CEO Việt Nam - Singapore Coffee Meetup"
 }
 
 const SingaporeCoffeeMeetupPage = () => {

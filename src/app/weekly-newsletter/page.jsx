@@ -3,7 +3,7 @@ import React from 'react';
 import WeeklyNewsletter from '@/components/weeklyNewsletter/WeeklyNewsletter';
 
 export const metadata = {
-    title: "Consua - Weekly Newsletter"
+    title: "Diễn đàn CEO Việt Nam - Weekly Newsletter"
 }
 
 const WeeklyNewsletterPage = () => {

@@ -3,7 +3,7 @@ import React from 'react';
 import EventsNetworking from '@/components/eventsNetworking/EventsNetworking';
 
 export const metadata = {
-    title: "Consua - Events & Networking"
+    title: "Diễn đàn CEO Việt Nam - Events & Networking"
 }
 
 const EventsNetworkingPage = () => {

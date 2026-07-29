@@ -3,7 +3,7 @@ import React from 'react';
 import LeadershipWorkshopsSub from '@/components/leadershipWorkshopsSub/LeadershipWorkshopsSub';
 
 export const metadata = {
-    title: "Consua - Leadership Workshops"
+    title: "Diễn đàn CEO Việt Nam - Leadership Workshops"
 }
 
 const LeadershipWorkshopsSubPage = () => {

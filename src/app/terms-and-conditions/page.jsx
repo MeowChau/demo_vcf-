@@ -3,7 +3,7 @@ import React from 'react';
 import TermsAndConditions from '@/components/termsAndConditions/TermsAndConditions';
 
 export const metadata = {
-    title: "Consua - Terms and Conditions"
+    title: "Diễn đàn CEO Việt Nam - Terms and Conditions"
 }
 
 const page = () => {

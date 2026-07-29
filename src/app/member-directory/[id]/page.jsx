@@ -3,7 +3,7 @@ import React from 'react';
 import MemberDetail from '@/components/membersDirectory/MemberDetail';
 
 export const metadata = {
-    title: "Consua - Member Directory"
+    title: "Diễn đàn CEO Việt Nam - Member Directory"
 }
 
 const page = ({ params }) => {

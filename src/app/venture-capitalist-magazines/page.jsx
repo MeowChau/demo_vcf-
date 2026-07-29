@@ -3,7 +3,7 @@ import React from 'react';
 import VentureCapitalistMagazines from '@/components/ventureCapitalistMagazines/VentureCapitalistMagazines';
 
 export const metadata = {
-    title: "Consua - Venture Capitalist Magazines"
+    title: "Diễn đàn CEO Việt Nam - Venture Capitalist Magazines"
 }
 
 const page = () => {

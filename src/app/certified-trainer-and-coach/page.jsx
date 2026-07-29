@@ -3,7 +3,7 @@ import React from 'react';
 import TrainerList from '@/components/trainers/TrainerList';
 
 export const metadata = {
-    title: "Consua - Certified Trainer & Coach"
+    title: "Diễn đàn CEO Việt Nam - Certified Trainer & Coach"
 }
 
 const TrainersPage = () => {

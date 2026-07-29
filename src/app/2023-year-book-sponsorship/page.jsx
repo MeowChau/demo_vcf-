@@ -3,7 +3,7 @@ import React from 'react';
 import YearbookSponsorship from '@/components/yearbookSponsorship/YearbookSponsorship';
 
 export const metadata = {
-    title: "Consua - 2023 Yearbook Sponsorship"
+    title: "Diễn đàn CEO Việt Nam - 2023 Yearbook Sponsorship"
 }
 
 const page = () => {

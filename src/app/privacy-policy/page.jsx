@@ -3,7 +3,7 @@ import React from 'react';
 import PrivacyPolicy from '@/components/privacyPolicy/PrivacyPolicy';
 
 export const metadata = {
-    title: "Consua - Privacy Policy"
+    title: "Diễn đàn CEO Việt Nam - Privacy Policy"
 }
 
 const page = () => {

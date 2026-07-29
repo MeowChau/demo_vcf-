@@ -3,7 +3,7 @@ import React from 'react';
 import FounderMagazines from '@/components/founderMagazines/FounderMagazines';
 
 export const metadata = {
-    title: "Consua - Founder Magazines"
+    title: "Diễn đàn CEO Việt Nam - Founder Magazines"
 }
 
 const page = () => {

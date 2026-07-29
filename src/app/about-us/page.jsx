@@ -3,7 +3,7 @@ import AboutUs from '@/components/aboutUs/AboutUs';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - About Us"
+    title: "Diễn đàn CEO Việt Nam - About Us"
 }
 
 const AboutUsPage = () => {

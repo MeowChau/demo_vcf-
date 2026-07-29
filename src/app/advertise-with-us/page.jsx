@@ -3,7 +3,7 @@ import React from 'react';
 import AdvertiseWithUs from '@/components/advertiseWithUs/AdvertiseWithUs';
 
 export const metadata = {
-    title: "Consua - Advertise With Us"
+    title: "Diễn đàn CEO Việt Nam - Advertise With Us"
 }
 
 const page = () => {

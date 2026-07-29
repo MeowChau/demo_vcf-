@@ -3,7 +3,7 @@ import React from 'react';
 import MemberBenefits from '@/components/memberBenefits/MemberBenefits';
 
 export const metadata = {
-    title: "Consua - Member Benefits"
+    title: "Diễn đàn CEO Việt Nam - Member Benefits"
 }
 
 const MemberBenefitsPage = () => {

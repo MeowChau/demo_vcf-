@@ -3,7 +3,7 @@ import Blog3ColumnContent from '@/components/blog/Blog3ColumnContent';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Blog 3 Column"
+    title: "Diễn đàn CEO Việt Nam - Consulting Business - Blog 3 Column"
 }
 
 const Blog3Column = () => {

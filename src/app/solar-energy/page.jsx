@@ -11,7 +11,7 @@ import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Solar Energy"
+    title: "Diễn đàn CEO Việt Nam - Consulting Business - Solar Energy"
 }
 
 const SolarEnergy = () => {

@@ -3,7 +3,7 @@ import React from 'react';
 import Connection3 from '@/components/connection3/Connection3';
 
 export const metadata = {
-    title: "Consua - Connection 3.0"
+    title: "Diễn đàn CEO Việt Nam - Connection 3.0"
 }
 
 const Connection3Page = () => {

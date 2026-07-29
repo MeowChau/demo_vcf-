@@ -3,7 +3,7 @@ import React from 'react';
 import PastEvents from '@/components/pastEvents/PastEvents';
 
 export const metadata = {
-    title: "Consua - Past Events"
+    title: "Diễn đàn CEO Việt Nam - Past Events"
 }
 
 const page = () => {

@@ -26,7 +26,10 @@ const manrope = Manrope({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Consua - Consulting Business React - NextJS Template"
+  title: "Diễn đàn CEO Việt Nam",
+  openGraph: {
+    title: "Diễn đàn CEO Việt Nam",
+  }
 }
 
 export default function RootLayout({ children }) {

@@ -3,7 +3,7 @@ import React from 'react';
 import CeoBusinessAwards from '@/components/ceoBusinessAwards/CeoBusinessAwards';
 
 export const metadata = {
-    title: "Consua - CEO Business Awards"
+    title: "Diễn đàn CEO Việt Nam - CEO Business Awards"
 }
 
 const CeoBusinessAwardsPage = () => {

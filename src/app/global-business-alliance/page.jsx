@@ -3,7 +3,7 @@ import React from 'react';
 import GlobalBusinessAlliance from '@/components/globalBusinessAlliance/GlobalBusinessAlliance';
 
 export const metadata = {
-    title: "Consua - Global Business Alliance"
+    title: "Diễn đàn CEO Việt Nam - Global Business Alliance"
 }
 
 const GlobalBusinessAlliancePage = () => {

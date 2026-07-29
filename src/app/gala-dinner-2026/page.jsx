@@ -3,7 +3,7 @@ import React from 'react';
 import GalaDinner2026 from '@/components/galaDinner2026/GalaDinner2026';
 
 export const metadata = {
-    title: "Consua - Gala Dinner 2026"
+    title: "Diễn đàn CEO Việt Nam - Gala Dinner 2026"
 }
 
 const page = () => {

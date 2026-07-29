@@ -3,7 +3,7 @@ import React from 'react';
 import CLevelRegistrationForm from '@/components/registrationForms/CLevelRegistrationForm';
 
 export const metadata = {
-    title: "Consua - C-level Registration"
+    title: "Diễn đàn CEO Việt Nam - C-level Registration"
 }
 
 const page = () => {

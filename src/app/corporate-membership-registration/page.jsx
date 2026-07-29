@@ -3,7 +3,7 @@ import React from 'react';
 import CorporateRegistrationForm from '@/components/registrationForms/CorporateRegistrationForm';
 
 export const metadata = {
-    title: "Consua - Corporate Membership Registration"
+    title: "Diễn đàn CEO Việt Nam - Corporate Membership Registration"
 }
 
 const page = () => {

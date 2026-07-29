@@ -3,7 +3,7 @@ import React from 'react';
 import ReferralProgram from '@/components/referralProgram/ReferralProgram';
 
 export const metadata = {
-    title: "Consua - Referral Program"
+    title: "Diễn đàn CEO Việt Nam - Referral Program"
 }
 
 const page = () => {

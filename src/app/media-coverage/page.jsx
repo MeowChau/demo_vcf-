@@ -3,7 +3,7 @@ import React from 'react';
 import MediaCoverage from '@/components/mediaCoverage/MediaCoverage';
 
 export const metadata = {
-    title: "Consua - Media Coverage"
+    title: "Diễn đàn CEO Việt Nam - Media Coverage"
 }
 
 const page = () => {

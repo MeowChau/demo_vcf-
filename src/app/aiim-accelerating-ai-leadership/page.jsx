@@ -3,7 +3,7 @@ import React from 'react';
 import AiimAcceleratingAiLeadership from '@/components/aiimAcceleratingAiLeadership/AiimAcceleratingAiLeadership';
 
 export const metadata = {
-    title: "Consua - AIIM Accelerating AI Leadership"
+    title: "Diễn đàn CEO Việt Nam - AIIM Accelerating AI Leadership"
 }
 
 const AiimAcceleratingAiLeadershipPage = () => {

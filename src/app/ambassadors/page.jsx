@@ -3,7 +3,7 @@ import React from 'react';
 import AmbassadorPortalForm from '@/components/ambassadors/AmbassadorPortalForm';
 
 export const metadata = {
-    title: "Consua - Ambassador Portal"
+    title: "Diễn đàn CEO Việt Nam - Ambassador Portal"
 }
 
 const AmbassadorsPage = () => {

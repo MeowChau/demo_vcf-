@@ -3,7 +3,7 @@ import React from 'react';
 import SubmitAnEvent from '@/components/submitAnEvent/SubmitAnEvent';
 
 export const metadata = {
-    title: "Consua - Submit An Event"
+    title: "Diễn đàn CEO Việt Nam - Submit An Event"
 }
 
 const page = () => {

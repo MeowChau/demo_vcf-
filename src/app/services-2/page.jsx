@@ -9,7 +9,7 @@ import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Services"
+    title: "Diễn đàn CEO Việt Nam - Consulting Business - Services"
 }
 
 const Service2Page = () => {

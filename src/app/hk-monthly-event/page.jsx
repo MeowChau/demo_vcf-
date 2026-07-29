@@ -3,7 +3,7 @@ import React from 'react';
 import HkMonthlyEvent from '@/components/hkMonthlyEvent/HkMonthlyEvent';
 
 export const metadata = {
-    title: "Consua - HK Monthly Event"
+    title: "Diễn đàn CEO Việt Nam - HK Monthly Event"
 }
 
 const page = () => {

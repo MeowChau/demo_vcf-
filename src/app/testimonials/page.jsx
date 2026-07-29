@@ -3,7 +3,7 @@ import React from 'react';
 import Testimonials from '@/components/testimonials/Testimonials';
 
 export const metadata = {
-    title: "Consua - Testimonials"
+    title: "Diễn đàn CEO Việt Nam - Testimonials"
 }
 
 const page = () => {

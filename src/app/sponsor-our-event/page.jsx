@@ -3,7 +3,7 @@ import React from 'react';
 import SponsorOurEvent from '@/components/sponsorOurEvent/SponsorOurEvent';
 
 export const metadata = {
-    title: "Consua - Sponsor Our Event"
+    title: "Diễn đàn CEO Việt Nam - Sponsor Our Event"
 }
 
 const page = () => {

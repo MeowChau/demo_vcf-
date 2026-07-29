@@ -3,7 +3,7 @@ import React from 'react';
 import GlobalChapters from '@/components/globalChapters/GlobalChapters';
 
 export const metadata = {
-    title: "Consua - Global Chapters"
+    title: "Diễn đàn CEO Việt Nam - Global Chapters"
 }
 
 const page = () => {

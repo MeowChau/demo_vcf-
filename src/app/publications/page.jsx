@@ -3,7 +3,7 @@ import React from 'react';
 import Publications from '@/components/publications/Publications';
 
 export const metadata = {
-    title: "Consua - Publications"
+    title: "Diễn đàn CEO Việt Nam - Publications"
 }
 
 const page = () => {

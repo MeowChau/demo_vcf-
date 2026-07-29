@@ -3,7 +3,7 @@ import React from 'react';
 import MoreEvents from '@/components/moreEvents/MoreEvents';
 
 export const metadata = {
-    title: "Consua - More Events"
+    title: "Diễn đàn CEO Việt Nam - More Events"
 }
 
 const page = () => {

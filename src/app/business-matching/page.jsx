@@ -3,7 +3,7 @@ import React from 'react';
 import BusinessMatchingPortal from '@/components/businessMatching/BusinessMatchingPortal';
 
 export const metadata = {
-    title: "Consua - Business Matching"
+    title: "Diễn đàn CEO Việt Nam - Business Matching"
 }
 
 const BusinessMatchingPage = () => {

@@ -3,7 +3,7 @@ import React from 'react';
 import AiimAiXEi from '@/components/aiimAiXEi/AiimAiXEi';
 
 export const metadata = {
-    title: "Consua - AIIM AI X EI"
+    title: "Diễn đàn CEO Việt Nam - AIIM AI X EI"
 }
 
 const AiimAiXEiPage = () => {
