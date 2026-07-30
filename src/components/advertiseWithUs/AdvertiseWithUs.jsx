@@ -28,7 +28,7 @@ const AdvertiseWithUs = () => {
 
                 {/* Social Media Section */}
                 <div className="text-center mb-5">
-                    <h2 style={{ color: '#d32f2f', fontSize: '32px', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '15px', fontFamily: "'Impact', 'Arial Black', sans-serif", letterSpacing: '1px' }}>
+                    <h2 style={{ color: '#d32f2f', fontSize: '32px', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '15px', fontFamily: 'var(--font-montserrat)', letterSpacing: '1px' }}>
                         Our Social Media
                     </h2>
                     <p style={{ color: '#555', fontSize: '15px', marginBottom: '20px' }}>
@@ -46,7 +46,7 @@ const AdvertiseWithUs = () => {
 
                 {/* Contact Us Form */}
                 <div className="mx-auto" style={{ maxWidth: '700px' }}>
-                    <h2 className="text-center mb-4" style={{ color: '#d32f2f', fontSize: '32px', fontWeight: 'bold', textTransform: 'uppercase', fontFamily: "'Impact', 'Arial Black', sans-serif", letterSpacing: '1px' }}>
+                    <h2 className="text-center mb-4" style={{ color: '#d32f2f', fontSize: '32px', fontWeight: 'bold', textTransform: 'uppercase', fontFamily: 'var(--font-montserrat)', letterSpacing: '1px' }}>
                         CONTACT US
                     </h2>
                     <form style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

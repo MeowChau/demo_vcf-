@@ -8,7 +8,7 @@ const StudentMember = () => {
                 <div className="row justify-content-center">
                     <div className="col-lg-8">
                         <div style={{ backgroundColor: '#f5d6b3', borderRadius: '15px', padding: '50px', textAlign: 'center' }}>
-                            <h2 style={{ fontFamily: '"Dancing Script", cursive, sans-serif', color: '#0056b3', fontSize: '42px', marginBottom: '20px' }}>
+                            <h2 style={{ fontFamily: 'var(--font-montserrat)', color: '#0056b3', fontSize: '42px', marginBottom: '20px' }}>
                                 Student Member
                             </h2>
                             

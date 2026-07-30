@@ -19,7 +19,7 @@ const AmbassadorPortalForm = () => {
                                     {/* Using a star and some small shapes to mimic the logo */}
                                     <i className="fas fa-star"></i>
                                 </div>
-                                <h3 style={{ color: '#d3a84b', fontWeight: 'bold', fontFamily: 'serif', letterSpacing: '1px' }}>Ambassador Portal</h3>
+                                <h3 style={{ color: '#d3a84b', fontWeight: 'bold', fontFamily: 'var(--font-montserrat)', letterSpacing: '1px' }}>Ambassador Portal</h3>
                                 <p style={{ color: '#9ba9b4', fontSize: '15px', marginTop: '10px' }}>Exclusive access for Asia CEO Partners</p>
                             </div>
                             

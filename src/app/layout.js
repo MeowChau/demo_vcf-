@@ -36,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.className} ${manrope.variable} ${outfit.variable} ${montserrat.variable}`}>
+      <body className={`${montserrat.className} ${manrope.variable} ${outfit.variable} ${montserrat.variable}`}>
         <ToastContainer />
         <Dependency />
         {children}

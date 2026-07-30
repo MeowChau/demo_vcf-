@@ -5,21 +5,21 @@ const tiers = [
     {
         id: 'global',
         title: 'Global Business\nAlliance\nRegistration',
-        intro: 'Standard membership members will be able to enjoy our services below:',
+        intro: 'Hội viên Tiêu chuẩn sẽ được hưởng các dịch vụ dưới đây:',
         features: [
-            'CEO Executive UP-TO-DATE',
-            'CEO Executive Monthly newsletter',
-            'CEO Executive Knowledge Sharing',
-            'CEO Shop',
-            'CEO Webinar',
-            'Invitation to our CEO Whatsapp Group',
-            'Invitation to our Linkedin Group',
-            'Invitation to our FaceBook Group'
+            'Cập nhật Tin tức CEO Executive',
+            'Bản tin CEO Executive Hàng tháng',
+            'Chia sẻ Kiến thức CEO Executive',
+            'Cửa hàng CEO',
+            'Hội thảo trực tuyến CEO',
+            'Thư mời tham gia Nhóm Whatsapp CEO',
+            'Thư mời tham gia Nhóm Linkedin',
+            'Thư mời tham gia Nhóm FaceBook'
         ],
         extraNotice: '',
         extraNoticeBottom: '',
         extraFeatures: [],
-        fee: 'Annual Fee: 180 USD',
+        fee: 'Phí Thường niên: 180 USD',
         qualificationText: [
             "Standard Membership is open to all, and is a great way to start your ASIA CEO COMMUNITY journey. With Standard membership you can access the ASIA CEO COMMUNITY's online resources and expertise, including our Monthly business updates and online business forum."
         ]
@@ -27,61 +27,61 @@ const tiers = [
     {
         id: 'clevel',
         title: 'C-level\nRegistration',
-        intro: 'C-level membership members will be able to enjoy our services below:',
+        intro: 'Hội viên C-level sẽ được hưởng các dịch vụ dưới đây:',
         features: [
-            'CEO Executive UP-TO-DATE',
-            'CEO Executive Monthly newsletter',
-            'CEO Executive Knowledge Sharing',
-            'CEO Shop',
-            'CEO Webinar',
-            'Wine Tasting Events',
-            'Invitation to our CEO Whatsapp Group',
-            'Invitation to our Linkedin Group',
-            'Invitation to our FaceBook Group',
-            'CEO Executive Directory',
-            'CEO Webinar',
-            'CEO Executive Forum',
-            'Invitation to Monthly Luncheon Event'
+            'Cập nhật Tin tức CEO Executive',
+            'Bản tin CEO Executive Hàng tháng',
+            'Chia sẻ Kiến thức CEO Executive',
+            'Cửa hàng CEO',
+            'Hội thảo trực tuyến CEO',
+            'Sự kiện Thử rượu',
+            'Thư mời tham gia Nhóm Whatsapp CEO',
+            'Thư mời tham gia Nhóm Linkedin',
+            'Thư mời tham gia Nhóm FaceBook',
+            'Danh bạ CEO Executive',
+            'Hội thảo trực tuyến CEO',
+            'Diễn đàn CEO Executive',
+            'Thư mời tham gia Tiệc trưa Hàng tháng'
         ],
         extraNotice: '',
-        extraNoticeBottom: 'Exclusive to C-Level Executive Members',
+        extraNoticeBottom: 'Dành riêng cho Hội viên Ban điều hành (C-Level)',
         extraFeatures: [
-            'Business Matching & Referral Services',
-            'Investors Connections',
-            'C-Level Roundtable',
-            'Business Owner Roundtable',
-            'Invite to CEO Interview',
-            'Free access to our Monthly Luncheon Event',
-            'Access to Business Referral Program',
-            'Special Discount to our CEO Shop',
-            'Investors Connections'
+            'Dịch vụ Kết nối & Giới thiệu Kinh doanh',
+            'Kết nối Nhà đầu tư',
+            'Bàn tròn C-Level',
+            'Bàn tròn Chủ Doanh nghiệp',
+            'Lời mời Phỏng vấn CEO',
+            'Miễn phí tham gia Tiệc trưa Hàng tháng',
+            'Tham gia Chương trình Giới thiệu Kinh doanh',
+            'Special Discount to our Cửa hàng CEO',
+            'Kết nối Nhà đầu tư'
         ],
-        fee: 'Annual Fee: 2,200 USD',
+        fee: 'Phí Thường niên: 2.200 USD',
         qualificationText: [
-            "C-Level Membership is open specially for the top management of the company who is looking for exchange of ideas, innovation, and best practice.",
+            "Hội viên C-Level dành riêng cho ban quản lý cấp cao của công ty, những người đang tìm kiếm cơ hội trao đổi ý tưởng, đổi mới và thực tiễn tốt nhất.",
             "Include but not limited to\n- Chief People Officer (CPO)\n- Chief Marketing Officer (CMO)\n- Chief Information Officer (CIO)\n- Chief Technology Officer (CTO)\n- Chief Executive Officer (CEO)\n- Chief Operation Officer (COO)\n- Chief Finance Officer (CFO)\n- Vice Presidents (VPs)\n- President\n- Executive Director\n- Managing Director\n- Managing Partner\n- General Manager"
         ]
     },
     {
         id: 'corporate',
         title: 'Corporate Membership\nRegistration',
-        intro: 'Corporate membership members will be able to enjoy our services below:',
-        extraNotice: 'All privileges of C-Level Membership plus',
+        intro: 'Hội viên Doanh nghiệp sẽ được hưởng các dịch vụ dưới đây:',
+        extraNotice: 'Tất cả đặc quyền của Hội viên C-Level cộng thêm',
         features: [
-            'All your C-level direct reports can participate in committees and events.',
-            'ASIA CEO COMMUNITY Member-to-Member Discount Program - Your company has the opportunity to offer special pricing and programs to ASIA CEO COMMUNITY members, generating business for you.',
-            'Your company logo on our web site.',
-            'A free supporting sponsorship for the ASIA CEO COMMUNITY CEO Round-table.',
-            'A 50% discount on other ASIA CEO COMMUNITY sponsorship opportunities.',
-            'Unlimited access to CEO Connection Business directory.',
-            'Event Hosting Supports',
-            'Products & Services Marketing Support',
-            'Business Matching & Referral Services',
-            'Investors Connections'
+            'Tất cả các quản lý cấp cao trực thuộc có thể tham gia các ủy ban và sự kiện.',
+            'Chương trình Giảm giá nội bộ - Công ty của bạn có cơ hội cung cấp mức giá và chương trình đặc biệt cho các thành viên khác, tạo ra cơ hội kinh doanh.',
+            'Logo công ty của bạn trên trang web của chúng tôi.',
+            'Miễn phí tài trợ hỗ trợ cho Hội nghị Bàn tròn CEO.',
+            'Giảm 50% cho các cơ hội tài trợ khác.',
+            'Truy cập không giới hạn vào danh bạ Doanh nghiệp Kết nối CEO.',
+            'Hỗ trợ Tổ chức Sự kiện',
+            'Hỗ trợ Tiếp thị Sản phẩm & Dịch vụ',
+            'Dịch vụ Kết nối & Giới thiệu Kinh doanh',
+            'Kết nối Nhà đầu tư'
         ],
         extraNoticeBottom: '',
         extraFeatures: [],
-        fee: 'Annual Fee: 5,000 USD',
+        fee: 'Phí Thường niên: 5.000 USD',
         qualificationText: []
     }
 ];
@@ -151,7 +151,7 @@ const JoinUsTiers = () => {
                             <div className="col-4" key={`qual-${tier.id}`}>
                                 {tier.qualificationText.length > 0 && (
                                     <>
-                                        <h5 style={{ color: '#e67e22', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Qualification</h5>
+                                        <h5 style={{ color: '#e67e22', fontWeight: 'bold', marginBottom: '20px', textAlign: 'center' }}>Điều kiện tham gia</h5>
                                         <ul style={{ listStyleType: 'disc', paddingLeft: '30px', textAlign: 'left', fontSize: '14px', color: '#555' }}>
                                             {tier.qualificationText.map((text, index) => (
                                                 <li key={index} style={{ marginBottom: '15px' }}>
@@ -215,7 +215,7 @@ const JoinUsTiers = () => {
 
                                 {tier.qualificationText.length > 0 && (
                                     <>
-                                        <h5 style={{ color: '#e67e22', fontWeight: 'bold', marginBottom: '20px' }}>Qualification</h5>
+                                        <h5 style={{ color: '#e67e22', fontWeight: 'bold', marginBottom: '20px' }}>Điều kiện tham gia</h5>
                                         <ul style={{ listStyleType: 'disc', paddingLeft: '30px', textAlign: 'left', fontSize: '14px', color: '#555' }}>
                                             {tier.qualificationText.map((text, index) => (
                                                 <li key={index} style={{ marginBottom: '15px' }}>

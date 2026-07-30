@@ -15,7 +15,7 @@ const JoinUsCards = () => {
             <div className="container">
                 <div className="row text-center mb-5">
                     <div className="col-12">
-                        <h4 style={{ color: '#e67e22', fontWeight: 'bold' }}>ASIA CEO Community - Virtual Membership Card available soon!</h4>
+                        <h4 style={{ color: '#e67e22', fontWeight: 'bold' }}>ASIA CEO Community - Thẻ Hội viên Ảo sắp ra mắt!</h4>
                     </div>
                 </div>
                 

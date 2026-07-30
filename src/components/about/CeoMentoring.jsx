@@ -50,7 +50,7 @@ const CeoMentoring = () => {
                                 />
                             </div>
                             {/* Logo Badge */}
-                            <div style={{ position: 'absolute', bottom: '10px', right: '10px', width: '160px', height: '160px', backgroundColor: '#fff', borderRadius: '50%', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div style={{ position: 'absolute', bottom: '10px', right: '10px', width: '160px', height: '160px', backgroundColor: '#fff2df', borderRadius: '50%', padding: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <Image src="/assets/img/logo/Logo VCF.png" alt="Vietnam CEO Forum" width={120} height={120} style={{ objectFit: 'contain' }} />
                             </div>
                         </div>

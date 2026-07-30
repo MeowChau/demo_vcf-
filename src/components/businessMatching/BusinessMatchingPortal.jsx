@@ -29,7 +29,7 @@ const BusinessMatchingPortal = () => {
                                 </button>
                                 
                                 <h4 style={{ color: '#d3a84b', fontWeight: 'bold', letterSpacing: '1px', marginBottom: '10px', fontSize: '18px' }}>ASIA CEO COMMUNITY</h4>
-                                <h2 style={{ color: '#fff', fontWeight: 'bold', fontFamily: 'serif', marginBottom: '20px' }}>Member Portal</h2>
+                                <h2 style={{ color: '#fff', fontWeight: 'bold', fontFamily: 'var(--font-montserrat)', marginBottom: '20px' }}>Member Portal</h2>
                             </div>
                             
                             <form>

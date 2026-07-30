@@ -27,7 +27,7 @@ const CSuiteMagazines = () => {
                             color: '#fff',
                             padding: '8px 0',
                             fontSize: '18px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Join Us
                         </button>
@@ -41,7 +41,7 @@ const CSuiteMagazines = () => {
                             color: '#fff',
                             padding: '8px 0',
                             fontSize: '18px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Upcoming Parties
                         </button>
@@ -55,7 +55,7 @@ const CSuiteMagazines = () => {
                             color: '#fff',
                             padding: '8px 0',
                             fontSize: '18px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Sponsorship
                         </button>

@@ -9,7 +9,7 @@ const CiosOutlookForTech = () => {
         padding: '10px 50px',
         margin: '0 15px 15px',
         fontSize: '22px',
-        fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+        fontFamily: 'var(--font-montserrat)',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
         cursor: 'pointer'
     };
@@ -22,7 +22,7 @@ const CiosOutlookForTech = () => {
         padding: '10px 50px',
         margin: '0 15px 15px',
         fontSize: '22px',
-        fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+        fontFamily: 'var(--font-montserrat)',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
         cursor: 'pointer'
     };
@@ -70,7 +70,7 @@ const CiosOutlookForTech = () => {
 
                 {/* Testimonials */}
                 <div className="testimonials-section mt-5 pt-3">
-                    <h2 style={{ fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif', fontSize: '42px', color: '#297fb8', marginBottom: '10px', marginLeft: '10px' }}>Testimonials</h2>
+                    <h2 style={{ fontFamily: 'var(--font-montserrat)', fontSize: '42px', color: '#297fb8', marginBottom: '10px', marginLeft: '10px' }}>Testimonials</h2>
                     
                     <div className="testimonial-slider position-relative text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: '#8a8a8a', padding: '0', minHeight: '300px' }}>
                         {/* Mock left arrow */}

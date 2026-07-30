@@ -13,7 +13,7 @@ const WeeklyNewsletter = () => {
                         <Link href="#" className="btn" style={{ 
                             background: 'linear-gradient(to bottom, #63a8eb, #3588d9)',
                             color: '#fff', 
-                            fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+                            fontFamily: 'var(--font-montserrat)',
                             fontSize: '22px',
                             padding: '8px 40px',
                             borderRadius: '4px',
@@ -25,7 +25,7 @@ const WeeklyNewsletter = () => {
                         <Link href="#" className="btn flex-grow-1" style={{ 
                             background: 'linear-gradient(to bottom, #63a8eb, #3588d9)',
                             color: '#fff', 
-                            fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+                            fontFamily: 'var(--font-montserrat)',
                             fontSize: '22px',
                             padding: '8px 40px',
                             borderRadius: '4px',
@@ -37,7 +37,7 @@ const WeeklyNewsletter = () => {
                         <Link href="#" className="btn" style={{ 
                             background: 'linear-gradient(to bottom, #63a8eb, #3588d9)',
                             color: '#fff', 
-                            fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+                            fontFamily: 'var(--font-montserrat)',
                             fontSize: '22px',
                             padding: '8px 40px',
                             borderRadius: '4px',

@@ -4,7 +4,7 @@ const EventsNetworking = () => {
     return (
         <div className="events-networking-page pt-100 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
-                <h1 className="text-center mb-5" style={{ color: '#d12f36', fontSize: '38px', fontWeight: 'bold', fontFamily: 'Impact, sans-serif', letterSpacing: '1px' }}>
+                <h1 className="text-center mb-5" style={{ color: '#d12f36', fontSize: '38px', fontWeight: 'bold', fontFamily: 'var(--font-montserrat)', letterSpacing: '1px' }}>
                     Upcoming Events
                 </h1>
 

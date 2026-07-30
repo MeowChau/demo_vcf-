@@ -10,7 +10,7 @@ const SingaporeCoffeeMeetup = () => {
         margin: '0 15px 15px',
         fontSize: '24px',
         fontWeight: 'bold',
-        fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+        fontFamily: 'var(--font-montserrat)',
         textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
         boxShadow: '0 3px 6px rgba(0,0,0,0.15)',
         cursor: 'pointer'
@@ -25,7 +25,7 @@ const SingaporeCoffeeMeetup = () => {
         margin: '0 15px 15px',
         fontSize: '24px',
         fontWeight: 'bold',
-        fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+        fontFamily: 'var(--font-montserrat)',
         textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
         boxShadow: '0 3px 6px rgba(0,0,0,0.15)',
         cursor: 'pointer'
@@ -155,7 +155,7 @@ const SingaporeCoffeeMeetup = () => {
 
                 {/* Testimonials */}
                 <div className="testimonials-section mt-5 pt-3">
-                    <h2 style={{ fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif', fontSize: '42px', color: '#297fb8', marginBottom: '10px', marginLeft: '10px' }}>Testimonials</h2>
+                    <h2 style={{ fontFamily: 'var(--font-montserrat)', fontSize: '42px', color: '#297fb8', marginBottom: '10px', marginLeft: '10px' }}>Testimonials</h2>
                     
                     <div className="testimonial-slider position-relative text-center d-flex align-items-center justify-content-center" style={{ backgroundColor: '#8a8a8a', padding: '0', minHeight: '300px' }}>
                         {/* Mock left arrow */}

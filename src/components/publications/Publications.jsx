@@ -21,7 +21,7 @@ const Publications = () => {
                             color: '#fff',
                             padding: '10px 0',
                             fontSize: '20px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Join Us
                         </button>
@@ -35,7 +35,7 @@ const Publications = () => {
                             color: '#fff',
                             padding: '10px 0',
                             fontSize: '20px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Upcoming Parties
                         </button>
@@ -49,7 +49,7 @@ const Publications = () => {
                             color: '#fff',
                             padding: '10px 0',
                             fontSize: '20px',
-                            fontFamily: "'Dancing Script', cursive, sans-serif"
+                            fontFamily: 'var(--font-montserrat)'
                         }}>
                             Sponsorship
                         </button>

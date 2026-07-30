@@ -84,9 +84,9 @@ Sidebar heading:  20px 'Outfit', sans-serif
 
 /* Variables */
 :root {
-	--font-default: var(--font-manrope), sans-serif;
+	--font-default: var(--font-montserrat), sans-serif;
 	--font-heading: var(--font-montserrat), sans-serif;
-	--font-secondary: var(--font-manrope), sans-serif;
+	--font-secondary: var(--font-montserrat), sans-serif;
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
 	--dark: #1D2027;

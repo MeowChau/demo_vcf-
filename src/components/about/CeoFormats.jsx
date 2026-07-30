@@ -27,7 +27,7 @@ const formatsData = [
 
 const CeoFormats = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '100px', fontFamily: "'Manrope', sans-serif" }}>
+        <div style={{ backgroundColor: '#fff2df', paddingBottom: '100px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="text-center" style={{ marginBottom: '60px' }}>
                     <h2 style={{ color: '#cc0000', fontSize: '36px', fontWeight: '800', marginBottom: '20px', textTransform: 'uppercase', fontFamily: 'var(--font-montserrat)' }}>
@@ -91,7 +91,7 @@ const CeoFormats = () => {
                                                 color: 'transparent', 
                                                 WebkitTextStroke: '1.5px rgba(255,255,255,0.6)', 
                                                 lineHeight: '1',
-                                                fontFamily: "'Oswald', sans-serif",
+                                                fontFamily: 'var(--font-montserrat)',
                                                 letterSpacing: '-2px',
                                                 marginBottom: '0px',
                                                 marginLeft: '-5px'

@@ -9,7 +9,7 @@ const SponsorOurEvent = () => {
         padding: '12px 20px',
         fontSize: '22px',
         fontWeight: '500',
-        fontFamily: "'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        fontFamily: 'var(--font-montserrat)',
         flex: '1',
         minWidth: '200px',
         maxWidth: '300px',

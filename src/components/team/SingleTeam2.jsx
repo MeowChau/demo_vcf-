@@ -52,10 +52,10 @@ const SingleTeam2 = ({ team, isTaller }) => {
                 </div>
                 <div className="info" style={{ position: 'static', background: 'transparent', padding: '0', boxShadow: 'none' }}>
                     <div className="content">
-                        <h4 className="title" style={{ color: '#cc0000', fontWeight: 'bold', fontSize: '16px', textTransform: 'uppercase', marginBottom: '8px', fontFamily: "'Montserrat', sans-serif" }}>
+                        <h4 className="title" style={{ color: '#cc0000', fontWeight: 'bold', fontSize: '16px', textTransform: 'uppercase', marginBottom: '8px', fontFamily: 'var(--font-montserrat)' }}>
                             <Link href={`/team-details/${id}`} style={{ color: 'inherit' }}>{name}</Link>
                         </h4>
-                        <span style={{ color: '#555', fontSize: '14px', display: 'block', fontFamily: "'Montserrat', sans-serif" }}>{designation}</span>
+                        <span style={{ color: '#555', fontSize: '14px', display: 'block', fontFamily: 'var(--font-montserrat)' }}>{designation}</span>
                     </div>
                 </div>
             </div>

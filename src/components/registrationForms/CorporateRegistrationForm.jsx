@@ -24,51 +24,51 @@ const CorporateRegistrationForm = () => {
             `}</style>
             <div className="container" style={{ maxWidth: '900px' }}>
                 <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h2 style={{ fontWeight: 'bold', margin: 0 }}>Corporate Membership Registration Form</h2>
+                    <h2 style={{ fontWeight: 'bold', margin: 0 }}>Đơn Đăng ký Hội viên Doanh nghiệp</h2>
                     <input type="text" className="form-control" defaultValue="25/07/2026" style={{ width: '200px', border: '1px solid #ccc', borderRadius: '0' }} />
                 </div>
                 
                 <div className="mb-5">
-                    <h5 style={{ color: '#d9232d', fontWeight: 'bold', fontSize: '15px' }}>Annual Fee (USD) 5,000</h5>
+                    <h5 style={{ color: '#d9232d', fontWeight: 'bold', fontSize: '15px' }}>Phí Thường niên (USD) 5,000</h5>
                 </div>
 
                 <form>
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>Title Mr/Ms/Mrs/Prof/Dr</label>
+                            <label>Danh xưng Ông/Bà/Giáo sư/Tiến sĩ</label>
                         </div>
                         <div className="col-md-8">
-                            <input type="text" className="form-control" placeholder="Title" style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Danh xưng" style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>Name <span style={{ color: 'red' }}>*</span></label>
+                            <label>Họ tên <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-4">
-                            <input type="text" className="form-control" placeholder="First Name" required style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Tên" required style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                         <div className="col-md-4 mt-3 mt-md-0">
-                            <input type="text" className="form-control" placeholder="Last Name" required style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Họ" required style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>Company Name <span style={{ color: 'red' }}>*</span></label>
+                            <label>Tên Công ty <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
-                            <input type="text" className="form-control" placeholder="Company Name" required style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Tên Công ty" required style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>Business Title <span style={{ color: 'red' }}>*</span></label>
+                            <label>Chức danh <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
-                            <input type="text" className="form-control" placeholder="Business Title" required style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Chức danh" required style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
@@ -116,36 +116,36 @@ const CorporateRegistrationForm = () => {
 
                     <div className="row mb-3 mt-4 align-items-center">
                         <div className="col-md-4">
-                            <label>Industry <span style={{ color: 'red' }}>*</span></label>
+                            <label>Ngành nghề <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-4">
                             <select className="form-select" required style={{ borderRadius: '0', border: '1px solid #999' }}>
-                                <option value="">Industry</option>
+                                <option value="">Ngành nghề</option>
                             </select>
                         </div>
                         <div className="col-md-4 mt-3 mt-md-0">
-                            <input type="text" className="form-control" placeholder="Other Industry" style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Ngành nghề khác" style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>Areas of special interest <span style={{ color: 'red' }}>*</span></label>
+                            <label>Lĩnh vực đặc biệt quan tâm <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
                             <select className="form-select" required style={{ borderRadius: '0', border: '1px solid #999' }}>
-                                <option value="">Areas of special interest</option>
+                                <option value="">Lĩnh vực đặc biệt quan tâm</option>
                             </select>
                         </div>
                     </div>
 
                     <div className="row mb-3 align-items-center">
                         <div className="col-md-4">
-                            <label>How did you hear us? <span style={{ color: 'red' }}>*</span></label>
+                            <label>Bạn biết đến chúng tôi từ đâu? <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
                             <select className="form-select" required style={{ borderRadius: '0', border: '1px solid #999' }}>
-                                <option value="">How did you hear us?</option>
+                                <option value="">Bạn biết đến chúng tôi từ đâu?</option>
                             </select>
                         </div>
                     </div>
@@ -161,10 +161,10 @@ const CorporateRegistrationForm = () => {
 
                     <div className="row mb-5 align-items-center mt-4">
                         <div className="col-md-4">
-                            <label>Referred By:</label>
+                            <label>Người giới thiệu:</label>
                         </div>
                         <div className="col-md-8">
-                            <input type="text" className="form-control" placeholder="Referred By (if any)" style={{ borderRadius: '0', border: '1px solid #999' }} />
+                            <input type="text" className="form-control" placeholder="Người giới thiệu (nếu có)" style={{ borderRadius: '0', border: '1px solid #999' }} />
                         </div>
                     </div>
 
@@ -175,37 +175,37 @@ const CorporateRegistrationForm = () => {
                         <div className="col-md-4 text-center">
                             <input type="file" id="corpLogo" style={{ display: 'none' }} />
                             <button type="button" className="upload-btn-custom" onClick={() => document.getElementById('corpLogo').click()}>+ UPLOAD COMPANY LOGO</button>
-                            <small style={{ color: '#999' }}>Max File Size 15MB</small>
+                            <small style={{ color: '#999' }}>Kích thước tệp tối đa 15MB</small>
                         </div>
                     </div>
 
                     <div className="row mb-4 mt-5">
                         <div className="col-md-4">
-                            <label>Sign up for Receiving ASIA CEO COMMUNITY Latest News, Promotions and Offers <span style={{ color: 'red' }}>*</span></label>
+                            <label>Đăng ký nhận Tin tức, Khuyến mãi và Ưu đãi mới nhất từ ASIA CEO COMMUNITY <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
                             <div style={{ position: 'relative', paddingLeft: '30px' }}>
                                 <input type="checkbox" style={{ position: 'absolute', left: 0, top: '2px', width: '16px', height: '16px', cursor: 'pointer' }} defaultChecked />
-                                <p style={{ fontSize: '13px', lineHeight: '1.4', margin: 0 }}>I acknowledge that I have read and understand the <a href="#" style={{ textDecoration: 'underline' }}>Personal Information Collection Statement</a> and the <a href="#" style={{ textDecoration: 'underline' }}>Privacy Policy</a> and I agree to the use of my personal data for direct marketing purposes by email in the manner set out in the <a href="#" style={{ textDecoration: 'underline' }}>Personal Information Collection Statement</a></p>
+                                <p style={{ fontSize: '13px', lineHeight: '1.4', margin: 0 }}>Tôi xác nhận rằng tôi đã đọc và hiểu <a href="#" style={{ textDecoration: 'underline' }}>Tuyên bố Thu thập Thông tin Cá nhân</a> và <a href="#" style={{ textDecoration: 'underline' }}>Chính sách Bảo mật</a> và tôi đồng ý với việc sử dụng dữ liệu cá nhân của mình cho các mục đích tiếp thị trực tiếp qua email theo cách được nêu trong <a href="#" style={{ textDecoration: 'underline' }}>Tuyên bố Thu thập Thông tin Cá nhân</a></p>
                             </div>
                         </div>
                     </div>
 
                     <div className="row mb-5">
                         <div className="col-md-4">
-                            <label>Terms of Services <span style={{ color: 'red' }}>*</span></label>
+                            <label>Điều khoản Dịch vụ <span style={{ color: 'red' }}>*</span></label>
                         </div>
                         <div className="col-md-8">
                             <div style={{ position: 'relative', paddingLeft: '30px' }}>
                                 <input type="checkbox" style={{ position: 'absolute', left: 0, top: '2px', width: '16px', height: '16px', cursor: 'pointer' }} defaultChecked />
-                                <p style={{ fontSize: '13px', margin: 0 }}>By creating an account, I agree and accept to the <a href="#" style={{ textDecoration: 'underline' }}>Terms and condition</a></p>
+                                <p style={{ fontSize: '13px', margin: 0 }}>Bằng cách tạo tài khoản, tôi đồng ý và chấp nhận <a href="#" style={{ textDecoration: 'underline' }}>Điều khoản và điều kiện</a></p>
                             </div>
                         </div>
                     </div>
 
                     <div className="row">
                         <div className="col-12 text-center">
-                            <button type="submit" className="btn" style={{ backgroundColor: '#d9232d', color: '#fff', fontWeight: 'bold', padding: '10px 60px', fontSize: '18px', borderRadius: '0' }}>Submit</button>
+                            <button type="submit" className="btn" style={{ backgroundColor: '#d9232d', color: '#fff', fontWeight: 'bold', padding: '10px 60px', fontSize: '18px', borderRadius: '0' }}>Gửi đi</button>
                         </div>
                     </div>
                 </form>

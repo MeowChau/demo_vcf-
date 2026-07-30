@@ -9,7 +9,7 @@ const BannerStyle1 = () => {
                 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
                 
                 .custom-ceo-banner * {
-                    font-family: 'Montserrat', sans-serif !important;
+                    font-family: var(--font-montserrat), sans-serif !important;
                 }
                 
                 .custom-ceo-banner-container {

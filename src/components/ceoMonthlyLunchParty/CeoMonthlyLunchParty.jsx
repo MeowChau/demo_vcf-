@@ -10,7 +10,7 @@ const CeoMonthlyLunchParty = () => {
                     Monthly CEO Lunch Party Sponsorship Opportunities
                 </h1>
 
-                <h3 style={{ color: '#555', fontSize: '28px', textTransform: 'none', marginBottom: '15px', fontFamily: "'Impact', 'Arial Black', sans-serif", letterSpacing: '0.5px' }}>
+                <h3 style={{ color: '#555', fontSize: '28px', textTransform: 'none', marginBottom: '15px', fontFamily: 'var(--font-montserrat)', letterSpacing: '0.5px' }}>
                     Connect with your target audience
                 </h3>
                 
@@ -98,7 +98,7 @@ const CeoMonthlyLunchParty = () => {
 
                 {/* Testimonial */}
                 <div className="text-center mt-5 pt-3">
-                    <h2 style={{ color: '#d32f2f', fontSize: '26px', fontWeight: 'bold', textTransform: 'none', marginBottom: '30px', fontFamily: "'Impact', 'Arial Black', sans-serif", letterSpacing: '0.5px' }}>
+                    <h2 style={{ color: '#d32f2f', fontSize: '26px', fontWeight: 'bold', textTransform: 'none', marginBottom: '30px', fontFamily: 'var(--font-montserrat)', letterSpacing: '0.5px' }}>
                         What people are saying about our parties
                     </h2>
                     

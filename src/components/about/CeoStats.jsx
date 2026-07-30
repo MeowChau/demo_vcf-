@@ -40,7 +40,7 @@ const StatBox = ({ iconClass, number, label }) => {
 
 const CeoStats = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: "'Manrope', sans-serif" }}>
+        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="text-center" style={{ marginBottom: '50px' }}>
                     <h2 style={{ color: '#cc0000', fontSize: '36px', fontWeight: '800', marginBottom: '20px', textTransform: 'uppercase', fontFamily: 'var(--font-montserrat)' }}>

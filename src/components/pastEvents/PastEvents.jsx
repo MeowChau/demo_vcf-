@@ -10,7 +10,7 @@ const PastEvents = () => {
         margin: '0 10px 15px',
         fontSize: '20px',
         fontWeight: 'bold',
-        fontFamily: '"Pacifico", "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif',
+        fontFamily: 'var(--font-montserrat)',
         textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
         boxShadow: '0 3px 6px rgba(0,0,0,0.15)',
         cursor: 'pointer',
@@ -50,7 +50,7 @@ const PastEvents = () => {
                         Past Events
                     </h1>
                     <div className="text-center">
-                        <h2 style={{ fontSize: '46px', fontWeight: 'bold', color: '#990000', marginBottom: '30px', fontFamily: 'Arial, sans-serif' }}>
+                        <h2 style={{ fontSize: '46px', fontWeight: 'bold', color: '#990000', marginBottom: '30px', fontFamily: 'var(--font-montserrat)' }}>
                             "We rise by lifting others."
                         </h2>
                         <p style={{ fontSize: '16px', color: '#555', lineHeight: '1.6', maxWidth: '900px', margin: '0 auto 40px' }}>

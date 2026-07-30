@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CeoIntro = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: "'Manrope', sans-serif" }}>
+        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="row align-items-stretch">
                     {/* Image Column */}

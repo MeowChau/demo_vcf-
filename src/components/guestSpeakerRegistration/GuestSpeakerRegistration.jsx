@@ -10,7 +10,7 @@ const GuestSpeakerRegistration = () => {
                     <h1 style={{ fontSize: '38px', fontWeight: '300', color: '#3a70b5', margin: '0' }}>
                         Guest Speaker Registration
                     </h1>
-                    <button style={{ backgroundColor: 'transparent', color: '#e71c24', border: '2px solid #e71c24', padding: '6px 30px', fontSize: '24px', fontWeight: 'bold', borderRadius: '40px', fontFamily: '"Impact", "Arial Black", sans-serif', textTransform: 'none', cursor: 'default' }}>
+                    <button style={{ backgroundColor: 'transparent', color: '#e71c24', border: '2px solid #e71c24', padding: '6px 30px', fontSize: '24px', fontWeight: 'bold', borderRadius: '40px', fontFamily: 'var(--font-montserrat)', textTransform: 'none', cursor: 'default' }}>
                         Our Past Guest Speakers
                     </button>
                 </div>
