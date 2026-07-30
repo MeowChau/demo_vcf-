@@ -1,12 +1,16 @@
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
-import HomeVideoSection from '@/components/about/HomeVideoSection';
-import UpcomingEvents from '@/components/events/UpcomingEvents';
-import HomeImageBanner from '@/components/events/HomeImageBanner';
+import CeoFaq from '@/components/faq/CeoFaq';
+import CeoMentoring from '@/components/about/CeoMentoring';
+import CeoStats from '@/components/about/CeoStats';
+import CeoIntro from '@/components/about/CeoIntro';
+import CeoValues from '@/components/about/CeoValues';
+import CeoMentors from '@/components/about/CeoMentors';
+import CeoFormats from '@/components/about/CeoFormats';
+import CeoTestimonials from '@/components/about/CeoTestimonials';
+import CeoVideos from '@/components/about/CeoVideos';
+import CeoSteps from '@/components/about/CeoSteps';
 import BannerStyle1 from '@/components/banner/BannerStyle1';
-import BlogStyle1 from '@/components/blog/BlogStyle1';
-import ProcessStyle1 from '@/components/process/ProcessStyle1';
-import ServicesStyle1 from '@/components/services/ServicesStyle1';
-import TeamStyle1 from '@/components/team/TeamStyle1';
+import TeamStyle2 from '@/components/team/TeamStyle2';
 import React from 'react';
 
 export const metadata = {
@@ -18,13 +22,17 @@ const Home1 = () => {
         <>
             <LayoutStyle1>
                 <BannerStyle1 />
-                <HomeVideoSection />
-                <UpcomingEvents />
-                <HomeImageBanner />
-                <ServicesStyle1 />
-                <ProcessStyle1 />
-                <TeamStyle1 sectionClass="bg-gray" teamTitle={true} />
-                <BlogStyle1 sectionClass="bg-gray" />
+                <TeamStyle2 />
+                <CeoFaq />
+                <CeoMentoring />
+                <CeoStats />
+                <CeoIntro />
+                <CeoValues />
+                <CeoMentors />
+                <CeoFormats />
+                <CeoTestimonials />
+                <CeoVideos />
+                <CeoSteps />
             </LayoutStyle1>
         </>
     );

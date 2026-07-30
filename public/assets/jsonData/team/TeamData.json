@@ -2,9 +2,9 @@
     {
         "id": 1,
         "activeClass": "active",
-        "memberThumb": "1.jpg",
-        "designation": "CEO & Founder",
-        "name": "Md Sohag",
+        "memberThumb": "/assets/img/Keynote/lequangdam.jpg",
+        "designation": "CEO Marvel Việt Nam",
+        "name": "LÊ QUANG ĐẠM",
         "email": "sohag@digital.com",
         "skillProgress": [
             {
@@ -65,9 +65,9 @@
     {
         "id": 2,
         "activeClass": "",
-        "memberThumb": "2.jpg",
-        "designation": "Product Manager",
-        "name": "Kevin Martin",
+        "memberThumb": "/assets/img/Keynote/nguyenmanhhung.jpg",
+        "designation": "Chủ tịch Sáng lập Viện Lãnh đạo, Quản trị và Quản lý Việt Nam",
+        "name": "NGUYỄN MẠNH HÙNG",
         "email": "kevin@digital.com",
         "skillProgress": [
             {
@@ -128,9 +128,9 @@
     {
         "id": 3,
         "activeClass": "",
-        "memberThumb": "8.jpg",
-        "designation": "Financial Consultant",
-        "name": "Sarah Albert",
+        "memberThumb": "/assets/img/Keynote/luu-trung-thai.jpg",
+        "designation": "Chủ tịch Ngân hàng MB",
+        "name": "LƯU TRUNG THÁI",
         "email": "sarah@digital.com",
         "skillProgress": [
             {
@@ -191,9 +191,9 @@
     {
         "id": 4,
         "activeClass": "",
-        "memberThumb": "4.jpg",
-        "designation": "Developer",
-        "name": "Aleesha Brown",
+        "memberThumb": "/assets/img/Keynote/vuminhkhuong.jpg",
+        "designation": "Trường Chính sách công Lý Quang Diệu, Singapore",
+        "name": "GS. TS. VŨ MINH KHƯƠNG",
         "email": "aleesha@digital.com",
         "skillProgress": [
             {
@@ -254,9 +254,9 @@
     {
         "id": 5,
         "activeClass": "",
-        "memberThumb": "3.jpg",
-        "designation": "CEO & Founder",
-        "name": "Istiak Ahmed",
+        "memberThumb": "/assets/img/Keynote/votrithanh.jpg",
+        "designation": "Viện trưởng Viện Chiến lược Thương hiệu và Cạnh tranh",
+        "name": "HOST: TS. VÕ TRÍ THÀNH",
         "email": "ahmed@digital.com",
         "skillProgress": [
             {
@@ -317,9 +317,9 @@
     {
         "id": 6,
         "activeClass": "",
-        "memberThumb": "7.jpg",
-        "designation": "Product Manager",
-        "name": "Kevin Martin",
+        "memberThumb": "/assets/img/Keynote/giantrungtu2.jpg",
+        "designation": "Chủ tịch Sáng lập Học viện Quản lý PACE",
+        "name": "TS. GIẢN TƯ TRUNG",
         "email": "kevin@digital.com",
         "skillProgress": [
             {

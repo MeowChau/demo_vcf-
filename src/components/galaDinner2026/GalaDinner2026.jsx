@@ -19,7 +19,7 @@ const GalaDinner2026 = () => {
     };
 
     return (
-        <div className="gala-dinner-2026-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
+        <div className="gala-dinner-2026-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Header Area */}

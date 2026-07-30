@@ -2,7 +2,7 @@ import React from 'react';
 
 const MoreEvents = () => {
     return (
-        <div className="more-events-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
+        <div className="more-events-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Header Area */}

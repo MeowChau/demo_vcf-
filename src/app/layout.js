@@ -20,10 +20,11 @@ import '@/assets/css/style.css';
 
 import Dependency from '@/components/utilities/Dependency';
 import { ToastContainer } from 'react-toastify';
-import { Manrope, Outfit } from "next/font/google";
+import { Manrope, Outfit, Montserrat } from "next/font/google";
 
-const manrope = Manrope({ subsets: ["latin"] });
-const outfit = Outfit({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin", "vietnamese"], variable: '--font-manrope' });
+const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
+const montserrat = Montserrat({ subsets: ["latin", "vietnamese"], variable: '--font-montserrat' });
 
 export const metadata = {
   title: "Diễn đàn CEO Việt Nam",
@@ -35,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} ${manrope.className}`}>
+      <body className={`${manrope.className} ${manrope.variable} ${outfit.variable} ${montserrat.variable}`}>
         <ToastContainer />
         <Dependency />
         {children}

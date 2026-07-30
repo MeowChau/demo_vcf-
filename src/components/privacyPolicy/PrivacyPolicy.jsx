@@ -2,7 +2,7 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="privacy-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="privacy-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

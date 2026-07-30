@@ -22,21 +22,21 @@ const GlobalBusinessAlliance = () => {
     };
 
     return (
-        <div className="global-business-alliance-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="global-business-alliance-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 <div className="d-flex flex-wrap justify-content-between align-items-center mb-4">
                     <h2 style={{ color: '#4d4d4d', fontWeight: 'bold', fontSize: '32px' }}>GLOBAL BUSINESS ALLIANCE</h2>
                     <div style={{ minWidth: '200px' }}>
                         <div className="input-group" style={{ border: '1px solid #b3b3ff', borderRadius: '4px', overflow: 'hidden' }}>
                             <input type="text" className="form-control" defaultValue="07/24/2026" style={{ border: 'none', color: '#666', outline: 'none', boxShadow: 'none' }} />
-                            <span className="input-group-text" style={{ backgroundColor: '#fff', border: 'none', color: '#b3b3ff' }}>
+                            <span className="input-group-text" style={{ backgroundColor: '#fff2df', border: 'none', color: '#b3b3ff' }}>
                                 <i className="far fa-calendar-alt"></i>
                             </span>
                         </div>
                     </div>
                 </div>
 
-                <div style={{ border: '2px solid #8cb3d9', borderRadius: '15px', padding: '40px', backgroundColor: '#fff' }}>
+                <div style={{ border: '2px solid #8cb3d9', borderRadius: '15px', padding: '40px', backgroundColor: '#fff2df' }}>
                     <form onSubmit={(e) => e.preventDefault()}>
                         <div className="row mb-4">
                             <div className="col-md-4 mb-3 mb-md-0">
@@ -103,7 +103,7 @@ const GlobalBusinessAlliance = () => {
 
                         <div className="mb-5">
                             <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '15px', color: '#555', fontSize: '18px' }}>Company Logo</label>
-                            <button type="button" style={{ cursor: 'pointer', border: '1px solid #eee', backgroundColor: '#fff', color: '#000', padding: '10px 30px', fontWeight: 'bold', borderRadius: '5px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
+                            <button type="button" style={{ cursor: 'pointer', border: '1px solid #eee', backgroundColor: '#fff2df', color: '#000', padding: '10px 30px', fontWeight: 'bold', borderRadius: '5px', boxShadow: '0 2px 5px rgba(0,0,0,0.05)' }}>
                                 <i className="fas fa-plus" style={{ marginRight: '8px' }}></i> UPLOAD
                             </button>
                         </div>
@@ -124,7 +124,7 @@ const GlobalBusinessAlliance = () => {
                                                 width: '24px', 
                                                 height: '24px', 
                                                 borderRadius: '50%', 
-                                                backgroundColor: '#fff', 
+                                                backgroundColor: '#fff2df', 
                                                 border: '2px solid #40e0d0', 
                                                 margin: '0 auto', 
                                                 position: 'relative', 
@@ -170,7 +170,7 @@ const GlobalBusinessAlliance = () => {
                         <div className="mb-5">
                             <div style={{ border: '1px solid #ddd', borderRadius: '3px', width: '300px', padding: '10px 15px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#f9f9f9' }}>
                                 <div className="d-flex align-items-center">
-                                    <div style={{ width: '28px', height: '28px', border: '2px solid #ccc', borderRadius: '2px', backgroundColor: '#fff', marginRight: '10px' }}></div>
+                                    <div style={{ width: '28px', height: '28px', border: '2px solid #ccc', borderRadius: '2px', backgroundColor: '#fff2df', marginRight: '10px' }}></div>
                                     <span style={{ fontSize: '14px', color: '#333' }}>I'm not a robot</span>
                                 </div>
                                 <div className="text-center">

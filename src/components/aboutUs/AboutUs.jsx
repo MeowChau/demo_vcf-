@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const AboutUs = () => {
     return (
-        <div className="about-us-page-area pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="about-us-page-area pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
                 
                 {/* Title */}

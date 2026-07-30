@@ -81,7 +81,7 @@ const posts = [
 
 const CommunityGovRelations = () => {
     return (
-        <div className="community-gov-relations-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="community-gov-relations-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 {/* Header Section */}
                 <div className="row text-center mb-5">

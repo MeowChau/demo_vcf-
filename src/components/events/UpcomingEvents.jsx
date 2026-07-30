@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const UpcomingEvents = () => {
     return (
-        <div className="upcoming-events-area" style={{ backgroundColor: '#fff', paddingTop: '20px', paddingBottom: '60px' }}>
+        <div className="upcoming-events-area" style={{ backgroundColor: '#fff2df', paddingTop: '20px', paddingBottom: '60px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12 text-center mb-50">

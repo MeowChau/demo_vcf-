@@ -28,7 +28,7 @@ const Connection3 = () => {
     });
 
     return (
-        <div className="connection-3-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="connection-3-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 <div className="text-center mb-5">
                     <h2 style={{ color: '#555', fontSize: '32px', fontWeight: '300' }}>
@@ -101,7 +101,7 @@ const Connection3 = () => {
                             <div className="mb-4">
                                 <div style={{ border: '1px solid #ddd', borderRadius: '3px', width: '250px', padding: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#f9f9f9' }}>
                                     <div className="d-flex align-items-center">
-                                        <div style={{ width: '24px', height: '24px', border: '2px solid #ccc', borderRadius: '2px', backgroundColor: '#fff', marginRight: '10px' }}></div>
+                                        <div style={{ width: '24px', height: '24px', border: '2px solid #ccc', borderRadius: '2px', backgroundColor: '#fff2df', marginRight: '10px' }}></div>
                                         <span style={{ fontSize: '12px', color: '#333' }}>I'm not a robot</span>
                                     </div>
                                     <div className="text-center">

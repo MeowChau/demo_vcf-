@@ -71,7 +71,7 @@ const CustomTestimonial = () => {
                 >
                     {testimonialData.map((testimonial) => (
                         <SwiperSlide key={testimonial.id}>
-                            <div style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '5px', display: 'flex', alignItems: 'flex-start' }}>
+                            <div style={{ backgroundColor: '#fff2df', padding: '40px', borderRadius: '5px', display: 'flex', alignItems: 'flex-start' }}>
                                 <img 
                                     src={testimonial.image} 
                                     alt={testimonial.name} 

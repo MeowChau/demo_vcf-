@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const WeeklyNewsletter = () => {
     return (
-        <div className="weekly-newsletter-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="weekly-newsletter-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 <div className="mb-5">
                     <h2 style={{ color: '#555', fontWeight: 'bold', fontSize: '32px', marginBottom: '30px', textTransform: 'uppercase' }}>

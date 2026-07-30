@@ -5,11 +5,14 @@ const TeamHeading2 = () => {
         <>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-8 offset-lg-2">
-                        <div className="site-heading secondary text-center">
-                            <h4 className="sub-heading">Team Members</h4>
-                            <h2 className="title">Meet our experts</h2>
-                            <div className="devider"></div>
+                    <div className="col-12">
+                        <div className="text-center" style={{ marginBottom: '80px' }}>
+                            <h2 style={{ color: '#cc0000', fontWeight: '900', textTransform: 'uppercase', fontSize: '32px', marginBottom: '15px', fontFamily: 'var(--font-montserrat)' }}>
+                                KEYNOTE SPEAKERS
+                            </h2>
+                            <p style={{ color: '#555', fontSize: '16px', margin: 0 }}>
+                                Một số Khách mời và diễn giả dự kiến sẽ trình bày tại CEO Dialogue #1
+                            </p>
                         </div>
                     </div>
                 </div>

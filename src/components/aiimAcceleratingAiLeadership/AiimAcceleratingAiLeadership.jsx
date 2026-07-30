@@ -22,7 +22,7 @@ const AiimAcceleratingAiLeadership = () => {
     };
 
     return (
-        <div className="aiim-page pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="aiim-page pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Images Section */}

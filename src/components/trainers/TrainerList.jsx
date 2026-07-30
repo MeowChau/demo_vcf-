@@ -29,7 +29,7 @@ const trainersData = [
 
 const TrainerList = () => {
     return (
-        <div className="trainers-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="trainers-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 <div className="row text-center mb-5">
                     <div className="col-12">

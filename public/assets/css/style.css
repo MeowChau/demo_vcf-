@@ -84,9 +84,9 @@ Sidebar heading:  20px 'Outfit', sans-serif
 
 /* Variables */
 :root {
-	--font-default: 'Outfit', sans-serif;
-	--font-heading: 'Outfit', sans-serif;
-	--font-secondary: 'Manrope', sans-serif;
+	--font-default: var(--font-manrope), sans-serif;
+	--font-heading: var(--font-montserrat), sans-serif;
+	--font-secondary: var(--font-manrope), sans-serif;
 	--fontawesome: "Font Awesome 5 Pro";
 	--black: #000000;
 	--dark: #1D2027;
@@ -5068,7 +5068,7 @@ p {
 	width: 60px;
 	line-height: 60px;
 	font-weight: 100;
-	background: #ffffff;
+	background: #fff2df;
 	color: var(--color-primary);
 	font-size: 22px;
 	border-radius: 50%;
@@ -5083,7 +5083,7 @@ p {
 	content: "";
 	height: 80px;
 	width: 80px;
-	background: #ffffff;
+	background: #fff2df;
 	z-index: -1;
 	border-radius: 50%;
 	opacity: 0.8;
@@ -5160,7 +5160,7 @@ p {
 	-ms-flex-align: center;
 	align-items: center;
 	margin-top: 15px;
-	background: #ffffff;
+	background: #fff2df;
 	padding: 20px 25px;
 	border-radius: 5px;
 	border: 2px solid #cddff7;
@@ -7088,7 +7088,7 @@ form.seo-form input:-moz-placeholder {
 	content: "";
 	height: 200px;
 	width: 300px;
-	background: #ffffff;
+	background: #fff2df;
 	top: -120px;
 	filter: blur(20px);
 }
@@ -7100,7 +7100,7 @@ form.seo-form input:-moz-placeholder {
 	content: "";
 	height: 200px;
 	width: 300px;
-	background: #ffffff;
+	background: #fff2df;
 	bottom: -120px;
 	filter: blur(20px);
 }
@@ -7831,7 +7831,7 @@ form.seo-form input:-moz-placeholder {
 
 .services-style-two {
 	overflow: hidden;
-	background: #ffffff;
+	background: #fff2df;
 	border-radius: 15px;
 }
 
@@ -12319,7 +12319,7 @@ ul.list-regular li::after {
 }
 
 .consua-preloader .loader .loader-section .bg {
-	background-color: #ffffff;
+	background-color: #fff2df;
 	height: 100%;
 	left: 0;
 	width: 100%;
@@ -12468,3 +12468,7 @@ svg.swiper-navigation-icon path {
 .feature-style-two-area {
     overflow: hidden;
 }
+body { background-color: #fff2df !important; }
+
+.bg-white { background-color: #fff2df !important; }
+header .bg-white, .header .bg-white { background-color: #ffffff !important; }

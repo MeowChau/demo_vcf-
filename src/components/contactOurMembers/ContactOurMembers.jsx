@@ -15,7 +15,7 @@ const ContactOurMembers = () => {
     };
 
     return (
-        <div className="contact-our-members-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="contact-our-members-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container">
                 <div className="mb-4">
                     <h2 style={{ color: '#4c8bf5', fontSize: '36px', fontWeight: '400', marginBottom: '25px' }}>

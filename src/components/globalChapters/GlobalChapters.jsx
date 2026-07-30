@@ -70,7 +70,7 @@ const GlobalChapters = () => {
     ];
 
     return (
-        <div className="global-chapters-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
+        <div className="global-chapters-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1200px' }}>
                 <div className="text-center mb-5">
                     <h1 style={{ fontSize: '38px', color: '#555', fontWeight: 'normal' }}>
@@ -87,7 +87,7 @@ const GlobalChapters = () => {
                         bottom: '5%',
                         left: '50%',
                         transform: 'translateX(-50%)',
-                        backgroundColor: '#fff',
+                        backgroundColor: '#fff2df',
                         padding: '10px 20px',
                         boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
                         display: 'flex',

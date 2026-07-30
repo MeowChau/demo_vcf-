@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const SubmitArticles = () => {
     return (
-        <div className="submit-articles-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="submit-articles-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Introduction Section */}
@@ -15,9 +15,9 @@ const SubmitArticles = () => {
                         A CEO is almost always the best single human asset a company has, particularly start-ups and smaller companies. Yet many businesses hide their top asset behind a marketing curtain. A short website bio, usually without contact information, makes most CEOs appear inaccessible. If your goal is to be a customer-facing and customer-focused organization, a CEO blog can create a public face for a company. Showcasing your company's personality can go a long way toward defining your values.
                     </p>
                     <div className="d-flex justify-content-center gap-3 mb-5" style={{ flexWrap: 'nowrap', overflowX: 'auto' }}>
-                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>VIEW ALL ARTICLES</Link>
-                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>SUBMIT YOUR ARTICLE</Link>
-                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>JOIN US</Link>
+                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff2df', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>VIEW ALL ARTICLES</Link>
+                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff2df', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>SUBMIT YOUR ARTICLE</Link>
+                        <Link href="#" className="btn rounded-0 px-4 py-3 d-flex align-items-center justify-content-center" style={{ backgroundColor: '#fff2df', border: '1px solid #666', color: '#555', fontSize: '13px', fontWeight: 'bold', letterSpacing: '1px', whiteSpace: 'nowrap', flex: 1, maxWidth: '250px' }}>JOIN US</Link>
                     </div>
                 </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <div className="contact-us-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="contact-us-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 <h1 style={{ color: '#335084', fontSize: '36px', marginBottom: '15px', fontWeight: '400' }}>

@@ -8,7 +8,7 @@ const testimonialImages = [
 
 const Testimonials = () => {
     return (
-        <div className="testimonials-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="testimonials-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

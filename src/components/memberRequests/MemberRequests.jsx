@@ -27,7 +27,7 @@ const MemberRequests = () => {
                 <div className="row">
                     {/* Left Column: Pain Point Form */}
                     <div className="col-lg-6 mb-5">
-                        <div className="mentoring-form-box contact-style-one-info" style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '10px', height: '100%' }}>
+                        <div className="mentoring-form-box contact-style-one-info" style={{ backgroundColor: '#fff2df', padding: '40px', borderRadius: '10px', height: '100%' }}>
                             <h3 className="text-primary" style={{ fontWeight: '800', marginBottom: '35px' }}><i className="fas fa-hands-helping mr-2 text-warning"></i> Report a Problem (Pain Point)</h3>
                             <form className="contact-form" onSubmit={handleForm}>
                                 <div className="row mb-4">
@@ -82,7 +82,7 @@ const MemberRequests = () => {
 
                     {/* Right Column: Follow-up Form */}
                     <div className="col-lg-6 mb-5">
-                        <div className="mentoring-form-box contact-style-one-info" style={{ backgroundColor: '#fff', padding: '40px', borderRadius: '10px', height: '100%' }}>
+                        <div className="mentoring-form-box contact-style-one-info" style={{ backgroundColor: '#fff2df', padding: '40px', borderRadius: '10px', height: '100%' }}>
                             <h3 className="text-primary" style={{ fontWeight: '800', marginBottom: '35px' }}><i className="fas fa-star mr-2 text-warning"></i> Mentoring Session Review (Follow-up)</h3>
                             <form className="contact-form" onSubmit={handleForm}>
                                 <div className="row mb-4">

@@ -21,7 +21,7 @@ const PastEvents = () => {
         border: '1px solid #e0e0e0',
         padding: '25px 20px',
         marginBottom: '20px',
-        backgroundColor: '#fff',
+        backgroundColor: '#fff2df',
         boxShadow: '0 2px 4px rgba(0,0,0,0.05)'
     };
 
@@ -41,7 +41,7 @@ const PastEvents = () => {
     };
 
     return (
-        <div className="past-events-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
+        <div className="past-events-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
                 
                 {/* Header Area */}

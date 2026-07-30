@@ -11,7 +11,7 @@ const galleryImages = [
 
 const SocialResponsibility = () => {
     return (
-        <div className="social-responsibility-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
+        <div className="social-responsibility-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 
                 {/* Title */}
