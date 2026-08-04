@@ -201,6 +201,39 @@ const RegistrationForm = () => {
                     background-color: #da151a;
                     transition: width 0.3s ease;
                 }
+                .action-buttons {
+                    display: flex;
+                    gap: 15px;
+                }
+                .form-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    margin-top: 20px;
+                }
+                @media (max-width: 768px) {
+                    .form-footer {
+                        flex-direction: column;
+                        align-items: stretch;
+                        gap: 20px;
+                    }
+                    .form-footer .progress-section {
+                        padding: 0 !important;
+                        max-width: 100% !important;
+                        order: 1;
+                    }
+                    .form-footer .action-buttons {
+                        justify-content: space-between;
+                        order: 2;
+                        width: 100%;
+                    }
+                    .form-footer .clear-section {
+                        order: 3;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                }
             `}} />
             
             <div className="container" style={{ maxWidth: '800px' }}>
@@ -411,12 +444,12 @@ const RegistrationForm = () => {
                 )}
 
                 {/* FOOTER CONTROLS */}
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 0', marginTop: '20px' }}>
-                    <div style={{ display: 'flex' }}>
+                <div className="form-footer">
+                    <div className="action-buttons">
                         {step > 1 ? (
-                            <button onClick={prevStep} className="btn-form" style={{ marginRight: '15px' }}>Quay lại</button>
+                            <button onClick={prevStep} className="btn-form">Quay lại</button>
                         ) : (
-                            <div style={{ width: '92px', display: 'inline-block', marginRight: '15px' }}></div>
+                            <div></div>
                         )}
                         
                         {step < totalSteps ? (
@@ -426,14 +459,14 @@ const RegistrationForm = () => {
                         )}
                     </div>
 
-                    <div style={{ display: 'flex', alignItems: 'center', flexGrow: 1, padding: '0 20px', maxWidth: '400px' }}>
+                    <div className="progress-section" style={{ display: 'flex', alignItems: 'center', flexGrow: 1, padding: '0 20px', maxWidth: '400px' }}>
                         <div className="progress-bar-container">
                             <div className="progress-bar-fill" style={{ width: (step / totalSteps) * 100 + '%' }}></div>
                         </div>
-                        <span style={{ fontSize: '13px', color: '#555', whiteSpace: 'nowrap' }}>Trang {step} trong tổng số {totalSteps}</span>
+                        <span style={{ fontSize: '13px', color: '#555', whiteSpace: 'nowrap' }}>Trang {step} / {totalSteps}</span>
                     </div>
 
-                    <div>
+                    <div className="clear-section">
                         <button onClick={resetForm} className="clear-btn">Xóa hết câu trả lời</button>
                     </div>
                 </div>

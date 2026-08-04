@@ -53,7 +53,8 @@ const AuthButton = ({ href, onClick, children, isMobile, variant = 'primary' }) 
         transition: 'all 0.3s',
         backgroundColor: defaultBg,
         color: defaultColor,
-        border: defaultBorder
+        border: defaultBorder,
+        textTransform: 'none'
     };
 
     React.useEffect(() => {
