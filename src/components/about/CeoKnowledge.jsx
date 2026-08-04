@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CeoKnowledge = () => {
     return (
-        <div className="ceo-knowledge-area pb-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", paddingTop: '150px' }}>
+        <div className="ceo-knowledge-area pb-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", paddingTop: '50px' }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .knowledge-card {
                     transition: transform 0.3s ease, box-shadow 0.3s ease;

@@ -1,4 +1,5 @@
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
+import BannerStyle1 from '@/components/banner/BannerStyle1';
 import CeoKnowledge from '@/components/about/CeoKnowledge';
 import CeoEvents from '@/components/about/CeoEvents';
 import CeoStatsHome from '@/components/home/CeoStatsHome';
@@ -13,6 +14,7 @@ const Home1 = () => {
     return (
         <>
             <LayoutStyle1>
+                <BannerStyle1 />
                 <CeoKnowledge />
                 <CeoEvents />
                 <CeoStatsHome />
