@@ -83,7 +83,7 @@ const mentorsData = [
   },
 ];
 
-const CeoMentors = () => {
+const CeoMentors = ({ title = "CÁC MENTOR CỦA CHƯƠNG TRÌNH", align = "center", hideHeader = false }) => {
   return (
     <div
       style={{
@@ -135,34 +135,36 @@ const CeoMentors = () => {
                 `}
       </style>
       <div className="container">
-        <div className="text-center" style={{ marginBottom: "60px" }}>
-          <h2
-            style={{
-              color: "#cc0000",
-              fontSize: "36px",
-              fontWeight: "800",
-              marginBottom: "20px",
-              textTransform: "uppercase",
-              fontFamily: "var(--font-montserrat)",
-            }}
-          >
-            CÁC MENTOR CỦA CHƯƠNG TRÌNH
-          </h2>
-          <p
-            style={{
-              color: "#555",
-              fontSize: "15.5px",
-              maxWidth: "850px",
-              margin: "0 auto",
-              lineHeight: "1.7",
-            }}
-          >
-            CEO Mentoring được tổ chức liên tục với sự đồng hành của các Nhà
-            lãnh đạo doanh nghiệp hàng đầu. Mỗi Mentor mang đến một góc nhìn
-            riêng, giúp cộng đồng CEO tiếp cận nhiều kinh nghiệm lãnh đạo trong
-            những bối cảnh và lĩnh vực khác nhau.
-          </p>
-        </div>
+        {!hideHeader && (
+          <div className={`text-${align}`} style={{ marginBottom: "60px" }}>
+            <h2
+              style={{
+                color: "#cc0000",
+                fontSize: "36px",
+                fontWeight: "800",
+                marginBottom: "20px",
+                textTransform: "uppercase",
+                fontFamily: "var(--font-montserrat)",
+              }}
+            >
+              {title}
+            </h2>
+            <p
+              style={{
+                color: "#555",
+                fontSize: "15.5px",
+                maxWidth: "850px",
+                margin: align === "center" ? "0 auto" : "0",
+                lineHeight: "1.7",
+              }}
+            >
+              CEO Mentoring được tổ chức liên tục với sự đồng hành của các Nhà
+              lãnh đạo doanh nghiệp hàng đầu. Mỗi Mentor mang đến một góc nhìn
+              riêng, giúp cộng đồng CEO tiếp cận nhiều kinh nghiệm lãnh đạo trong
+              những bối cảnh và lĩnh vực khác nhau.
+            </p>
+          </div>
+        )}
 
         <div className="row justify-content-center text-center">
           {mentorsData.map((mentor) => {

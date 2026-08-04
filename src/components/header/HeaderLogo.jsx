@@ -18,6 +18,7 @@ const HeaderLogo = ({ openMenu }) => {
                         gap: 10px;
                         transform: scale(1.4);
                         transform-origin: left center;
+                        margin: 0;
                     }
                     .logo-ptit {
                         height: 40px;
@@ -38,10 +39,62 @@ const HeaderLogo = ({ openMenu }) => {
                         margin-left: -10px;
                     }
                     
-                    @media (max-width: 991px) {
+                    @media (max-width: 1360px) {
+                        nav.navbar {
+                            height: auto !important;
+                            min-height: 80px !important;
+                            padding: 15px 0 !important;
+                            display: flex !important;
+                            align-items: center !important;
+                        }
+                        nav.navbar > .container {
+                            width: 100% !important;
+                        }
+                        .navbar-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            position: relative;
+                            padding: 0 !important;
+                        }
                         .header-logo-container {
-                            transform: scale(0.7);
-                            gap: 5px;
+                            transform: none;
+                            gap: 15px;
+                            margin: 0;
+                        }
+                        .logo-ptit { height: 34px !important; } /* Balanced size */
+                        .logo-vlgm { height: 78px; }
+                        .logo-vcf { height: 140px; transform: none; margin-left: -5px; }
+
+                        .navbar-toggle {
+                            display: block !important;
+                            position: absolute !important;
+                            left: 15px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            margin: 0 !important;
+                            float: none !important;
+                            z-index: 99;
+                        }
+                    }
+                    @media (max-width: 991px) {
+                        nav.navbar {
+                            padding: 10px 0 !important;
+                        }
+                        .navbar-header {
+                            padding: 0 !important;
+                        }
+                        .header-logo-container {
+                            gap: 10px;
+                        }
+                        .logo-ptit { height: 36px !important; }
+                        .logo-vlgm { height: 58px !important; }
+                        .logo-vcf { height: 126px; }
+                    }
+                    @media (min-width: 1361px) {
+                        .navbar-toggle {
+                            display: none !important;
                         }
                     }
                 `}</style>
