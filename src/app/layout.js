@@ -37,6 +37,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${montserrat.className} ${manrope.variable} ${outfit.variable} ${montserrat.variable}`}>
+        <style dangerouslySetInnerHTML={{__html: `
+          @media (min-width: 1400px) {
+            .container {
+              max-width: 1440px !important;
+            }
+          }
+          @media (min-width: 1600px) {
+            .container {
+              max-width: 1560px !important;
+            }
+          }
+        `}} />
         <ToastContainer />
         <Dependency />
         {children}

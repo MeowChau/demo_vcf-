@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { knowledgeData } from '@/components/knowledge/knowledgeData';
 
 const UserDashboard = () => {
     const bgStyle = { backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", minHeight: '100vh', paddingTop: '150px', paddingBottom: '80px' };
@@ -13,15 +14,12 @@ const UserDashboard = () => {
         { id: 3, title: 'Hội thảo Công nghệ và Quản trị', date: '12/09/2026 - 09:00 AM', status: 'Đã lưu', color: '#6c757d', image: '/assets/img/about/z7934289805121_b022af287ca855669016fcb915cc851d-20260628161753-8cne3.jpg' }
     ];
 
-    const knowledgeItems = [
-        { id: 1, title: 'Tương lai của AI trong quản trị doanh nghiệp', date: '01/08/2026', image: '/assets/img/about/8-22-20260717035442-ifit7.png' },
-        { id: 2, title: 'Chiến lược phát triển bền vững 2030', date: '25/07/2026', image: '/assets/img/about/ba-hung-20260613000614-cpzxy.png' },
-        { id: 3, title: 'Kỹ năng lãnh đạo trong kỷ nguyên số', date: '15/07/2026', image: '/assets/img/aboutUs/1747028868901.avif' }
-    ];
+    // Use the first 3 items from knowledgeData as recommended
+    const knowledgeItems = knowledgeData.slice(0, 3);
 
     return (
         <div className="user-dashboard-area" style={bgStyle}>
-            <div className="container" style={{ maxWidth: '1200px' }}>
+            <div className="container">
                 <div className="row">
                     {/* LEFT COLUMN - SCHEDULE */}
                     <div className="col-lg-8 mb-4">
@@ -91,16 +89,18 @@ const UserDashboard = () => {
                     
                     {knowledgeItems.map(item => (
                         <div key={item.id} className="col-lg-4 col-md-6 mb-4">
-                            <div style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.3s' }} className="knowledge-card">
-                                <div style={{ width: '100%', height: '220px', backgroundColor: '#e9ecef', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                                    <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                            <Link href={`/tri-thuc/${item.id}`} style={{ textDecoration: 'none' }}>
+                                <div style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', transition: 'transform 0.3s', height: '100%' }} className="knowledge-card">
+                                    <div style={{ width: '100%', height: '220px', backgroundColor: '#e9ecef', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                                        <Image src={item.image} alt={item.title} width={400} height={220} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    </div>
+                                    <div style={{ padding: '25px' }}>
+                                        <div style={{ fontSize: '13px', color: '#888', marginBottom: '10px' }}><i className="far fa-clock"></i> {item.time}</div>
+                                        <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#222', margin: '0 0 15px 0', lineHeight: '1.4' }}>{item.title}</h4>
+                                        <div style={{ width: '40px', height: '3px', backgroundColor: '#da151a' }}></div>
+                                    </div>
                                 </div>
-                                <div style={{ padding: '25px' }}>
-                                    <div style={{ fontSize: '13px', color: '#888', marginBottom: '10px' }}><i className="far fa-clock"></i> {item.date}</div>
-                                    <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#222', margin: '0 0 15px 0', lineHeight: '1.4' }}>{item.title}</h4>
-                                    <div style={{ width: '40px', height: '3px', backgroundColor: '#da151a' }}></div>
-                                </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
