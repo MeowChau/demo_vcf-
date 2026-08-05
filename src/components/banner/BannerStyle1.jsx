@@ -13,7 +13,7 @@ const BannerStyle1 = () => {
                 }
                 
                 .custom-ceo-banner-container {
-                    padding-top: 200px;
+                    padding-top: 0px;
                     padding-bottom: 50px;
                 }
                 
@@ -24,9 +24,19 @@ const BannerStyle1 = () => {
                     align-items: center;
                 }
                 
+                .custom-ceo-strategy-text {
+                    white-space: nowrap;
+                }
+                
+                @media (max-width: 1199px) {
+                    .custom-ceo-strategy-text {
+                        white-space: normal;
+                    }
+                }
+                
                 @media (max-width: 991px) {
                     .custom-ceo-banner-container {
-                        padding-top: 150px;
+                        padding-top: 0px;
                         padding-bottom: 30px;
                     }
                     .custom-ceo-buttons {
@@ -41,7 +51,7 @@ const BannerStyle1 = () => {
                 
                 @media (max-width: 767px) {
                     .custom-ceo-banner-container {
-                        padding-top: 120px;
+                        padding-top: 0px;
                     }
                     .custom-ceo-text-col h2 {
                         font-size: 20px !important;
@@ -65,19 +75,19 @@ const BannerStyle1 = () => {
                 <div className="row align-items-center">
                     {/* Left Content */}
                     <div className="col-lg-6 mb-5 mb-lg-0 custom-ceo-text-col">
-                        <h4 style={{ color: '#e60000', fontWeight: '700', fontSize: '26px', margin: 0, paddingBottom: '45px', letterSpacing: '-0.5px' }}>
+                        <h4 style={{ color: '#e60000', fontWeight: '700', fontSize: '28px', lineHeight: '1.4', margin: 0, paddingBottom: '35px', letterSpacing: '-0.5px' }}>
                             CEO Dialogue #1 - Vietnam CEO Forum
                         </h4>
 
-                        <h2 style={{ color: '#003366', fontWeight: '800', fontSize: '24px', lineHeight: '1.4', margin: 0, paddingBottom: '50px' }}>
+                        <h2 style={{ color: '#003366', fontWeight: '800', fontSize: '28px', lineHeight: '1.6', margin: 0, paddingBottom: '40px' }}>
                             CEO VÀ BÀI TOÁN TĂNG TRƯỞNG NHANH MÀ KHÔNG VỠ HỆ THỐNG CỦA DOANH NGHIỆP
                         </h2>
 
-                        <p style={{ color: '#444', lineHeight: '1.8', fontSize: '16px', margin: 0, paddingBottom: '55px' }}>
+                        <p style={{ color: '#444', lineHeight: '2.0', fontSize: '18px', margin: 0, paddingBottom: '45px' }}>
                             <strong style={{ color: '#003366' }}>CEO Dialogue</strong> là chuỗi đối thoại chuyên sâu trong Vietnam CEO Forum, quy tụ các CEO, chuyên gia và nhà lãnh đạo để cùng thảo luận những vấn đề chiến lược của doanh nghiệp và nền kinh tế. Đây là không gian kết nối tri thức, chia sẻ góc nhìn và tìm kiếm giải pháp cho những thách thức của lãnh đạo trong bối cảnh mới.
                         </p>
 
-                        <h5 style={{ color: '#cc0000', fontWeight: 'bold', fontSize: '18px', margin: 0, paddingBottom: '70px' }}>
+                        <h5 className="custom-ceo-strategy-text" style={{ color: '#cc0000', fontWeight: 'bold', fontSize: '20px', lineHeight: '1.6', margin: 0, paddingBottom: '55px' }}>
                             Đối thoại chiến lược. Kết nối góc nhìn. Kiến tạo giải pháp.
                         </h5>
 

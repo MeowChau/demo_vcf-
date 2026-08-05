@@ -65,7 +65,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                 `}</style>
                 <li><Link href="/about-us" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Giới thiệu</Link></li>
                 <li><Link href="/programs" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Chương trình</Link></li>
-                <li><Link href="/" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Tri thức</Link></li>
+                <li><Link href="/tri-thuc" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Tri thức</Link></li>
                 <li><Link href="/" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Công cụ</Link></li>
             </ul>
             <style dangerouslySetInnerHTML={{

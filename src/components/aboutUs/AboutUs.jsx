@@ -94,7 +94,7 @@ const AboutUs = () => {
                     
                     <div className="row">
                         {[
-                            { num: '1.500+', label: 'CEO đăng ký', icon: 'fas fa-graduation-cap' },
+                            { num: '1.000+', label: 'CEO đăng ký', icon: 'fas fa-graduation-cap' },
                             { num: '15+', label: 'Phiên Mentoring', icon: 'fas fa-briefcase' },
                             { num: '10+', label: 'Mentor tham gia', icon: 'fas fa-pencil-ruler' },
                             { num: '200+', label: 'CEO tham gia', icon: 'fas fa-book-open' }

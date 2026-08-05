@@ -28,33 +28,33 @@ const FooterStyle1 = () => {
                         <h4 style={{ color: '#003399', fontWeight: '800', textTransform: 'uppercase', marginBottom: '25px', fontSize: '22px' }}>Liên hệ</h4>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', fontSize: '16px', fontWeight: '600', color: '#222' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
-                                <i className="fa fa-home" style={{ fontSize: '24px', color: '#003399', marginTop: '2px' }}></i>
-                                <span>Address: Học viện Công nghệ Bưu chính Viễn thông</span>
+                                <div style={{ width: '30px', textAlign: 'center', flexShrink: 0 }}><i className="fa fa-home" style={{ fontSize: '24px', color: '#003399', marginTop: '2px' }}></i></div>
+                                <span>Địa chỉ: Học viện Công nghệ Bưu chính Viễn thông, cơ sở Ngọc Trục, 33 Đại Mỗ, Hà Nội</span>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
-                                <i className="fa fa-phone" style={{ fontSize: '22px', color: '#003399', transform: 'rotate(90deg)', marginTop: '2px' }}></i>
-                                <span>Hotline: 0936 198 686 - 0877 459 777</span>
+                                <div style={{ width: '30px', textAlign: 'center', flexShrink: 0 }}><i className="fa fa-phone" style={{ fontSize: '22px', color: '#003399', transform: 'rotate(90deg)', marginTop: '2px' }}></i></div>
+                                <span>SĐT: 0936 198 686 - 0877 459 777</span>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
-                                <i className="fa fa-envelope" style={{ fontSize: '22px', color: '#003399', marginTop: '2px' }}></i>
-                                <span>Email: mentoring@vietceo.vn</span>
+                                <div style={{ width: '30px', textAlign: 'center', flexShrink: 0 }}><i className="fa fa-envelope" style={{ fontSize: '22px', color: '#003399', marginTop: '2px' }}></i></div>
+                                <span>Email: contact@vcf.edu.vn</span>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
-                                <i className="fa fa-globe" style={{ fontSize: '24px', color: '#003399', marginTop: '2px' }}></i>
-                                <span>Website: www.vietceo.vn</span>
+                                <div style={{ width: '30px', textAlign: 'center', flexShrink: 0 }}><i className="fa fa-globe" style={{ fontSize: '24px', color: '#003399', marginTop: '2px' }}></i></div>
+                                <span>Website: diendanceovietnam.vn</span>
                             </div>
                         </div>
                     </div>
 
                     <div className="col-lg-2 col-md-12 mb-4" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-                            <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#1877F2', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(24, 119, 242, 0.3)', transition: 'all 0.3s' }}>
+                            <a href="https://www.facebook.com/vcf.edu.vn" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#1877F2', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(24, 119, 242, 0.3)', transition: 'all 0.3s' }}>
                                 <i className="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#000000', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)', transition: 'all 0.3s' }}>
+                            <a href="https://www.tiktok.com/@vietnamceoforum.ptit" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#000000', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)', transition: 'all 0.3s' }}>
                                 <i className="fab fa-tiktok"></i>
                             </a>
-                            <a href="#" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#FF0000', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(255, 0, 0, 0.3)', transition: 'all 0.3s' }}>
+                            <a href="https://www.youtube.com/@VietnamCEO" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '55px', height: '55px', backgroundColor: '#FF0000', color: 'white', borderRadius: '12px', fontSize: '28px', textDecoration: 'none', boxShadow: '0 4px 10px rgba(255, 0, 0, 0.3)', transition: 'all 0.3s' }}>
                                 <i className="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -62,7 +62,7 @@ const FooterStyle1 = () => {
 
                     <div className="col-lg-5 col-md-12 mb-4">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.292513286008!2d105.78486297597155!3d20.980908480656093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135accdd8a1ad71%3A0xa2f9b16036648187!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCBWaeG7hW4gdGjDtG5n!5e0!3m2!1svi!2s!4v1714902103598!5m2!1svi!2s" 
+                            src="https://maps.google.com/maps?q=H%E1%BB%8Dc%20vi%E1%BB%87n%20C%C3%B4ng%20ngh%E1%BB%87%20B%C6%B0u%20ch%C3%ADnh%20Vi%E1%BB%85n%20th%C3%B4ng,%20c%C6%A1%20s%E1%BB%9F%20Ng%E1%BB%8Dc%20Tr%E1%BB%A5c,%2033%20%C4%90%E1%BA%A1i%20M%E1%BB%97,%20H%C3%A0%20N%E1%BB%99i&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                             width="100%" 
                             height="280" 
                             style={{ border: 0, borderRadius: '16px', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} 
