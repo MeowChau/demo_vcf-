@@ -96,8 +96,7 @@ const UserDashboard = () => {
                                     </div>
                                     <div style={{ padding: '25px' }}>
                                         <div style={{ fontSize: '13px', color: '#888', marginBottom: '10px' }}><i className="far fa-clock"></i> {item.time}</div>
-                                        <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#222', margin: '0 0 15px 0', lineHeight: '1.4' }}>{item.title}</h4>
-                                        <div style={{ width: '40px', height: '3px', backgroundColor: '#da151a' }}></div>
+                                        <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#222', margin: '0', lineHeight: '1.4' }}>{item.title}</h4>
                                     </div>
                                 </div>
                             </Link>
