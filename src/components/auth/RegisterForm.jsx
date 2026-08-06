@@ -254,13 +254,6 @@ const RegisterForm = () => {
         <div style={styles.container}>
             <div style={styles.formWrapper}>
                 
-                {/* Global Error */}
-                {error && (
-                    <div className="alert alert-danger" style={{ borderRadius: '8px', marginBottom: '12px' }}>
-                        {error}
-                    </div>
-                )}
-
                 <form onSubmit={step === 1 ? handleNextStep : handleSubmit}>
                     
                     {/* Header */}
@@ -405,6 +398,13 @@ const RegisterForm = () => {
                                     {isSubmitting ? 'Đang gửi...' : 'Gửi'}
                                 </button>
                             </div>
+
+                            {/* Global Error Moved Below Submit Button */}
+                            {error && (
+                                <div className="alert alert-danger" style={{ borderRadius: '8px', marginTop: '20px', marginBottom: '0' }}>
+                                    {error}
+                                </div>
+                            )}
                         </>
                     )}
                 </form>
