@@ -214,8 +214,7 @@ const MentoringRequestForm = () => {
 
     return (
         <div style={styles.card}>
-            <h1 style={styles.title}>Đăng ký event</h1>
-            <p style={styles.desc}>Sau khi vào landing page của mentoring thì flow đi chương trình như sau</p>
+            <h2 style={styles.title}>Đăng ký event</h2>
 
             {error && (
                 <div className="alert alert-danger" style={{ marginBottom: '25px' }}>
