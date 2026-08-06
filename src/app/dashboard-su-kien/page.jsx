@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
-import Breadcrumb from '@/components/breadCrumb/BreadCrumb';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const DashboardSuKien = () => {
@@ -78,7 +77,6 @@ const DashboardSuKien = () => {
 
     return (
         <LayoutStyle1>
-            <Breadcrumb title="Dashboard Sự Kiện" pageName="Dashboard Sự Kiện" />
             <section className="dashboard-area pt-50 pb-100">
                 <div className="container">
                     
