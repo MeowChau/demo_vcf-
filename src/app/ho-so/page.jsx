@@ -26,7 +26,7 @@ const ProfilePage = () => {
             const fetchCeoProfile = async () => {
                 try {
                     const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-                    const res = await fetch(`${API_URL}/api/ceo-profiles?filters[users_permissions_user][id][$eq]=${parsedUser.id}`, {
+                    const res = await fetch(`${API_URL}/api/ceo-profiles?filters[ownerEmail][$eq]=${parsedUser.email}`, {
                         headers: {
                             Authorization: `Bearer ${jwt}`
                         }
