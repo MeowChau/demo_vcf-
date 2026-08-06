@@ -130,7 +130,8 @@ const RegisterForm = () => {
                         employeeCount: formData.employeeCount,
                         equity: parseFloat(formData.equity),
                         companyType: formData.companyType === 'Other' ? formData.companyTypeOther : formData.companyType,
-                        user: userId
+                        users_permissions_user: userId,
+                        publishedAt: new Date().toISOString()
                     }
                 })
             });
