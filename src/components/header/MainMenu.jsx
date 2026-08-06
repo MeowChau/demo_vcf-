@@ -76,7 +76,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                 <li><Link href="/about-us" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Giới thiệu</Link></li>
                 <li><Link href="/programs" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Chương trình</Link></li>
                 <li><Link href="/tri-thuc" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Tri thức</Link></li>
-                <li><Link href="/" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Công cụ</Link></li>
+                <li><a href="https://ceo-forum.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Công cụ</a></li>
                 {isLoggedIn && (
                     <li><Link href="/dang-ky-event" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Đăng ký sự kiện</Link></li>
                 )}
