@@ -24,7 +24,7 @@ const DashboardSuKien = () => {
 
             try {
                 // Fetch events for the current user
-                const response = await fetch(`http://localhost:1337/api/mentoring-requests?filters[user][documentId][$eq]=${user.documentId}&populate=*`, {
+                const response = await fetch(`http://localhost:1337/api/mentoring-requests?filters[user][$eq]=${user.documentId}&populate=*`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }

@@ -304,6 +304,7 @@ const MentoringRequestForm = () => {
                         value={formData.problemDescription}
                         onChange={handleChange}
                         style={styles.textarea}
+                        rows={5}
                         placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
@@ -317,6 +318,7 @@ const MentoringRequestForm = () => {
                         value={formData.problemImportance}
                         onChange={handleChange}
                         style={styles.textarea}
+                        rows={5}
                         placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
@@ -330,6 +332,7 @@ const MentoringRequestForm = () => {
                         value={formData.triedSolutions}
                         onChange={handleChange}
                         style={styles.textarea}
+                        rows={5}
                         placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
@@ -343,6 +346,7 @@ const MentoringRequestForm = () => {
                         value={formData.consideredOptions}
                         onChange={handleChange}
                         style={styles.textarea}
+                        rows={5}
                         placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
@@ -356,6 +360,7 @@ const MentoringRequestForm = () => {
                         value={formData.mainQuestionForMentor}
                         onChange={handleChange}
                         style={styles.textarea}
+                        rows={5}
                         placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
