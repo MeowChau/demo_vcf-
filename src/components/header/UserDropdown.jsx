@@ -76,6 +76,12 @@ const UserDropdown = ({ isMobile }) => {
                         </li>
                         <li style={{ borderTop: '1px solid #eee', margin: '5px 0' }}></li>
                         <li>
+                            <Link href="/dashboard-su-kien" onClick={() => setIsOpen(false)} style={{ display: 'block', padding: '10px 20px', color: '#333', textDecoration: 'none', fontSize: '15px', transition: 'background 0.2s' }} onMouseEnter={(e) => e.target.style.backgroundColor = '#f5f5f5'} onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}>
+                                <i className="fas fa-chart-bar" style={{ marginRight: '10px', width: '20px', textAlign: 'center', color: '#666' }}></i> Dashboard Sự kiện
+                            </Link>
+                        </li>
+                        <li style={{ borderTop: '1px solid #eee', margin: '5px 0' }}></li>
+                        <li>
                             <button onClick={handleLogout} style={{ width: '100%', textAlign: 'left', background: 'none', border: 'none', padding: '10px 20px', color: '#da151a', cursor: 'pointer', fontSize: '15px', transition: 'background 0.2s' }} onMouseEnter={(e) => e.target.style.backgroundColor = '#fff0f0'} onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}>
                                 <i className="fas fa-sign-out-alt" style={{ marginRight: '10px', width: '20px', textAlign: 'center' }}></i> Đăng xuất
                             </button>
