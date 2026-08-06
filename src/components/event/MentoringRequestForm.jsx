@@ -154,7 +154,8 @@ const MentoringRequestForm = () => {
             color: '#e60000'
         },
         radioLabel: {
-            display: 'block',
+            display: 'flex',
+            alignItems: 'center',
             marginBottom: '12px',
             fontSize: '15px',
             color: '#202124',
@@ -223,9 +224,9 @@ const MentoringRequestForm = () => {
                                 value={lop} 
                                 checked={formData.desiredClasses.includes(lop)}
                                 onChange={handleChange}
-                                style={{ marginRight: '10px' }}
+                                style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
                             />
-                            {lop}
+                            <span>{lop}</span>
                         </label>
                     ))}
                 </div>
@@ -247,9 +248,9 @@ const MentoringRequestForm = () => {
                                     value={shortName}
                                     checked={formData.mainProblemCategory === shortName}
                                     onChange={handleChange}
-                                    style={{ marginRight: '10px' }}
+                                    style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
                                 />
-                                {cat}
+                                <span>{cat}</span>
                             </label>
                         );
                     })}
@@ -261,9 +262,9 @@ const MentoringRequestForm = () => {
                             value="Other"
                             checked={formData.mainProblemCategory === 'Other'}
                             onChange={handleChange}
-                            style={{ marginRight: '10px' }}
+                            style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
                         />
-                        Other:
+                        <span>Other:</span>
                         <input 
                             type="text"
                             name="otherProblemCategory"
