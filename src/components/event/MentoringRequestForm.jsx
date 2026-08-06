@@ -264,7 +264,7 @@ const MentoringRequestForm = () => {
                             onChange={handleChange}
                             style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
                         />
-                        <span>Other:</span>
+                        <span>Khác:</span>
                         <input 
                             type="text"
                             name="otherProblemCategory"
@@ -289,7 +289,7 @@ const MentoringRequestForm = () => {
                         value={formData.problemDescription}
                         onChange={handleChange}
                         style={styles.textarea}
-                        placeholder="Long answer text"
+                        placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
 
@@ -302,7 +302,7 @@ const MentoringRequestForm = () => {
                         value={formData.problemImportance}
                         onChange={handleChange}
                         style={styles.textarea}
-                        placeholder="Long answer text"
+                        placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
 
@@ -315,7 +315,7 @@ const MentoringRequestForm = () => {
                         value={formData.triedSolutions}
                         onChange={handleChange}
                         style={styles.textarea}
-                        placeholder="Long answer text"
+                        placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
 
@@ -328,7 +328,7 @@ const MentoringRequestForm = () => {
                         value={formData.consideredOptions}
                         onChange={handleChange}
                         style={styles.textarea}
-                        placeholder="Long answer text"
+                        placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
 
