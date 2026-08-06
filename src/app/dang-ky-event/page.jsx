@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import MentoringRequestForm from '../../components/event/MentoringRequestForm';
-import Breadcrumb from '../../components/common/Breadcrumb';
+import Breadcrumb from '../../components/breadCrumb/BreadCrumb';
 
 const DangKyEventPage = () => {
     return (
