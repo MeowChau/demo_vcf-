@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const coverageData = [
@@ -58,7 +58,7 @@ const coverageData = [
 
 const MediaCoverage = () => {
     return (
-        <div className="media-coverage-page-area pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="media-coverage-page-area pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '800px' }}>
                 
                 {/* Title */}

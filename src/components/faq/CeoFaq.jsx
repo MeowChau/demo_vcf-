@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const FaqItem = ({ num, title, desc }) => (
@@ -15,7 +15,7 @@ const FaqItem = ({ num, title, desc }) => (
 
 const CeoFaq = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px' }}>
+        <div style={{ backgroundColor: '#fff', paddingBottom: '80px' }}>
             <div className="container">
                 {/* Header */}
                 <div className="text-center" style={{ marginBottom: '60px' }}>

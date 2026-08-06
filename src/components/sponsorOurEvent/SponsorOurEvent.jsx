@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const SponsorOurEvent = () => {
     const btnStyle = {
@@ -17,7 +17,7 @@ const SponsorOurEvent = () => {
     };
 
     return (
-        <div className="sponsor-our-event-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', minHeight: '60vh' }}>
+        <div className="sponsor-our-event-page pt-80 pb-100" style={{ backgroundColor: '#fff', minHeight: '60vh' }}>
             <div className="container text-center">
                 
                 <h1 style={{ color: '#555', fontSize: '42px', fontWeight: 'bold', marginBottom: '30px', textTransform: 'none' }}>

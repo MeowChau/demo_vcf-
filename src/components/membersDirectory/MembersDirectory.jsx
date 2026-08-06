@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -37,7 +37,7 @@ const renderMembersText = (text) => {
 
 const MembersDirectory = () => {
     return (
-        <div className="members-directory-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="members-directory-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container">
                 {/* Title */}
                 <div className="row mb-4">
@@ -103,7 +103,7 @@ const MembersDirectory = () => {
                                 <option>Group 98</option>
                                 <option>Group 89</option>
                             </select>
-                            <button className="btn" style={{ border: '1px solid #333', backgroundColor: '#fff2df', padding: '10px 40px', fontWeight: 'bold', width: '200px' }}>Search</button>
+                            <button className="btn" style={{ border: '1px solid #333', backgroundColor: '#fff', padding: '10px 40px', fontWeight: 'bold', width: '200px' }}>Search</button>
                         </div>
                         
                         <div className="d-flex flex-column flex-md-row justify-content-center gap-4">

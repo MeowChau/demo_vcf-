@@ -38,6 +38,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${montserrat.className} ${manrope.variable} ${outfit.variable} ${montserrat.variable}`}>
         <style dangerouslySetInnerHTML={{__html: `
+          body, .wrapper {
+            background-color: #ffffff !important;
+          }
           @media (min-width: 1400px) {
             .container {
               max-width: 1440px !important;

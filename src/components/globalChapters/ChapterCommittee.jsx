@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const ChapterCommittee = ({ countryName }) => {
@@ -16,7 +16,7 @@ const ChapterCommittee = ({ countryName }) => {
         .join(' ');
 
     return (
-        <div className="chapter-committee-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="chapter-committee-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
                 <div className="text-center mb-5">
                     <h1 style={{ fontSize: '38px', color: '#555', fontWeight: 'normal' }}>

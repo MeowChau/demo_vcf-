@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const galleryImages = [
     '/assets/img/aboutUs/075a97_b55fb12c83d3488b9439c17e50cf14c9~mv2_d_1920_1920_s_2.avif',
@@ -11,7 +11,7 @@ const galleryImages = [
 
 const SocialResponsibility = () => {
     return (
-        <div className="social-responsibility-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="social-responsibility-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 
                 {/* Title */}

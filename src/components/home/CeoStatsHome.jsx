@@ -2,23 +2,14 @@ import React from 'react';
 
 const CeoStatsHome = () => {
     return (
-        <div className="ceo-stats-home-area py-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif" }}>
-            <div className="container pt-4 pb-4" style={{ maxWidth: '1200px' }}>
-                <div className="row mb-5 text-center justify-content-center">
-                    <div className="col-12 d-flex flex-column align-items-center">
-                        <h2 style={{ color: '#da151a', fontWeight: '800', textTransform: 'uppercase', fontSize: '32px', fontFamily: 'var(--font-montserrat)' }}>
-                            CON SỐ NỔI BẬT
-                        </h2>
-                        <div style={{ width: '150px', height: '2px', backgroundColor: '#da151a', marginTop: '15px' }}></div>
-                    </div>
-                </div>
-                
+        <div className="ceo-stats-home-area py-5" style={{ backgroundColor: '#fff', fontFamily: "'Manrope', sans-serif" }}>
+            <div className="container pt-4 pb-4">
                 <div className="row">
                     {[
-                        { num: '1000+', label: 'CEO đăng ký', icon: 'fas fa-graduation-cap' },
-                        { num: '15+', label: 'Phiên Mentoring', icon: 'fas fa-briefcase' },
-                        { num: '10+', label: 'Mentor tham gia', icon: 'fas fa-pencil-ruler' },
-                        { num: '200+', label: 'CEO tham gia', icon: 'fas fa-book-open' }
+                        { num: '200+', label: 'CEO tham gia thường xuyên', icon: 'fas fa-book-open' },
+                        { num: '50+', label: 'CEO nòng cốt', icon: 'fas fa-briefcase' },
+                        { num: '1000+', label: 'Tài khoản nền tảng số', icon: 'fas fa-graduation-cap' },
+                        { num: '5+', label: 'Kỳ Forum/sự kiện/năm', icon: 'fas fa-pencil-ruler' }
                     ].map((stat, index) => (
                         <div className="col-lg-3 col-md-6 mb-4" key={index}>
                             <div style={{ 

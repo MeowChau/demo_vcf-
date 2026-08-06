@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const testimonialImages = [
     '/assets/img/aboutUs/075a97_5077a728c4c844c59a1ef3dcecd24249~mv2.avif',
@@ -8,7 +8,7 @@ const testimonialImages = [
 
 const Testimonials = () => {
     return (
-        <div className="testimonials-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="testimonials-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

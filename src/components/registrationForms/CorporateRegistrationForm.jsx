@@ -1,9 +1,9 @@
-'use client';
+﻿'use client';
 import React from 'react';
 
 const CorporateRegistrationForm = () => {
     return (
-        <div className="registration-form-area pt-150 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="registration-form-area pt-150 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <style>{`
                 .upload-btn-custom {
                     color: #000;

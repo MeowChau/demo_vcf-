@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const SubmitAnEvent = () => {
     return (
-        <div className="submit-an-event-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="submit-an-event-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 
                 {/* Header Area */}
@@ -55,7 +55,7 @@ const SubmitAnEvent = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff2df', padding: '12px', textAlign: 'center', fontWeight: 'bold', color: '#000' }}>
+                                    <div style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff', padding: '12px', textAlign: 'center', fontWeight: 'bold', color: '#000' }}>
                                         14:30
                                     </div>
                                 </div>
@@ -72,7 +72,7 @@ const SubmitAnEvent = () => {
                                     </div>
                                 </div>
                                 <div className="col-md-6">
-                                    <div style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff2df', padding: '12px', textAlign: 'center', fontWeight: 'bold', color: '#000' }}>
+                                    <div style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff', padding: '12px', textAlign: 'center', fontWeight: 'bold', color: '#000' }}>
                                         14:30
                                     </div>
                                 </div>
@@ -82,7 +82,7 @@ const SubmitAnEvent = () => {
                         {/* Upload Poster */}
                         <div className="d-flex align-items-center mb-5 flex-wrap">
                             <h5 style={{ color: '#1b3664', fontWeight: 'bold', marginRight: '30px', marginBottom: '0' }}>Event Poster:</h5>
-                            <button type="button" className="btn btn-light" style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff2df', border: 'none', padding: '10px 30px', fontWeight: 'bold' }}>
+                            <button type="button" className="btn btn-light" style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.05)', backgroundColor: '#fff', border: 'none', padding: '10px 30px', fontWeight: 'bold' }}>
                                 <i className="fas fa-plus" style={{ marginRight: '8px' }}></i> UPLOAD
                             </button>
                         </div>

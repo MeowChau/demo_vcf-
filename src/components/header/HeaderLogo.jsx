@@ -29,6 +29,7 @@ const HeaderLogo = ({ openMenu }) => {
                         height: 78px;
                         width: auto;
                         max-width: none;
+                        mix-blend-mode: multiply;
                     }
                     .logo-vcf {
                         height: 100px;
@@ -39,7 +40,7 @@ const HeaderLogo = ({ openMenu }) => {
                         margin-left: -10px;
                     }
                     
-                    @media (max-width: 1360px) {
+                    @media (max-width: 1300px) {
                         nav.navbar {
                             height: auto !important;
                             min-height: 80px !important;
@@ -92,16 +93,15 @@ const HeaderLogo = ({ openMenu }) => {
                         .logo-vlgm { height: 58px !important; }
                         .logo-vcf { height: 126px; }
                     }
-                    @media (min-width: 1361px) {
+                    @media (min-width: 1301px) {
                         .navbar-toggle {
                             display: none !important;
                         }
                     }
                 `}</style>
-                <Link className="navbar-brand header-logo-container" href="/">
+                <Link className="navbar-brand header-logo-container" href="/" style={{ mixBlendMode: 'multiply' }}>
                     <img src="/assets/img/logo/logoPTIT.png" className="logo-ptit" alt="PTIT Logo" />
                     <img src="/assets/img/logo/logo%20VLGM%20final-01.jpg" className="logo-vlgm" alt="VLGM Logo" />
-                    <img src="/assets/img/logo/Logo%20VCF.png" className="logo-vcf" alt="VCF Logo" />
                 </Link>
             </div>
         </>

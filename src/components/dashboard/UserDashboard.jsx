@@ -1,11 +1,11 @@
-"use client"
+﻿"use client"
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { knowledgeData } from '@/components/knowledge/knowledgeData';
 
 const UserDashboard = () => {
-    const bgStyle = { backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", minHeight: '100vh', paddingTop: '150px', paddingBottom: '80px' };
+    const bgStyle = { backgroundColor: '#fff', fontFamily: "'Manrope', sans-serif", minHeight: '100vh', paddingTop: '150px', paddingBottom: '80px' };
     
     // Placeholder data
     const scheduleItems = [
@@ -53,7 +53,7 @@ const UserDashboard = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', height: '100%' }}>
                             <Link href="#" style={{ textDecoration: 'none' }}>
                                 <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', transition: 'all 0.3s' }} className="dashboard-btn">
-                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff2df', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
+                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
                                         <i className="fas fa-check-circle" style={{ color: '#da151a', fontSize: '24px' }}></i>
                                     </div>
                                     <h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#333' }}>Sự kiện đã tham gia</h4>
@@ -62,7 +62,7 @@ const UserDashboard = () => {
 
                             <Link href="#" style={{ textDecoration: 'none' }}>
                                 <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', transition: 'all 0.3s' }} className="dashboard-btn">
-                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff2df', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
+                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
                                         <i className="fas fa-bookmark" style={{ color: '#da151a', fontSize: '24px' }}></i>
                                     </div>
                                     <h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#333' }}>Tri thức đã lưu</h4>
@@ -71,7 +71,7 @@ const UserDashboard = () => {
 
                             <Link href="#" style={{ textDecoration: 'none' }}>
                                 <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '25px', boxShadow: '0 4px 15px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', transition: 'all 0.3s' }} className="dashboard-btn">
-                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff2df', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
+                                    <div style={{ width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', marginRight: '20px' }}>
                                         <i className="fas fa-chart-pie" style={{ color: '#da151a', fontSize: '24px' }}></i>
                                     </div>
                                     <h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#333' }}>Công cụ và báo cáo của tôi</h4>

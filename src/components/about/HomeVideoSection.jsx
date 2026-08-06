@@ -1,9 +1,9 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import React from 'react';
 
 const HomeVideoSection = () => {
     return (
-        <div className="home-video-section text-center" style={{ paddingTop: '80px', paddingBottom: '20px', backgroundColor: '#fff2df' }}>
+        <div className="home-video-section text-center" style={{ paddingTop: '80px', paddingBottom: '20px', backgroundColor: '#fff' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-xl-10 offset-xl-1">

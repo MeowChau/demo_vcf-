@@ -10,6 +10,7 @@ import Image from 'next/image';
 import logo from '@/assets/img/logo.png';
 import { usePathname } from 'next/navigation';
 import MembershipLoginModal from '@/components/membership/MembershipLoginModal';
+import UserDropdown from './UserDropdown';
 
 const AuthButton = ({ href, onClick, children, isMobile, variant = 'primary' }) => {
     const btnRef = React.useRef(null);
@@ -100,12 +101,34 @@ const MainHeaderStyle1 = () => {
     const toggleSubMenu = useSubMenuToggle();
     const { isOpen, openMenu, closeMenu } = useSidebarMenu();
     const pathname = usePathname();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    React.useEffect(() => {
+        const checkAuth = () => {
+            const jwt = localStorage.getItem('jwt');
+            setIsLoggedIn(!!jwt);
+        };
+        checkAuth();
+        // Setup an interval to watch for login state changes if needed, or rely on page reload.
+        // For standard flow, page reload after login/logout handles it.
+        window.addEventListener('storage', checkAuth);
+        return () => window.removeEventListener('storage', checkAuth);
+    }, []);
 
     return (
         <>
             <header>
                 <style>{`
-                    @media (max-width: 1360px) {
+                    nav.navbar,
+                    nav.navbar.navbar-default,
+                    nav.navbar.sticked,
+                    nav.navbar.navbar-responsive,
+                    header nav.navbar,
+                    .navbar-header,
+                    .mobile-header-column {
+                        background-color: #fff2df !important;
+                    }
+                    @media (max-width: 1300px) {
                         .desktop-flex { display: none !important; }
                         .mobile-only { display: flex !important; }
                         .mobile-only-block { display: block !important; }
@@ -144,14 +167,14 @@ const MainHeaderStyle1 = () => {
                             visibility: visible;
                         }
                     }
-                    @media (min-width: 1361px) {
+                    @media (min-width: 1301px) {
                         .desktop-flex { display: flex !important; }
                         .mobile-only { display: none !important; }
                         .mobile-only-block { display: none !important; }
                         .flex-column-desktop { display: flex !important; }
                     }
                 `}</style>
-                <nav className={`navbar mobile-sidenav navbar-style-one navbar-sticky navbar-default validnavs sticked force-sticky navbar-fixed on no-full ${isOpen ? "navbar-responsive" : ""}`}>
+                <nav className={`navbar mobile-sidenav navbar-style-one navbar-sticky navbar-default validnavs sticked force-sticky navbar-fixed on no-full ${isOpen ? "navbar-responsive" : ""}`} style={{ backgroundColor: '#fff2df' }}>
                     <div className="container">
                         <div className="row align-center">
                             <div className="col-xl-2 col-lg-3 col-md-9 col-sm-9 col-9 mobile-header-column">
@@ -165,8 +188,14 @@ const MainHeaderStyle1 = () => {
                                     <div className="mobile-only-block" style={{ height: '70px' }}></div>
                                     <MainMenu navbarPlacement="navbar-right" isOpen={isOpen} closeMenu={closeMenu} toggleSubMenu={toggleSubMenu} />
                                     <div className="mobile-only" style={{ padding: '20px 15px', display: 'flex', gap: '10px', justifyContent: 'center' }}>
-                                        <AuthButton href="/dashboard" isMobile={true}>Đăng nhập</AuthButton>
-                                        <AuthButton href="/dang-ky" isMobile={true}>Đăng ký</AuthButton>
+                                        {isLoggedIn ? (
+                                            <UserDropdown isMobile={true} />
+                                        ) : (
+                                            <>
+                                                <AuthButton href="/dashboard" isMobile={true}>Đăng nhập</AuthButton>
+                                                <AuthButton href="/dang-ky" isMobile={true}>Đăng ký</AuthButton>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -176,12 +205,20 @@ const MainHeaderStyle1 = () => {
                                     <i className="fas fa-search" style={{ position: 'absolute', right: '12px', color: '#888', cursor: 'pointer' }}></i>
                                 </div>
                                 <ul className="desktop-flex" style={{ flexDirection: 'row', alignItems: 'center', gap: '10px', margin: 0, padding: 0, listStyle: 'none' }}>
-                                    <li className="button">
-                                        <AuthButton href="/dashboard">Đăng nhập</AuthButton>
-                                    </li>
-                                    <li className="button">
-                                        <AuthButton href="/dang-ky">Đăng ký</AuthButton>
-                                    </li>
+                                    {isLoggedIn ? (
+                                        <li className="button">
+                                            <UserDropdown isMobile={false} />
+                                        </li>
+                                    ) : (
+                                        <>
+                                            <li className="button">
+                                                <AuthButton href="/dashboard">Đăng nhập</AuthButton>
+                                            </li>
+                                            <li className="button">
+                                                <AuthButton href="/dang-ky">Đăng ký</AuthButton>
+                                            </li>
+                                        </>
+                                    )}
                                 </ul>
                             </div>
                         </div>

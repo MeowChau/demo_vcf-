@@ -3,28 +3,17 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { knowledgeData as allNews } from './knowledgeData';
+import CeoVideoCarousel from '../home/CeoVideoCarousel';
 
 const KnowledgeContent = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
     // Calculate items for current page
-    let currentItems = [];
-    let featuredItem = null;
-    let gridItems = [];
-
-    if (currentPage === 1) {
-        featuredItem = allNews[0];
-        gridItems = allNews.slice(1, 10); // 9 items
-    } else {
-        // Page 2 starts at index 10. Page 3 at 19.
-        const startIndex = 10 + (currentPage - 2) * 9;
-        gridItems = allNews.slice(startIndex, startIndex + 9);
-    }
+    const startIndex = (currentPage - 1) * 9;
+    const gridItems = allNews.slice(startIndex, startIndex + 9);
 
     // Total pages calculation
-    // Page 1 takes 10 items. Remaining items take 9 per page.
-    const remainingItems = Math.max(0, allNews.length - 10);
-    const totalPages = 1 + Math.ceil(remainingItems / 9);
+    const totalPages = Math.ceil(allNews.length / 9);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -79,32 +68,10 @@ const KnowledgeContent = () => {
                 }
             `}} />
 
-            {/* Featured Item - Only on Page 1 */}
-            {currentPage === 1 && featuredItem && (
-                <div className="row mb-5 pb-4" style={{ borderBottom: '1px solid #eee' }}>
-                    <div className="col-lg-8 col-md-7 mb-4 mb-md-0">
-                        <Link href={`/tri-thuc/${featuredItem.id}`} className="d-block" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden' }}>
-                            <Image
-                                src={featuredItem.image}
-                                alt={featuredItem.title}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </Link>
-                    </div>
-                    <div className="col-lg-4 col-md-5 d-flex flex-column justify-content-center">
-                        <Link href={`/tri-thuc/${featuredItem.id}`}>
-                            <h2 className="news-title mb-3" style={{ fontSize: '36px', lineHeight: '1.3', fontWeight: 800 }}>
-                                {featuredItem.title}
-                            </h2>
-                        </Link>
-                        <p className="news-desc mb-4">
-                            {featuredItem.desc}
-                        </p>
-                        <div className="news-time">
-                            {featuredItem.time}
-                        </div>
-                    </div>
+            {/* Video Carousel - Only on Page 1 */}
+            {currentPage === 1 && (
+                <div className="mb-5">
+                    <CeoVideoCarousel />
                 </div>
             )}
 

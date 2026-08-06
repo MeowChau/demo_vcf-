@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const SingaporeNewYearDinner2026 = () => {
     const btnStyleLightTeal = {
@@ -62,7 +62,7 @@ const SingaporeNewYearDinner2026 = () => {
     ];
 
     return (
-        <div className="singapore-new-year-dinner-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="singapore-new-year-dinner-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1100px' }}>
                 
                 {/* Header Area */}

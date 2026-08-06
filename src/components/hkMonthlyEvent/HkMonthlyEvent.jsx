@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const HkMonthlyEvent = () => {
     const btnStyleOrange = {
@@ -49,7 +49,7 @@ const HkMonthlyEvent = () => {
     };
 
     return (
-        <div className="hk-monthly-event-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="hk-monthly-event-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Header Area */}

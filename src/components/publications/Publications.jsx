@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const Publications = () => {
     return (
-        <div className="publications-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="publications-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}
@@ -104,7 +104,7 @@ const Publications = () => {
                 <div className="mx-auto mt-5" style={{ maxWidth: '500px' }}>
                     <div style={{ backgroundColor: '#4a90e2', padding: '15px', position: 'relative' }}>
                         <h4 style={{ color: '#fff', fontSize: '18px', margin: '0 0 10px 0', fontWeight: 'normal' }}>Subscribe for Updates</h4>
-                        <div style={{ display: 'flex', backgroundColor: '#fff2df', padding: '0' }}>
+                        <div style={{ display: 'flex', backgroundColor: '#fff', padding: '0' }}>
                             <input type="email" placeholder="Email" style={{ flex: 1, border: 'none', padding: '10px 15px', fontSize: '14px', outline: 'none' }} />
                         </div>
                         <div className="mt-2 text-right" style={{ textAlign: 'right' }}>

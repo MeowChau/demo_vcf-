@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react';
 
 const AiimAiXEi = () => {
@@ -23,7 +23,7 @@ const AiimAiXEi = () => {
 
     const uploadBtnStyle = {
         border: '1px solid #eee',
-        backgroundColor: '#fff2df',
+        backgroundColor: '#fff',
         color: '#000',
         padding: '12px 20px',
         fontWeight: 'bold',
@@ -37,7 +37,7 @@ const AiimAiXEi = () => {
     };
 
     return (
-        <div className="aiim-page pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="aiim-page pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Images Section */}

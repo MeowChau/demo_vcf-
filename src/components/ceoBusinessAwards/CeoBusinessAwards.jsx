@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const CeoBusinessAwards = () => {
@@ -30,7 +30,7 @@ const CeoBusinessAwards = () => {
     ];
 
     return (
-        <div className="ceo-business-awards-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="ceo-business-awards-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container">
                 <div className="mb-5 text-center">
                     <h2 style={{ color: '#555', fontSize: '32px', marginBottom: '40px', fontWeight: '300' }}>

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const AsiaCeoMagazine = () => {
@@ -11,7 +11,7 @@ const AsiaCeoMagazine = () => {
     ];
 
     return (
-        <div className="asia-ceo-magazine-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="asia-ceo-magazine-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

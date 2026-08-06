@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const testimonialsData = [
@@ -48,7 +48,7 @@ const testimonialsData = [
 
 const CeoTestimonials = () => {
     return (
-        <div className="ceo-testimonials-area pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="ceo-testimonials-area pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-lg-10 text-center mb-5">
@@ -71,7 +71,7 @@ const CeoTestimonials = () => {
                                 position: 'relative', 
                                 borderRadius: '50%', 
                                 overflow: 'hidden', 
-                                border: '3px solid #fff2df'
+                                border: '3px solid #fff'
                             }}>
                                 <Image src={item.image} alt={item.name} fill style={{ objectFit: 'cover' }} />
                             </div>

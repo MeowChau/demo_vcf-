@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { knowledgeData } from '@/components/knowledge/knowledgeData';
@@ -7,7 +7,7 @@ const CeoKnowledge = () => {
     const featuredPost = knowledgeData[0];
     const olderPosts = knowledgeData.slice(1, 5);
     return (
-        <div className="ceo-knowledge-area pb-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", paddingTop: '150px' }}>
+        <div className="ceo-knowledge-area pb-5" style={{ backgroundColor: '#fff', fontFamily: "'Manrope', sans-serif", paddingTop: '150px' }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .knowledge-card {
                     transition: transform 0.3s ease, box-shadow 0.3s ease;

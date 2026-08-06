@@ -1,9 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const CeoIntro = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
+        <div style={{ backgroundColor: '#fff', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="row align-items-stretch">
                     {/* Image Column */}

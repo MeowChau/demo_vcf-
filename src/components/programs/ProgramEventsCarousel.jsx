@@ -11,28 +11,28 @@ import BannerStyle1 from '../banner/BannerStyle1';
 const eventsData = [
     {
         id: 1,
-        title: "CEO Mentoring Lớp 17",
+        title: "CEO Mentoring #17",
         date: "14/08/2026 - Hà Nội",
         desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
         image: "/assets/img/about/z7934289768980_21088567fa80181416162d7272c561a2-20260628161753-vw10m.jpg"
     },
     {
         id: 2,
-        title: "CEO Mentoring Lớp 18",
+        title: "CEO Mentoring #18",
         date: "15/08/2026 - TP Hồ Chí Minh",
         desc: "Mentor: Ông Võ Quang Huệ, Chủ tịch Foundry AI Việt Nam, Nguyên Phó tổng Giám đốc Tập đoàn VinGroup",
         image: "/assets/img/about/z7934289805121_b022af287ca855669016fcb915cc851d-20260628161753-8cne3.jpg"
     },
     {
         id: 3,
-        title: "CEO Mentoring Lớp 19",
+        title: "CEO Mentoring #19",
         date: "21/08/2026 - Hà Nội",
         desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
         image: "/assets/img/about/87c9484f52c5d39b8ad4.jpg"
     },
     {
         id: 4,
-        title: "CEO Mentoring Lớp 20",
+        title: "CEO Mentoring #20",
         date: "28/08/2026 - Hà Nội",
         desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
         image: "/assets/img/about/ceo-mentoring-18-20260628161442-tjcbb.jpg"
@@ -41,7 +41,7 @@ const eventsData = [
 
 const ProgramEventsCarousel = () => {
     return (
-        <div className="program-events-area pb-100" style={{ backgroundColor: '#fff2df', paddingTop: '150px', fontFamily: "'Manrope', sans-serif" }}>
+        <div className="program-events-area pb-100" style={{ backgroundColor: '#fff', paddingTop: '150px', fontFamily: "'Manrope', sans-serif" }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .event-card {
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -133,7 +133,7 @@ const ProgramEventsCarousel = () => {
                         modules={[Keyboard, Autoplay, Navigation]}
                         spaceBetween={30}
                         slidesPerView={4}
-                        loop={true}
+                        loop={false}
                         navigation={{
                             prevEl: '.program-swiper-button-prev',
                             nextEl: '.program-swiper-button-next',
@@ -146,7 +146,7 @@ const ProgramEventsCarousel = () => {
                         }}
                         className="program-swiper"
                     >
-                        {[...eventsData, ...eventsData.map(e => ({...e, id: e.id + 4}))].map((event) => (
+                        {eventsData.map((event) => (
                             <SwiperSlide key={event.id} style={{ height: 'auto' }}>
                                 <div className="event-card" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
                                     <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
@@ -173,8 +173,8 @@ const ProgramEventsCarousel = () => {
                                         </p>
                                         
                                         <div className="mt-auto">
-                                            <Link href="/dang-ky" className="btn-register">
-                                                Đăng ký
+                                            <Link href="/ceo-mentoring" className="btn-register">
+                                                Xem thêm
                                             </Link>
                                         </div>
                                     </div>

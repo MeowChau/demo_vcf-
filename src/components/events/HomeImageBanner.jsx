@@ -1,9 +1,9 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import React from 'react';
 
 const HomeImageBanner = () => {
     return (
-        <div className="home-image-banner-area" style={{ background: '#fff2df', paddingBottom: '60px' }}>
+        <div className="home-image-banner-area" style={{ background: '#fff', paddingBottom: '60px' }}>
             <div className="container">
                 <div className="row">
                     <div className="col-12">

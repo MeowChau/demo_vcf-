@@ -1,9 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const LeadershipWorkshops = () => {
     return (
-        <div className="leadership-workshops-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="leadership-workshops-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container">
                 {/* Header & Poster */}
                 <div className="text-center mb-5">

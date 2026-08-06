@@ -14,7 +14,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                         font-family: var(--font-montserrat), sans-serif !important;
                     }
 
-                    @media (max-width: 1360px) {
+                    @media (max-width: 1300px) {
                         .force-right {
                             display: flex !important;
                             flex-direction: column !important;
@@ -33,7 +33,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                         }
                     }
 
-                    @media (min-width: 1361px) {
+                    @media (min-width: 1301px) {
                         .force-right {
                             display: flex !important;
                             flex-direction: row !important;

@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const CeoVideos = () => {
     return (
-        <div className="ceo-videos-area pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="ceo-videos-area pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container">
                 {/* Row 1 */}
                 <div className="row align-items-center mb-5">

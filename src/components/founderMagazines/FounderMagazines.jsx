@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const FounderMagazines = () => {
     // Array of placeholder magazines based on the screenshots
@@ -8,7 +8,7 @@ const FounderMagazines = () => {
     });
 
     return (
-        <div className="founder-magazines-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="founder-magazines-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

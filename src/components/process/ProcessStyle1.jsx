@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const ProcessStyle1 = ({ sectionClass }) => {
     return (
         <>
-            <div className={`process-style-one-area text-center default-padding ${sectionClass ? sectionClass : ""}`} style={{ backgroundColor: '#fff2df' }}>
+            <div className={`process-style-one-area text-center default-padding ${sectionClass ? sectionClass : ""}`} style={{ backgroundColor: '#fff' }}>
                 <div className="container">
                     <div className="row mb-50">
                         <div className="col-12 text-center">

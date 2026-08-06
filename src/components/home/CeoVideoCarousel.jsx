@@ -14,32 +14,13 @@ const videos = [
 
 const CeoVideoCarousel = () => {
     return (
-        <div className="ceo-video-carousel-area py-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif" }}>
+        <div className="ceo-video-carousel-area py-5" style={{ backgroundColor: '#fff', fontFamily: "'Manrope', sans-serif" }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .video-swiper {
                     padding: 40px 0 !important;
                 }
                 .video-swiper .swiper-slide {
                     transition: all 0.5s ease;
-                    opacity: 0.4;
-                    transform: scale(0.85);
-                }
-                .video-swiper .swiper-slide-active {
-                    opacity: 1;
-                    transform: scale(1);
-                    z-index: 2;
-                }
-                .video-swiper .swiper-slide .video-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 10;
-                    cursor: pointer;
-                }
-                .video-swiper .swiper-slide-active .video-overlay {
-                    display: none;
                 }
                 .video-swiper-button-prev, .video-swiper-button-next {
                     position: absolute;
@@ -64,10 +45,10 @@ const CeoVideoCarousel = () => {
                     color: #fff;
                 }
                 .video-swiper-button-prev {
-                    left: 20px;
+                    left: -25px;
                 }
                 .video-swiper-button-next {
-                    right: 20px;
+                    right: -25px;
                 }
                 .video-wrapper {
                     border-radius: 12px;
@@ -76,22 +57,22 @@ const CeoVideoCarousel = () => {
                     background-color: #000;
                 }
             `}} />
-            <div className="container-fluid pt-4 pb-4">
+            <div className="container pt-4 pb-4">
                 <div className="row mb-5 text-center justify-content-center">
                     <div className="col-12 d-flex flex-column align-items-center">
                         <h2 style={{ color: '#da151a', fontWeight: '800', textTransform: 'uppercase', fontSize: '32px', fontFamily: 'var(--font-montserrat)' }}>
-                            VIDEO TRI THỨC
+                            VIDEO
                         </h2>
                         <div style={{ width: '150px', height: '2px', backgroundColor: '#da151a', marginTop: '15px' }}></div>
                     </div>
                 </div>
 
-                <div style={{ position: 'relative', padding: '0 20px', maxWidth: '1400px', margin: '0 auto' }}>
+                <div style={{ position: 'relative' }}>
                     <Swiper
                         modules={[Keyboard, Autoplay, Navigation]}
-                        spaceBetween={0}
-                        slidesPerView={1.5}
-                        centeredSlides={true}
+                        spaceBetween={30}
+                        slidesPerView={3}
+                        centeredSlides={false}
                         loop={true}
                         navigation={{
                             prevEl: '.video-swiper-button-prev',
@@ -99,8 +80,8 @@ const CeoVideoCarousel = () => {
                         }}
                         breakpoints={{
                             320: { slidesPerView: 1, spaceBetween: 20 },
-                            768: { slidesPerView: 1.5, spaceBetween: 0 },
-                            1024: { slidesPerView: 1.8, spaceBetween: 0 }
+                            768: { slidesPerView: 2, spaceBetween: 20 },
+                            1024: { slidesPerView: 3, spaceBetween: 30 }
                         }}
                         className="video-swiper"
                     >
@@ -115,7 +96,6 @@ const CeoVideoCarousel = () => {
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowFullScreen>
                                     </iframe>
-                                    <div className="video-overlay"></div>
                                 </div>
                             </SwiperSlide>
                         ))}

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const ValueBox = ({ iconClass, title, desc, isBlue }) => (
@@ -33,7 +33,7 @@ const ValueBox = ({ iconClass, title, desc, isBlue }) => (
 
 const CeoValues = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
+        <div style={{ backgroundColor: '#fff', paddingBottom: '80px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="text-center" style={{ marginBottom: '50px' }}>
                     <h2 style={{ color: '#cc0000', fontSize: '36px', fontWeight: '800', marginBottom: '20px', textTransform: 'uppercase', fontFamily: 'var(--font-montserrat)' }}>
@@ -44,7 +44,7 @@ const CeoValues = () => {
                     </p>
                 </div>
 
-                <div style={{ backgroundColor: '#fff2df', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', borderRadius: '3px', overflow: 'hidden' }}>
+                <div style={{ backgroundColor: '#fff', boxShadow: '0 10px 40px rgba(0,0,0,0.06)', borderRadius: '3px', overflow: 'hidden' }}>
                     <div className="row g-0 align-items-stretch">
                         <div className="col-lg-5 position-relative" style={{ minHeight: '350px' }}>
                             <Image 

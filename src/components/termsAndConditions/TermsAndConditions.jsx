@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const TermsAndConditions = () => {
     return (
-        <div className="terms-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="terms-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

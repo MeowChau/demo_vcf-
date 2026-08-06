@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 
 const FooterStyle1 = () => {
     return (
-        <footer className={montserrat.className} style={{ background: '#ffd49f', padding: '60px 0', textAlign: 'center', color: '#333', position: 'relative', overflow: 'hidden' }}>
+        <footer className={montserrat.className} style={{ background: '#fff2df', padding: '60px 0', textAlign: 'center', color: '#333', position: 'relative', overflow: 'hidden' }}>
             <style>
                 {`
                 footer::before, footer::after, .footer::before, .footer::after {

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Link from 'next/link';
 
 const MemberDetail = ({ id }) => {
@@ -7,7 +7,7 @@ const MemberDetail = ({ id }) => {
     const imageSrc = `/assets/img/membersArea/Image-empty-state (${parseInt(id) + 1 > 1 && parseInt(id) + 1 <= 11 ? parseInt(id) + 1 : 2}).avif`;
 
     return (
-        <div className="member-detail-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="member-detail-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 <div className="row mb-4">
                     <div className="col-12 text-center">
@@ -19,7 +19,7 @@ const MemberDetail = ({ id }) => {
                 <div className="row mb-4">
                     <div className="col-12 d-flex justify-content-between">
                         <Link href={`/member-directory/${Math.max(1, parseInt(id) - 1)}`} className="btn flex-fill text-center" style={{ backgroundColor: '#e0e0e0', border: '1px solid #999', color: '#666', borderRadius: 0, marginRight: '10px' }}>Previous</Link>
-                        <Link href="/member-directory" className="btn flex-fill text-center" style={{ backgroundColor: '#fff2df', border: '1px solid #333', color: '#000', fontWeight: 'bold', borderRadius: 0, marginRight: '10px' }}>Back to Search</Link>
+                        <Link href="/member-directory" className="btn flex-fill text-center" style={{ backgroundColor: '#fff', border: '1px solid #333', color: '#000', fontWeight: 'bold', borderRadius: 0, marginRight: '10px' }}>Back to Search</Link>
                         <Link href={`/member-directory/${parseInt(id) + 1}`} className="btn flex-fill text-center" style={{ backgroundColor: '#e0e0e0', border: '1px solid #999', color: '#666', borderRadius: 0 }}>Next</Link>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ const MemberDetail = ({ id }) => {
                 <div className="row">
                     <div className="col-12 d-flex justify-content-between">
                         <Link href={`/member-directory/${Math.max(1, parseInt(id) - 1)}`} className="btn flex-fill text-center" style={{ backgroundColor: '#e0e0e0', border: '1px solid #999', color: '#666', borderRadius: 0, marginRight: '10px' }}>Previous</Link>
-                        <Link href="/member-directory" className="btn flex-fill text-center" style={{ backgroundColor: '#fff2df', border: '1px solid #333', color: '#000', fontWeight: 'bold', borderRadius: 0, marginRight: '10px' }}>Back to Search</Link>
+                        <Link href="/member-directory" className="btn flex-fill text-center" style={{ backgroundColor: '#fff', border: '1px solid #333', color: '#000', fontWeight: 'bold', borderRadius: 0, marginRight: '10px' }}>Back to Search</Link>
                         <Link href={`/member-directory/${parseInt(id) + 1}`} className="btn flex-fill text-center" style={{ backgroundColor: '#e0e0e0', border: '1px solid #999', color: '#666', borderRadius: 0 }}>Next</Link>
                     </div>
                 </div>

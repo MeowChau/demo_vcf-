@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import React from 'react';
 import TeamData from '@/assets/jsonData/team/TeamData.json'
 import SingleTeam2 from './SingleTeam2';
@@ -8,7 +8,7 @@ import TeamHeading2 from './TeamHeading2';
 const TeamStyle2 = ({ hasText }) => {
     return (
         <>
-            <div className="team-style-two-area secondary" style={{ backgroundColor: '#fff2df', backgroundImage: `url(/assets/img/shape/27.png)`, paddingTop: '30px', paddingBottom: '80px' }}>
+            <div className="team-style-two-area secondary" style={{ backgroundColor: '#fff', backgroundImage: `url(/assets/img/shape/27.png)`, paddingTop: '30px', paddingBottom: '80px' }}>
                 <style>{`
                     @media (max-width: 767px) {
                         .mobile-order-0 { order: 2; }

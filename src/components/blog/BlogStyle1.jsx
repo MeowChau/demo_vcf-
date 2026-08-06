@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const BlogStyle1 = ({ sectionClass }) => {
     return (
         <>
-            <div className={`home-blog-area default-padding bottom-less ${sectionClass ? sectionClass : ""}`} style={{ backgroundColor: '#fff2df', paddingBottom: '60px' }}>
+            <div className={`home-blog-area default-padding bottom-less ${sectionClass ? sectionClass : ""}`} style={{ backgroundColor: '#fff', paddingBottom: '60px' }}>
                 <div className="container">
                     <div className="row mb-40">
                         <div className="col-12 text-center">

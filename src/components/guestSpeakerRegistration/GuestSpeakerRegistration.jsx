@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const GuestSpeakerRegistration = () => {
     return (
-        <div className="guest-speaker-registration-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="guest-speaker-registration-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Header Area */}

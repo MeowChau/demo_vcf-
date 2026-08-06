@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const CeoMonthlyLunchParty = () => {
     return (
-        <div className="ceo-lunch-party-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="ceo-lunch-party-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 
                 {/* Intro Section */}
@@ -58,7 +58,7 @@ const CeoMonthlyLunchParty = () => {
                                 Please note that all artwork, logos or informational pieces must be provided by the sponsor.
                             </p>
 
-                            <button style={{ backgroundColor: '#fff2df', color: '#d9534f', border: '2px solid #76d7c4', padding: '10px 20px', fontSize: '16px', fontWeight: 'bold', width: '100%', cursor: 'pointer' }}>
+                            <button style={{ backgroundColor: '#fff', color: '#d9534f', border: '2px solid #76d7c4', padding: '10px 20px', fontSize: '16px', fontWeight: 'bold', width: '100%', cursor: 'pointer' }}>
                                 Sign Up Montly Sponsor
                             </button>
                         </div>
@@ -82,7 +82,7 @@ const CeoMonthlyLunchParty = () => {
                                 Please note that all artwork, logos or informational pieces must be provided by the sponsor.
                             </p>
 
-                            <button style={{ backgroundColor: '#fff2df', color: '#d9534f', border: '2px solid #76d7c4', padding: '10px 20px', fontSize: '16px', fontWeight: 'bold', width: '100%', cursor: 'pointer' }}>
+                            <button style={{ backgroundColor: '#fff', color: '#d9534f', border: '2px solid #76d7c4', padding: '10px 20px', fontSize: '16px', fontWeight: 'bold', width: '100%', cursor: 'pointer' }}>
                                 Sign Up Yearly Sponsor
                             </button>
                         </div>
@@ -91,7 +91,7 @@ const CeoMonthlyLunchParty = () => {
 
                 {/* Contact Us Button */}
                 <div className="text-center mb-5">
-                    <button style={{ border: '2px solid #c86bba', color: '#c86bba', backgroundColor: '#fff2df', padding: '6px 35px', borderRadius: '25px', fontSize: '18px', fontWeight: 'bold', cursor: 'pointer' }}>
+                    <button style={{ border: '2px solid #c86bba', color: '#c86bba', backgroundColor: '#fff', padding: '6px 35px', borderRadius: '25px', fontSize: '18px', fontWeight: 'bold', cursor: 'pointer' }}>
                         Contact us
                     </button>
                 </div>

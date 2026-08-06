@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const VentureCapitalistMagazines = () => {
     // Array of placeholder magazines based on the screenshots
@@ -8,7 +8,7 @@ const VentureCapitalistMagazines = () => {
     });
 
     return (
-        <div className="venture-capitalist-magazines-page pt-80 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="venture-capitalist-magazines-page pt-80 pb-100" style={{ backgroundColor: '#fff' }}>
             <div className="container" style={{ maxWidth: '1000px' }}>
                 
                 {/* Title */}

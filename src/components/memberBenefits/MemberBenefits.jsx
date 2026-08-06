@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from 'react';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -217,7 +217,7 @@ For more information, please contact us via email ceo@asiaceo.club`
     ];
 
     return (
-        <div className="member-benefits-area pt-100 pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="member-benefits-area pt-100 pb-100" style={{ backgroundColor: '#fff' }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .member-benefits-slider .swiper-button-next,
                 .member-benefits-slider .swiper-button-prev {

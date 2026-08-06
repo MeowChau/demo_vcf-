@@ -3,7 +3,7 @@ import React from 'react';
 
 const BannerStyle1 = () => {
     return (
-        <div style={{ background: '#fff2df' }} className="custom-ceo-banner-container">
+        <div style={{ background: '#fff' }} className="custom-ceo-banner-container">
             <style>
                 {`
                 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
@@ -98,7 +98,7 @@ const BannerStyle1 = () => {
                             <a href="#" style={{ display: 'inline-block', backgroundColor: '#cc0000', color: '#fff', borderRadius: '40px', padding: '12px 22px', fontWeight: '700', fontSize: '13px', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                                 ĐĂNG KÝ VÉ MỜI
                             </a>
-                            <a href="#" style={{ display: 'inline-block', backgroundColor: '#5c00e6', color: '#fff', borderRadius: '40px', padding: '12px 22px', fontWeight: '700', fontSize: '13px', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                            <a href="#" style={{ display: 'inline-block', backgroundColor: '#ffd49f', color: '#fff', borderRadius: '40px', padding: '12px 22px', fontWeight: '700', fontSize: '13px', textDecoration: 'none', whiteSpace: 'nowrap', border: '1px solid #ffd49f' }}>
                                 CHƯƠNG TRÌNH DỰ KIẾN
                             </a>
                         </div>

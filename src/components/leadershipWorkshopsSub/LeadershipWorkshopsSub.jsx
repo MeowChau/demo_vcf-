@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const LeadershipWorkshopsSub = () => {
     const btnStyle = {
@@ -25,7 +25,7 @@ const LeadershipWorkshopsSub = () => {
     };
 
     return (
-        <div className="leadership-training-page pt-100 pb-100" style={{ backgroundColor: '#fff2df', color: '#555' }}>
+        <div className="leadership-training-page pt-100 pb-100" style={{ backgroundColor: '#fff', color: '#555' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 <h1 className="text-center mb-5" style={{ color: '#8a1c1c', fontWeight: 'bold', fontSize: '32px', textTransform: 'uppercase' }}>
                     ASIA CEO COMMUNITY - TRAINING PROGRAM

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const formatsData = [
@@ -27,7 +27,7 @@ const formatsData = [
 
 const CeoFormats = () => {
     return (
-        <div style={{ backgroundColor: '#fff2df', paddingBottom: '100px', fontFamily: 'var(--font-montserrat)' }}>
+        <div style={{ backgroundColor: '#fff', paddingBottom: '100px', fontFamily: 'var(--font-montserrat)' }}>
             <div className="container">
                 <div className="text-center" style={{ marginBottom: '60px' }}>
                     <h2 style={{ color: '#cc0000', fontSize: '36px', fontWeight: '800', marginBottom: '20px', textTransform: 'uppercase', fontFamily: 'var(--font-montserrat)' }}>

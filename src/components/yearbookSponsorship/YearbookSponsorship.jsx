@@ -1,8 +1,8 @@
-import React from 'react';
+﻿import React from 'react';
 
 const YearbookSponsorship = () => {
     return (
-        <div className="yearbook-sponsorship-page pt-80 pb-100" style={{ backgroundColor: '#fff2df', color: '#333' }}>
+        <div className="yearbook-sponsorship-page pt-80 pb-100" style={{ backgroundColor: '#fff', color: '#333' }}>
             <div className="container" style={{ maxWidth: '900px' }}>
                 
                 <h1 style={{ color: '#4b5563', fontSize: '36px', fontWeight: 'bold', marginBottom: '25px', letterSpacing: '0.5px' }}>

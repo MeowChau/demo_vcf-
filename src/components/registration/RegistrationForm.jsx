@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import React, { useState } from 'react';
 
 const RegistrationForm = () => {
@@ -134,7 +134,7 @@ const RegistrationForm = () => {
     };
 
     return (
-        <div className="registration-area pb-5" style={{ backgroundColor: '#fff2df', fontFamily: "'Manrope', sans-serif", minHeight: '100vh', paddingTop: '150px' }}>
+        <div className="registration-area pb-5" style={{ backgroundColor: '#fff', fontFamily: "'Manrope', sans-serif", minHeight: '100vh', paddingTop: '150px' }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .form-input:focus {
                     border-bottom: 2px solid #da151a !important;

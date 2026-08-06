@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 const stepsData = [
@@ -59,7 +59,7 @@ const ecosystemData = [
 
 const CeoSteps = () => {
     return (
-        <div className="ceo-steps-area pb-100" style={{ backgroundColor: '#fff2df' }}>
+        <div className="ceo-steps-area pb-100" style={{ backgroundColor: '#fff' }}>
             <style dangerouslySetInnerHTML={{__html: `
                 .ecosystem-item {
                     padding: 30px;

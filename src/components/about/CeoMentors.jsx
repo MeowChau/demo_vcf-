@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Image from "next/image";
 
 const mentorsData = [
@@ -87,7 +87,7 @@ const CeoMentors = ({ title = "CÁC MENTOR CỦA CHƯƠNG TRÌNH", align = "cent
   return (
     <div
       style={{
-        backgroundColor: "#fff2df",
+        backgroundColor: "#fff",
         paddingBottom: "80px",
         fontFamily: "var(--font-montserrat)",
       }}
@@ -209,25 +209,7 @@ const CeoMentors = ({ title = "CÁC MENTOR CỦA CHƯƠNG TRÌNH", align = "cent
                       fill
                       style={{ objectFit: "cover" }}
                     />
-                    <div className="social-overlay">
-                      <ul>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-twitter"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i className="fab fa-linkedin-in"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+
                   </div>
                   <div
                     style={{

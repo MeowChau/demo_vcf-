@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 const MembershipLoginModal = ({ isOpen, onClose }) => {
@@ -63,7 +63,7 @@ const MembershipLoginModal = ({ isOpen, onClose }) => {
                             border: '1px solid #ccc',
                             borderRadius: '4px',
                             fontSize: '14px',
-                            backgroundColor: '#fff2df',
+                            backgroundColor: '#fff',
                             color: '#333'
                         }} />
                     </div>
@@ -76,7 +76,7 @@ const MembershipLoginModal = ({ isOpen, onClose }) => {
                             border: '1px solid #ccc',
                             borderRadius: '4px',
                             fontSize: '14px',
-                            backgroundColor: '#fff2df',
+                            backgroundColor: '#fff',
                             color: '#333'
                         }} />
                     </div>
@@ -107,7 +107,7 @@ const MembershipLoginModal = ({ isOpen, onClose }) => {
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
                     <div style={{ 
                         width: '35px', height: '35px', 
-                        borderRadius: '50%', backgroundColor: '#fff2df', 
+                        borderRadius: '50%', backgroundColor: '#fff', 
                         display: 'flex', justifyContent: 'center', alignItems: 'center',
                         boxShadow: '0 2px 5px rgba(0,0,0,0.1)', cursor: 'pointer'
                     }}>
