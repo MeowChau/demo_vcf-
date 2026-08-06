@@ -129,9 +129,7 @@ const RegisterForm = () => {
                         annualRevenue: formData.annualRevenue,
                         employeeCount: formData.employeeCount,
                         equity: parseFloat(formData.equity),
-                        companyType: formData.companyType === 'Other' ? formData.companyTypeOther : formData.companyType,
-                        users_permissions_user: userId,
-                        publishedAt: new Date().toISOString()
+                        companyType: formData.companyType === 'Other' ? formData.companyTypeOther : formData.companyType
                     }
                 })
             });
