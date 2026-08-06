@@ -78,7 +78,7 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                 <li><Link href="/tri-thuc" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Tri thức</Link></li>
                 <li><Link href="/" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Công cụ</Link></li>
                 {isLoggedIn && (
-                    <li><Link href="/dang-ky-event" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600, color: '#e60000' }}>Đăng ký sự kiện</Link></li>
+                    <li><Link href="/dang-ky-event" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Đăng ký sự kiện</Link></li>
                 )}
             </ul>
             <style dangerouslySetInnerHTML={{
