@@ -65,7 +65,8 @@ const MentoringRequestForm = () => {
                     problemImportance: formData.problemImportance,
                     triedSolutions: formData.triedSolutions,
                     consideredOptions: formData.consideredOptions,
-                    mainQuestionForMentor: formData.mainQuestionForMentor
+                    mainQuestionForMentor: formData.mainQuestionForMentor,
+                    user: JSON.parse(localStorage.getItem('user')).id
                 }
             };
 
@@ -86,7 +87,7 @@ const MentoringRequestForm = () => {
 
             setSuccess(true);
             setTimeout(() => {
-                window.location.href = '/dashboard';
+                window.location.href = '/dashboard-su-kien';
             }, 2000);
 
         } catch (err) {
