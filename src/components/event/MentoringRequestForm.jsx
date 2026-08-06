@@ -341,7 +341,7 @@ const MentoringRequestForm = () => {
                         value={formData.mainQuestionForMentor}
                         onChange={handleChange}
                         style={styles.textarea}
-                        placeholder="Long answer text"
+                        placeholder="Nhập câu trả lời của bạn..."
                     ></textarea>
                 </div>
 
