@@ -65,8 +65,7 @@ const MentoringRequestForm = () => {
                     problemImportance: formData.problemImportance,
                     triedSolutions: formData.triedSolutions,
                     consideredOptions: formData.consideredOptions,
-                    mainQuestionForMentor: formData.mainQuestionForMentor,
-                    user: JSON.parse(localStorage.getItem('user')).id
+                    mainQuestionForMentor: formData.mainQuestionForMentor
                 }
             };
 
