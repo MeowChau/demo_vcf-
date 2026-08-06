@@ -34,7 +34,7 @@ const MentoringRequestForm = () => {
             try {
                 const user = JSON.parse(userStr);
                 const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-                const res = await fetch(`${API_URL}/api/mentoring-requests?filters[user][$eq]=${user.documentId}`, {
+                const res = await fetch(`${API_URL}/api/mentoring-requests/me`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 

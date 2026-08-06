@@ -21,8 +21,8 @@ const DashboardSuKien = () => {
             const user = JSON.parse(userStr);
 
             try {
-                // Fetch events for the current user
-                const response = await fetch(`http://localhost:1337/api/mentoring-requests?filters[user][$eq]=${user.documentId}&populate=*`, {
+                // Fetch events for the current user using the custom /me endpoint
+                const response = await fetch(`http://localhost:1337/api/mentoring-requests/me`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
