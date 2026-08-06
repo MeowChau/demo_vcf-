@@ -134,7 +134,7 @@ const DashboardSuKien = () => {
 
     return (
         <LayoutStyle1>
-            <section className="dashboard-area pb-100" style={{ paddingTop: '120px' }}>
+            <section className="dashboard-area pb-100" style={{ paddingTop: '180px' }}>
                 <div className="container">
                     
                     {/* Thống kê */}
