@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 
 const ProfilePage = () => {
     const [user, setUser] = useState(null);
+    const [ceoProfile, setCeoProfile] = useState(null);
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
 
@@ -18,7 +19,29 @@ const ProfilePage = () => {
         }
 
         try {
-            setUser(JSON.parse(userData));
+            const parsedUser = JSON.parse(userData);
+            setUser(parsedUser);
+            
+            // Fetch CEO profile data
+            const fetchCeoProfile = async () => {
+                try {
+                    const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                    const res = await fetch(`${API_URL}/api/ceo-profiles?filters[user][id][$eq]=${parsedUser.id}`, {
+                        headers: {
+                            Authorization: `Bearer ${jwt}`
+                        }
+                    });
+                    const resData = await res.json();
+                    if (resData.data && resData.data.length > 0) {
+                        setCeoProfile(resData.data[0]);
+                    }
+                } catch (e) {
+                    console.error("Lỗi khi tải thông tin CEO:", e);
+                }
+            };
+            
+            fetchCeoProfile();
+            
         } catch (e) {
             router.push('/dang-nhap');
         } finally {
@@ -137,6 +160,40 @@ const ProfilePage = () => {
                                 <div style={styles.infoLabel}>Ngày sinh:</div>
                                 <div style={styles.infoValue}>{user.dob || 'Chưa cập nhật'}</div>
                             </div>
+                            
+                            {ceoProfile && (
+                                <div style={{ marginTop: '20px', borderTop: '2px dashed #eee', paddingTop: '20px' }}>
+                                    <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '15px', color: '#da151a' }}>Thông tin doanh nghiệp (CEO)</h3>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Kinh nghiệm quản lý:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.managementExperience || 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Lĩnh vực hoạt động:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.industry || 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Năm thành lập:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.foundedYear || 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Doanh thu hàng năm:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.annualRevenue || 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Số lượng nhân sự:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.employeeCount || 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Vốn chủ sở hữu:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.equity ? `${ceoProfile.equity} tỷ VND` : 'Chưa cập nhật'}</div>
+                                    </div>
+                                    <div style={styles.infoRow}>
+                                        <div style={styles.infoLabel}>Loại hình doanh nghiệp:</div>
+                                        <div style={styles.infoValue}>{ceoProfile.companyType || 'Chưa cập nhật'}</div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                     </div>
