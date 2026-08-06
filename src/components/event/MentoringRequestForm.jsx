@@ -17,15 +17,43 @@ const MentoringRequestForm = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const [jwt, setJwt] = useState(null);
+    const [registeredClasses, setRegisteredClasses] = useState([]);
 
     useEffect(() => {
         // Retrieve JWT to check if user is logged in
         const token = localStorage.getItem('jwt');
-        if (!token) {
+        const userStr = localStorage.getItem('user');
+        if (!token || !userStr) {
             window.location.href = '/dang-nhap';
+            return;
         } else {
             setJwt(token);
         }
+
+        const fetchUserEvents = async () => {
+            try {
+                const user = JSON.parse(userStr);
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                const res = await fetch(`${API_URL}/api/mentoring-requests?filters[user][$eq]=${user.documentId}`, {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                
+                if (res.ok) {
+                    const data = await res.json();
+                    let classes = [];
+                    data.data.forEach(req => {
+                        if (req.desiredClasses) {
+                            classes = [...classes, ...req.desiredClasses];
+                        }
+                    });
+                    setRegisteredClasses(classes);
+                }
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        fetchUserEvents();
     }, []);
 
     const handleChange = (e) => {
@@ -231,19 +259,23 @@ const MentoringRequestForm = () => {
                     </div>
                     <div style={styles.questionSub}>Vui lòng lựa chọn tất cả những ngày có thể tham gia</div>
                     
-                    {['Lớp 17', 'Lớp 18', 'Lớp 19', 'Lớp 20'].map((lop) => (
-                        <label key={lop} style={styles.radioLabel}>
-                            <input 
-                                type="checkbox" 
-                                name="desiredClasses" 
-                                value={lop} 
-                                checked={formData.desiredClasses.includes(lop)}
-                                onChange={handleChange}
-                                style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
-                            />
-                            <span>{lop}</span>
-                        </label>
-                    ))}
+                    {['Lớp 17', 'Lớp 18', 'Lớp 19', 'Lớp 20'].map((lop) => {
+                        const isRegistered = registeredClasses.includes(lop);
+                        return (
+                            <label key={lop} style={{...styles.radioLabel, color: isRegistered ? '#999' : '#202124'}}>
+                                <input 
+                                    type="checkbox" 
+                                    name="desiredClasses" 
+                                    value={lop} 
+                                    checked={formData.desiredClasses.includes(lop)}
+                                    onChange={handleChange}
+                                    disabled={isRegistered}
+                                    style={{ marginRight: '10px', marginTop: '0', width: 'auto' }}
+                                />
+                                <span>{lop} {isRegistered && <span style={{color: '#e60000', fontSize: '13px', marginLeft: '5px'}}>(Bạn đã đăng ký lớp này)</span>}</span>
+                            </label>
+                        );
+                    })}
                 </div>
 
                 {/* Radio section */}

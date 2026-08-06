@@ -2,11 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const DashboardSuKien = () => {
     const [events, setEvents] = useState([]);
-    const [chartData, setChartData] = useState([]);
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
@@ -36,27 +34,9 @@ const DashboardSuKien = () => {
 
                 const data = await response.json();
                 const eventList = data.data || [];
+                // Sort by newest first
+                eventList.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
                 setEvents(eventList);
-
-                // Process data for the chart (group by month)
-                const monthCounts = {
-                    'Tháng 1': 0, 'Tháng 2': 0, 'Tháng 3': 0, 'Tháng 4': 0,
-                    'Tháng 5': 0, 'Tháng 6': 0, 'Tháng 7': 0, 'Tháng 8': 0,
-                    'Tháng 9': 0, 'Tháng 10': 0, 'Tháng 11': 0, 'Tháng 12': 0
-                };
-
-                eventList.forEach(event => {
-                    const date = new Date(event.createdAt);
-                    const monthKey = `Tháng ${date.getMonth() + 1}`;
-                    monthCounts[monthKey] += 1;
-                });
-
-                const formattedChartData = Object.keys(monthCounts).map(key => ({
-                    name: key,
-                    'Số sự kiện': monthCounts[key]
-                }));
-
-                setChartData(formattedChartData);
             } catch (error) {
                 console.error("Error fetching events:", error);
             } finally {
@@ -75,79 +55,90 @@ const DashboardSuKien = () => {
         );
     }
 
+    const cardStyle = {
+        backgroundColor: '#fff',
+        borderRadius: '8px',
+        padding: '25px',
+        marginBottom: '25px',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
+        border: '1px solid #eaeaea',
+        borderLeft: '5px solid #e60000'
+    };
+
+    const labelStyle = {
+        fontWeight: 'bold',
+        color: '#202124',
+        marginBottom: '5px',
+        fontSize: '15px'
+    };
+
+    const valueStyle = {
+        color: '#5f6368',
+        marginBottom: '15px',
+        fontSize: '15px',
+        whiteSpace: 'pre-wrap'
+    };
+
     return (
         <LayoutStyle1>
             <section className="dashboard-area pt-50 pb-100">
                 <div className="container">
-                    
-                    <div className="row mb-50">
-                        <div className="col-12">
-                            <div className="card shadow-sm border-0">
-                                <div className="card-body p-4">
-                                    <h4 className="mb-4" style={{ color: '#002b5e', fontWeight: 700 }}>Thống kê sự kiện đã đăng ký theo tháng</h4>
-                                    <div style={{ width: '100%', height: 400 }}>
-                                        <ResponsiveContainer>
-                                            <BarChart
-                                                data={chartData}
-                                                margin={{
-                                                    top: 20, right: 30, left: 20, bottom: 5,
-                                                }}
-                                            >
-                                                <CartesianGrid strokeDasharray="3 3" />
-                                                <XAxis dataKey="name" />
-                                                <YAxis allowDecimals={false} />
-                                                <Tooltip />
-                                                <Legend />
-                                                <Bar dataKey="Số sự kiện" fill="#da151a" barSize={40} />
-                                            </BarChart>
-                                        </ResponsiveContainer>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div className="row">
                         <div className="col-12">
-                            <div className="card shadow-sm border-0">
-                                <div className="card-body p-4">
-                                    <h4 className="mb-4" style={{ color: '#002b5e', fontWeight: 700 }}>Danh sách sự kiện đã đăng ký ({events.length})</h4>
-                                    
-                                    {events.length === 0 ? (
-                                        <p>Bạn chưa đăng ký sự kiện nào.</p>
-                                    ) : (
-                                        <div className="table-responsive">
-                                            <table className="table table-hover">
-                                                <thead style={{ backgroundColor: '#f8f9fa' }}>
-                                                    <tr>
-                                                        <th>STT</th>
-                                                        <th>Ngày đăng ký</th>
-                                                        <th>Chủ đề quan tâm</th>
-                                                        <th>Lớp tham gia</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    {events.map((evt, index) => (
-                                                        <tr key={evt.id}>
-                                                            <td>{index + 1}</td>
-                                                            <td>{new Date(evt.createdAt).toLocaleDateString('vi-VN')}</td>
-                                                            <td>{evt.mainProblemCategory}</td>
-                                                            <td>
-                                                                {evt.desiredClasses 
-                                                                    ? evt.desiredClasses.join(', ')
-                                                                    : 'Không có'}
-                                                            </td>
-                                                        </tr>
-                                                    ))}
-                                                </tbody>
-                                            </table>
+                            <h3 className="mb-4" style={{ color: '#002b5e', fontWeight: 700 }}>Danh sách sự kiện đã đăng ký ({events.length})</h3>
+                            
+                            {events.length === 0 ? (
+                                <div className="alert alert-info">Bạn chưa đăng ký sự kiện nào.</div>
+                            ) : (
+                                <div className="event-list">
+                                    {events.map((evt, index) => (
+                                        <div key={evt.id} style={cardStyle}>
+                                            <div style={{ borderBottom: '1px solid #eee', paddingBottom: '15px', marginBottom: '15px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                                <h5 style={{ margin: 0, color: '#e60000' }}>Phiếu đăng ký số {events.length - index}</h5>
+                                                <span style={{ color: '#888', fontSize: '14px' }}>
+                                                    Ngày gửi: {new Date(evt.createdAt).toLocaleString('vi-VN')}
+                                                </span>
+                                            </div>
+
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <div style={labelStyle}>Lớp tham gia:</div>
+                                                    <div style={valueStyle}>
+                                                        {evt.desiredClasses && evt.desiredClasses.length > 0
+                                                            ? evt.desiredClasses.join(', ')
+                                                            : 'Chưa chọn'}
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div style={labelStyle}>Nhóm bài toán chính:</div>
+                                                    <div style={valueStyle}>
+                                                        {evt.mainProblemCategory === 'Khác' 
+                                                            ? `Khác: ${evt.otherProblemCategory}` 
+                                                            : evt.mainProblemCategory}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div style={labelStyle}>Mô tả vấn đề/bài toán:</div>
+                                            <div style={valueStyle}>{evt.problemDescription}</div>
+
+                                            <div style={labelStyle}>Vì sao bài toán này quan trọng lúc này?</div>
+                                            <div style={valueStyle}>{evt.problemImportance}</div>
+
+                                            <div style={labelStyle}>Đã thử làm gì rồi?</div>
+                                            <div style={valueStyle}>{evt.triedSolutions}</div>
+
+                                            <div style={labelStyle}>Đang phân vân những lựa chọn nào?</div>
+                                            <div style={valueStyle}>{evt.consideredOptions}</div>
+
+                                            <div style={labelStyle}>Câu hỏi chính muốn hỏi Mentor:</div>
+                                            <div style={{...valueStyle, marginBottom: 0}}>{evt.mainQuestionForMentor}</div>
                                         </div>
-                                    )}
+                                    ))}
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </div>
-
                 </div>
             </section>
         </LayoutStyle1>
