@@ -28,7 +28,7 @@ const AboutUs = () => {
                             
                             {/* Tầm nhìn */}
                             <div className="mb-5">
-                                <h3 style={{ color: '#002b5e', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>I. Tầm nhìn (Vision)</h3>
+                                <h3 style={{ color: '#e60000', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>I. Tầm nhìn (Vision)</h3>
                                 <div style={{ color: '#333', fontSize: '16px', lineHeight: '1.8' }}>
                                     <p className="mb-3" style={{ fontWeight: '600' }}>Trở thành nơi hình thành và lan tỏa Trường phái Lãnh đạo – Quản trị – Quản lý Việt Nam, kiến tạo lớp CEO Việt Nam có khát vọng, có bản lĩnh và có năng lực dẫn dắt tăng trưởng nhanh và bền vững trong kỷ nguyên mới.</p>
                                     <p className="mb-3">VCF hướng đến một thế hệ CEO Việt Nam mang khát vọng về một Việt Nam hùng cường và thịnh vượng — những người lãnh đạo doanh nghiệp không chỉ giỏi quản trị, mà còn có trường phái tư duy riêng và thuộc về một cộng đồng cùng chí hướng.</p>
@@ -38,7 +38,7 @@ const AboutUs = () => {
 
                             {/* Sứ mệnh */}
                             <div className="mb-5">
-                                <h3 style={{ color: '#002b5e', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>II. Sứ mệnh (Mission)</h3>
+                                <h3 style={{ color: '#e60000', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>II. Sứ mệnh (Mission)</h3>
                                 <div style={{ color: '#333', fontSize: '16px', lineHeight: '1.8' }}>
                                     <p className="mb-4">VCF theo đuổi bốn sứ mệnh cốt lõi:</p>
                                     
@@ -58,7 +58,7 @@ const AboutUs = () => {
 
                             {/* Định vị */}
                             <div className="mb-5">
-                                <h3 style={{ color: '#002b5e', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>III. Định vị (Positioning)</h3>
+                                <h3 style={{ color: '#e60000', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>III. Định vị (Positioning)</h3>
                                 <div style={{ color: '#333', fontSize: '16px', lineHeight: '1.8' }}>
                                     <p className="mb-3" style={{ fontWeight: '600' }}>VCF là nền tảng lý luận và hành động của CEO Việt Nam.</p>
                                     <p className="mb-4">Chúng tôi không chỉ là một diễn đàn để lắng nghe và học hỏi, mà là nơi tri thức được chuyển hóa thành hành động, và hành động được đúc kết trở lại thành tri thức.</p>
@@ -72,7 +72,7 @@ const AboutUs = () => {
 
                             {/* Giá trị cốt lõi */}
                             <div className="mb-4">
-                                <h3 style={{ color: '#002b5e', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>IV. Giá trị cốt lõi (Core Values)</h3>
+                                <h3 style={{ color: '#e60000', fontSize: '26px', marginBottom: '20px', fontWeight: '700' }}>IV. Giá trị cốt lõi (Core Values)</h3>
                                 <ul style={{ color: '#333', fontSize: '16px', lineHeight: '1.8', paddingLeft: '20px' }}>
                                     <li className="mb-3"><strong>Khát vọng dẫn dắt</strong> — Không ngừng vươn lên vì sự thịnh vượng chung của doanh nghiệp và đất nước.</li>
                                     <li className="mb-3"><strong>Bản lĩnh Việt Nam</strong> — Xây dựng trường phái lãnh đạo mang bản sắc, phù hợp với thực tiễn và văn hóa Việt.</li>
