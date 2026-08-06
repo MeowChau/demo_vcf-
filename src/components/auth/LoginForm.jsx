@@ -48,8 +48,8 @@ const LoginForm = () => {
             localStorage.setItem('jwt', data.jwt);
             localStorage.setItem('user', JSON.stringify(data.user));
 
-            // Redirect to Dashboard
-            window.location.href = '/dashboard';
+            // Redirect to Form
+            window.location.href = '/dang-ky-event';
 
         } catch (err) {
             setError(err.message);
