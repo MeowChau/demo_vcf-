@@ -1,9 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import MembershipLoginModal from '@/components/membership/MembershipLoginModal';
 
 const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
     const [isMembershipModalOpen, setMembershipModalOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const token = localStorage.getItem('jwt');
+            if (token) {
+                setIsLoggedIn(true);
+            }
+        }
+    }, []);
     return (
         <>
             <ul className={`nav navbar-nav ${navbarPlacement} force-right`} data-in="fadeInDown" data-out="fadeOutUp" >
@@ -67,6 +77,9 @@ const MainMenu = ({ toggleSubMenu, navbarPlacement }) => {
                 <li><Link href="/programs" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Chương trình</Link></li>
                 <li><Link href="/tri-thuc" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Tri thức</Link></li>
                 <li><Link href="/" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600 }}>Công cụ</Link></li>
+                {isLoggedIn && (
+                    <li><Link href="/dang-ky-event" className="text-uppercase" style={{ fontSize: '14px', fontWeight: 600, color: '#e60000' }}>Đăng ký sự kiện</Link></li>
+                )}
             </ul>
             <style dangerouslySetInnerHTML={{
                 __html: `
