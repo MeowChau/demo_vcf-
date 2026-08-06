@@ -1,8 +1,19 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 const CeoMentoringDetails = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('jwt');
+        if (token) {
+            setIsLoggedIn(true);
+        }
+    }, []);
+
+    const targetUrl = isLoggedIn ? "/dang-ky-event" : "/dang-ky";
+
     return (
         <div className="ceo-mentoring-details-area" style={{ backgroundColor: '#ffffff', fontFamily: "'Manrope', sans-serif" }}>
             <div className="container py-5" style={{ maxWidth: '900px' }}>
@@ -23,7 +34,7 @@ const CeoMentoringDetails = () => {
                     <h4 style={{ color: '#da151a', fontWeight: '700', fontSize: '18px', marginBottom: '30px' }}>
                         Nhìn đúng vấn đề — Mở rộng góc nhìn — Tìm hướng hành động phù hợp
                     </h4>
-                    <Link href="/dang-ky" className="btn btn-theme effect btn-md" style={{ backgroundColor: '#da151a', color: '#fff', padding: '12px 30px', fontWeight: 'bold', textTransform: 'uppercase', borderRadius: '5px' }}>
+                    <Link href={targetUrl} className="btn btn-theme effect btn-md" style={{ backgroundColor: '#da151a', color: '#fff', padding: '12px 30px', fontWeight: 'bold', textTransform: 'uppercase', borderRadius: '5px' }}>
                         ĐĂNG KÝ THAM GIA
                     </Link>
                     <p style={{ fontSize: '14px', color: '#777', fontStyle: 'italic', marginTop: '15px' }}>
@@ -326,7 +337,7 @@ const CeoMentoringDetails = () => {
                     <p style={{ fontSize: '16px', color: '#333', lineHeight: '1.6', marginBottom: '30px', maxWidth: '800px', margin: '0 auto 30px' }}>
                         CEO Mentoring tạo ra không gian để những người đang trực tiếp điều hành doanh nghiệp cùng đối thoại, soi chiếu kinh nghiệm và tìm ra hướng đi phù hợp hơn cho những quyết định quan trọng.
                     </p>
-                    <Link href="/dang-ky" className="btn btn-theme effect btn-md" style={{ backgroundColor: '#da151a', color: '#fff', padding: '15px 40px', fontWeight: 'bold', textTransform: 'uppercase', borderRadius: '5px', fontSize: '18px', display: 'inline-block' }}>
+                    <Link href={targetUrl} className="btn btn-theme effect btn-md" style={{ backgroundColor: '#da151a', color: '#fff', padding: '15px 40px', fontWeight: 'bold', textTransform: 'uppercase', borderRadius: '5px', fontSize: '18px', display: 'inline-block' }}>
                         ĐĂNG KÝ CEO MENTORING
                     </Link>
                     
