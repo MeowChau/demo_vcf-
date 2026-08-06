@@ -242,7 +242,7 @@ const RegisterForm = () => {
                             Tài khoản của bạn đã được tạo thành công! Hệ thống sẽ tự động chuyển hướng đến trang Đăng nhập trong giây lát...
                         </p>
                         <div style={{ marginTop: '30px' }}>
-                            <a href="/dang-nhap" style={{ backgroundColor: '#002b5e', color: '#fff', padding: '10px 24px', borderRadius: '4px', textDecoration: 'none', fontWeight: '500', display: 'inline-block' }}>Đến trang Đăng nhập ngay</a>
+                            <a href="/dang-nhap" style={{ backgroundColor: '#e60000', color: '#fff', padding: '10px 24px', borderRadius: '4px', textDecoration: 'none', fontWeight: '500', display: 'inline-block' }}>Đến trang Đăng nhập ngay</a>
                         </div>
                     </div>
                 </div>
