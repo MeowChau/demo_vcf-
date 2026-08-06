@@ -56,10 +56,26 @@ const MentoringRequestForm = () => {
             const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
             
             // Format data for Strapi v5
+            const mapCategoryToEnum = (label) => {
+                if (label === 'Other') return 'Khác';
+                if (label.startsWith('Chiến lược')) return 'Chiến lược';
+                if (label.startsWith('Tăng trưởng')) return 'Tăng trưởng';
+                if (label.startsWith('Marketing')) return 'Marketing';
+                if (label.startsWith('Nhân sự')) return 'Nhân sự';
+                if (label.startsWith('Phân quyền')) return 'Phân quyền';
+                if (label.startsWith('Quản lý & vận hành')) return 'Quản lý & vận hành';
+                if (label.startsWith('Tài chính')) return 'Tài chính';
+                if (label.startsWith('AI & chuyển đổi số')) return 'AI & chuyển đổi số';
+                if (label.startsWith('Sản phẩm')) return 'Sản phẩm';
+                if (label.startsWith('Quốc tế hóa')) return 'Quốc tế hóa';
+                if (label.startsWith('Pháp lý')) return 'Pháp lý';
+                return 'Khác';
+            };
+
             const payload = {
                 data: {
                     desiredClasses: formData.desiredClasses,
-                    mainProblemCategory: formData.mainProblemCategory === 'Other' ? 'Khác' : formData.mainProblemCategory,
+                    mainProblemCategory: mapCategoryToEnum(formData.mainProblemCategory),
                     otherProblemCategory: formData.otherProblemCategory,
                     problemDescription: formData.problemDescription,
                     problemImportance: formData.problemImportance,
