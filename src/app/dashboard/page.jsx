@@ -2,35 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
-// Mock Data
-const MOCK_EVENTS = [
-    {
-        id: 1,
-        title: 'CEO Dialogue 2026',
-        date: '20/08/2026 - 08:30 AM',
-        status: 'Đã xác nhận tham gia',
-        statusColor: '#2e7d32', // Green
-        image: '/assets/img/eventsNetworking/Dinner Party.avif'
-    },
-    {
-        id: 2,
-        title: 'Khóa học Lãnh đạo Đột phá',
-        date: '05/09/2026 - 14:00 PM',
-        status: 'Đang chờ xếp lớp',
-        statusColor: '#f57c00', // Orange
-        image: '/assets/img/eventsNetworking/ASIA CEO DEC 2022 (91)_HEIC.avif'
-    },
-    {
-        id: 3,
-        title: 'Hội thảo Công nghệ và Quản trị',
-        date: '12/09/2026 - 09:00 AM',
-        status: 'Đã lưu',
-        statusColor: '#757575', // Grey
-        image: '/assets/img/eventsNetworking/Yacht Deck.avif'
-    }
-];
-
+// Mock Data for Articles
 const MOCK_ARTICLES = [
     {
         id: 1,
@@ -54,26 +28,128 @@ const MOCK_ARTICLES = [
 
 const DashboardPage = () => {
     const [user, setUser] = useState(null);
+    const [events, setEvents] = useState([]);
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Check if user is logged in
-        const jwt = localStorage.getItem('jwt');
-        const userData = localStorage.getItem('user');
+        const fetchDashboardData = async () => {
+            const jwt = localStorage.getItem('jwt');
+            const userData = localStorage.getItem('user');
 
-        if (!jwt || !userData) {
-            router.push('/dang-nhap');
-            return;
-        }
+            if (!jwt || !userData) {
+                router.push('/dang-nhap');
+                return;
+            }
 
-        try {
-            setUser(JSON.parse(userData));
-        } catch (e) {
-            router.push('/dang-nhap');
-        } finally {
-            setIsLoading(false);
-        }
+            try {
+                setUser(JSON.parse(userData));
+                
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                
+                // Fetch user's registered requests
+                const requestsRes = await fetch(`${API_URL}/api/mentoring-requests/me`, {
+                    headers: { 'Authorization': `Bearer ${jwt}` }
+                });
+                
+                // Fetch all events from the new Course API
+                const eventsRes = await fetch(`${API_URL}/api/courses?populate=*`);
+                
+                if (requestsRes.ok) {
+                    const requestsData = await requestsRes.json();
+                    let registeredClasses = [];
+                    // Flatten desiredClasses from all requests
+                    (requestsData.data || []).forEach(req => {
+                        if (req.desiredClasses && Array.isArray(req.desiredClasses)) {
+                            req.desiredClasses.forEach(c => {
+                                if (!registeredClasses.includes(c)) registeredClasses.push(c);
+                            });
+                        }
+                    });
+
+                    let strapiEvents = [];
+                    if (eventsRes.ok) {
+                        const evtData = await eventsRes.json();
+                        // Support both Strapi v4 and v5 data structures
+                        strapiEvents = evtData.data || [];
+                    }
+
+                    // Map registered classes to actual events
+                    const IMAGE_MAP = {
+                        '17': '/assets/img/about/z7934289768980_21088567fa80181416162d7272c561a2-20260628161753-vw10m.jpg',
+                        '18': '/assets/img/about/z7934289805121_b022af287ca855669016fcb915cc851d-20260628161753-8cne3.jpg',
+                        '19': '/assets/img/about/87c9484f52c5d39b8ad4.jpg',
+                        '20': '/assets/img/about/ceo-mentoring-18-20260628161442-tjcbb.jpg'
+                    };
+
+                    const DATE_MAP = {
+                        '17': '14/08/2026 - Hà Nội',
+                        '18': '15/08/2026 - TP Hồ Chí Minh',
+                        '19': '21/08/2026 - Hà Nội',
+                        '20': '28/08/2026 - Hà Nội'
+                    };
+
+                    const mappedEvents = registeredClasses.map((className, index) => {
+                        // Find if there's a matching event in Strapi by title
+                        const strapiMatch = strapiEvents.find(e => {
+                            const title = e.attributes ? e.attributes.title : e.title;
+                            return title === className;
+                        });
+
+                        let matchedDefaultImg = '/assets/img/eventsNetworking/ASIA CEO DEC 2022 (91)_HEIC.avif';
+                        let matchedDefaultDate = 'Đang cập nhật';
+                        
+                        Object.keys(IMAGE_MAP).forEach(key => {
+                            if (className.includes(key) || (strapiMatch && strapiMatch.attributes && strapiMatch.attributes.title.includes(key))) {
+                                matchedDefaultImg = IMAGE_MAP[key];
+                                matchedDefaultDate = DATE_MAP[key];
+                            }
+                        });
+                        
+                        if (strapiMatch) {
+                            const attr = strapiMatch.attributes || strapiMatch;
+                            let imgUrl = matchedDefaultImg; 
+                            
+                            if (attr.image && attr.image.data) {
+                                imgUrl = `${API_URL}${attr.image.data.attributes.url}`;
+                            } else if (attr.image && attr.image.url) {
+                                imgUrl = `${API_URL}${attr.image.url}`; // For v5 without explicit data object sometimes
+                            }
+
+                            return {
+                                id: strapiMatch.id,
+                                title: attr.title || className,
+                                date: attr.date || matchedDefaultDate,
+                                status: attr.eventStatus || 'Đang chờ xếp lớp',
+                                statusColor: attr.statusColor || '#f57c00',
+                                image: imgUrl
+                            };
+                        } else {
+                            // Fallback if not found in Strapi yet
+                            return {
+                                id: `fallback-${index}`,
+                                title: className,
+                                date: matchedDefaultDate,
+                                status: 'Đang chờ xếp lớp',
+                                statusColor: '#f57c00', // Orange
+                                image: matchedDefaultImg
+                            };
+                        }
+                    });
+
+                    setEvents(mappedEvents);
+                }
+
+            } catch (e) {
+                console.error("Dashboard fetch error:", e);
+                // Optionally redirect to login on error if token is expired
+                // router.push('/dang-nhap');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchDashboardData();
     }, [router]);
 
     if (isLoading || !user) {
@@ -90,7 +166,7 @@ const DashboardPage = () => {
 
     const styles = {
         bg: {
-            backgroundColor: '#ffffff', // Changed to white background
+            backgroundColor: '#ffffff',
             minHeight: '100vh',
             paddingTop: '130px',
             paddingBottom: '80px'
@@ -99,9 +175,9 @@ const DashboardPage = () => {
             backgroundColor: '#fff',
             borderRadius: '12px',
             padding: '24px',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.05)', // Slightly stronger shadow for white bg
+            boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
             marginBottom: '20px',
-            border: '1px solid #f0f0f0' // Subtle border
+            border: '1px solid #f0f0f0'
         },
         cardTitle: {
             fontSize: '18px',
@@ -135,7 +211,8 @@ const DashboardPage = () => {
             alignItems: 'center',
             gap: '15px',
             cursor: 'pointer',
-            transition: 'transform 0.2s'
+            transition: 'transform 0.2s',
+            border: '1px solid #f0f0f0'
         },
         btnIconBox: {
             width: '32px',
@@ -174,6 +251,17 @@ const DashboardPage = () => {
         },
         articleContent: {
             padding: '20px'
+        },
+        registerBtn: {
+            backgroundColor: '#e60000',
+            color: '#fff',
+            padding: '8px 20px',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            fontSize: '14px',
+            display: 'inline-block',
+            marginTop: '15px',
+            fontWeight: '600'
         }
     };
 
@@ -192,35 +280,54 @@ const DashboardPage = () => {
                                     Lịch và đăng kí của tôi
                                 </div>
                                 
-                                {MOCK_EVENTS.map((evt, idx) => (
-                                    <div key={evt.id} style={{
-                                        ...styles.eventRow,
-                                        borderBottom: idx === MOCK_EVENTS.length - 1 ? 'none' : '1px dashed #eee'
-                                    }}>
-                                        <img src={evt.image} alt={evt.title} style={styles.eventImg} />
-                                        <div>
-                                            <h4 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '5px', color: '#333' }}>{evt.title}</h4>
-                                            <div style={{ fontSize: '13px', color: '#777', marginBottom: '5px' }}>
-                                                <i className="far fa-clock" style={{ marginRight: '5px' }}></i>
-                                                {evt.date}
+                                {events.length === 0 ? (
+                                    <div style={{ textAlign: 'center', padding: '30px 0' }}>
+                                        <img src="/assets/img/icon/empty.png" alt="Empty" style={{ width: '60px', opacity: 0.3, marginBottom: '15px' }} />
+                                        <h5 style={{ color: '#666', fontSize: '15px' }}>Bạn chưa đăng ký sự kiện nào</h5>
+                                        <Link href="/dang-ky-event" style={styles.registerBtn}>
+                                            Đăng ký sự kiện ngay
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <div>
+                                        {events.map((evt, idx) => (
+                                            <div key={evt.id} style={{
+                                                ...styles.eventRow,
+                                                borderBottom: idx === events.length - 1 ? 'none' : '1px dashed #eee'
+                                            }}>
+                                                <img src={evt.image} alt={evt.title} style={styles.eventImg} />
+                                                <div>
+                                                    <h4 style={{ fontSize: '15px', fontWeight: '600', marginBottom: '5px', color: '#333' }}>{evt.title}</h4>
+                                                    <div style={{ fontSize: '13px', color: '#777', marginBottom: '5px' }}>
+                                                        <i className="far fa-clock" style={{ marginRight: '5px' }}></i>
+                                                        {evt.date}
+                                                    </div>
+                                                    <div style={{ fontSize: '13px' }}>
+                                                        Trạng thái: <span style={{ color: evt.statusColor, fontWeight: '500' }}>{evt.status}</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div style={{ fontSize: '13px' }}>
-                                                Trạng thái: <span style={{ color: evt.statusColor, fontWeight: '500' }}>{evt.status}</span>
-                                            </div>
+                                        ))}
+                                        <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                                            <Link href="/dang-ky-event" style={{ display: 'inline-block', backgroundColor: '#da151a', color: '#fff', padding: '12px 30px', borderRadius: '6px', textDecoration: 'none', fontWeight: '600', fontSize: '15px' }}>
+                                                Đăng ký sự kiện
+                                            </Link>
                                         </div>
                                     </div>
-                                ))}
+                                )}
                             </div>
                         </div>
 
                         {/* Action Buttons */}
                         <div className="col-lg-4">
-                            <div style={styles.btnCard} className="hover-lift">
-                                <div style={styles.btnIconBox}>
-                                    <i className="fas fa-check"></i>
+                            <Link href="/dashboard" style={{ textDecoration: 'none' }}>
+                                <div style={{...styles.btnCard, border: '1px solid #da151a', backgroundColor: '#fff9f9'}}>
+                                    <div style={{...styles.btnIconBox, backgroundColor: '#da151a', color: '#fff'}}>
+                                        <i className="fas fa-check"></i>
+                                    </div>
+                                    <span style={{ fontSize: '15px', fontWeight: '600', color: '#da151a' }}>Sự kiện đã tham gia</span>
                                 </div>
-                                <span style={{ fontSize: '15px', fontWeight: '500', color: '#333' }}>Sự kiện đã tham gia</span>
-                            </div>
+                            </Link>
 
                             <div style={styles.btnCard} className="hover-lift">
                                 <div style={styles.btnIconBox}>

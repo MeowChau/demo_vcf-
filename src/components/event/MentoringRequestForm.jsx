@@ -130,7 +130,7 @@ const MentoringRequestForm = () => {
 
             setSuccess(true);
             setTimeout(() => {
-                window.location.href = '/dashboard-su-kien';
+                window.location.href = '/dashboard';
             }, 2000);
 
         } catch (err) {
@@ -242,7 +242,7 @@ const MentoringRequestForm = () => {
 
     return (
         <div style={styles.card}>
-            <h2 style={styles.title}>Đăng ký event</h2>
+            <h2 style={styles.title}>Đăng ký sự kiện</h2>
 
             {error && (
                 <div className="alert alert-danger" style={{ marginBottom: '25px' }}>

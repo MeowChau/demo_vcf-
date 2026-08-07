@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 const MembershipLoginModal = ({ isOpen, onClose }) => {
@@ -98,6 +98,7 @@ const MembershipLoginModal = ({ isOpen, onClose }) => {
                             textAlign: 'center',
                             fontWeight: 'bold'
                         }}
+                        onClick={() => window.location.href = '/dashboard'}
                     >
                         Log In
                     </div>
