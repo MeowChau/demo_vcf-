@@ -1,12 +1,49 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { knowledgeData as allNews } from './knowledgeData';
 import CeoVideoCarousel from '../home/CeoVideoCarousel';
 
 const KnowledgeContent = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [allNews, setAllNews] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchArticles = async () => {
+            try {
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                const response = await fetch(`${API_URL}/api/articles?populate=*&pagination[limit]=100&sort[0]=createdAt:desc`);
+                const data = await response.json();
+                
+                if (data && data.data) {
+                    const getImageUrl = (imgObj) => {
+                        if (!imgObj) return null;
+                        const url = imgObj.url || imgObj.data?.attributes?.url;
+                        if (!url) return null;
+                        return url.startsWith('http') ? url : `${API_URL}${url}`;
+                    };
+
+                    const formattedData = data.data.map(item => ({
+                        id: item.documentId || item.id,
+                        title: item.title,
+                        desc: item.desc,
+                        image: getImageUrl(item.image) || item.imageUrl || '/assets/img/baiVietMau/bai1.png',
+                        time: item.time,
+                        tags: item.tags,
+                        comments: item.comments
+                    }));
+                    setAllNews(formattedData);
+                }
+            } catch (error) {
+                console.error("Error fetching articles:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchArticles();
+    }, []);
 
     // Calculate items for current page
     const startIndex = (currentPage - 1) * 9;
@@ -76,8 +113,15 @@ const KnowledgeContent = () => {
             )}
 
             {/* Grid Items */}
-            <div className="row g-4">
-                {gridItems.map((item) => (
+            {isLoading ? (
+                <div className="text-center py-5">
+                    <div className="spinner-border text-danger" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            ) : (
+                <div className="row g-4">
+                    {gridItems.map((item) => (
                     <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
                         <Link href={`/tri-thuc/${item.id}`} className="d-block mb-3" style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
                             <Image
@@ -98,6 +142,7 @@ const KnowledgeContent = () => {
                     </div>
                 ))}
             </div>
+            )}
 
             {/* Pagination */}
             {totalPages > 1 && (

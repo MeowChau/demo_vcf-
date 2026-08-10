@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,38 +8,44 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import BannerStyle1 from '../banner/BannerStyle1';
 
-const eventsData = [
-    {
-        id: 1,
-        title: "CEO Mentoring #17",
-        date: "14/08/2026 - Hà Nội",
-        desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
-        image: "/assets/img/about/z7934289768980_21088567fa80181416162d7272c561a2-20260628161753-vw10m.jpg"
-    },
-    {
-        id: 2,
-        title: "CEO Mentoring #18",
-        date: "15/08/2026 - TP Hồ Chí Minh",
-        desc: "Mentor: Ông Võ Quang Huệ, Chủ tịch Foundry AI Việt Nam, Nguyên Phó tổng Giám đốc Tập đoàn VinGroup",
-        image: "/assets/img/about/z7934289805121_b022af287ca855669016fcb915cc851d-20260628161753-8cne3.jpg"
-    },
-    {
-        id: 3,
-        title: "CEO Mentoring #19",
-        date: "21/08/2026 - Hà Nội",
-        desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
-        image: "/assets/img/about/87c9484f52c5d39b8ad4.jpg"
-    },
-    {
-        id: 4,
-        title: "CEO Mentoring #20",
-        date: "28/08/2026 - Hà Nội",
-        desc: "Mentor: Ông Nguyễn Mạnh Hùng, Nguyên Bộ trưởng Bộ Khoa học và Công nghệ",
-        image: "/assets/img/about/ceo-mentoring-18-20260628161442-tjcbb.jpg"
-    }
-];
-
 const ProgramEventsCarousel = () => {
+    const [eventsData, setEventsData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchEvents = async () => {
+            try {
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                const response = await fetch(`${API_URL}/api/events?populate=*&sort[0]=createdAt:desc`);
+                const data = await response.json();
+                
+                if (data && data.data) {
+                    const getImageUrl = (imgObj) => {
+                        if (!imgObj) return null;
+                        const url = imgObj.url || imgObj.data?.attributes?.url;
+                        if (!url) return null;
+                        return url.startsWith('http') ? url : `${API_URL}${url}`;
+                    };
+
+                    const formattedData = data.data.map(item => ({
+                        id: item.documentId || item.id,
+                        title: item.title,
+                        date: item.date,
+                        desc: item.desc,
+                        image: getImageUrl(item.image) || item.imageUrl || '/assets/img/about/87c9484f52c5d39b8ad4.jpg'
+                    }));
+                    setEventsData(formattedData);
+                }
+            } catch (error) {
+                console.error("Error fetching events:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchEvents();
+    }, []);
+
     return (
         <div className="program-events-area pb-100" style={{ backgroundColor: '#fff', paddingTop: '150px', fontFamily: "'Manrope', sans-serif" }}>
             <style dangerouslySetInnerHTML={{__html: `
@@ -129,6 +135,13 @@ const ProgramEventsCarousel = () => {
 
             <div className="container pt-4 pb-4" style={{ maxWidth: '1400px' }}>
                 <div style={{ position: 'relative', padding: '0 10px' }}>
+                    {isLoading ? (
+                        <div className="text-center py-5">
+                            <div className="spinner-border text-danger" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    ) : (
                     <Swiper
                         modules={[Keyboard, Autoplay, Navigation]}
                         spaceBetween={30}
@@ -189,6 +202,7 @@ const ProgramEventsCarousel = () => {
                     <div className="program-swiper-button-next d-none d-md-flex">
                         <i className="fas fa-chevron-right"></i>
                     </div>
+                    )}
                 </div>
 
                 <div className="row mt-5 pt-4">
