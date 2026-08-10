@@ -32,7 +32,7 @@ const ProgramEventsCarousel = () => {
                         title: item.title,
                         date: item.date,
                         desc: item.desc,
-                        image: getImageUrl(item.image) || item.imageUrl || '/assets/img/about/87c9484f52c5d39b8ad4.jpg'
+                        image: getImageUrl(item.image) || item.imageUrl || null,
                     }));
                     setEventsData(formattedData);
                 }
@@ -162,9 +162,11 @@ const ProgramEventsCarousel = () => {
                         {eventsData.map((event) => (
                             <SwiperSlide key={event.id} style={{ height: 'auto' }}>
                                 <div className="event-card" style={{ backgroundColor: '#ffffff', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', overflow: 'hidden', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                                    <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                                         <Image src={event.image} alt={event.title} fill style={{ objectFit: 'cover' }} />
-                                    </div>
+                                    {event.image && (
+                                        <div style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
+                                            <Image src={event.image} alt={event.title} fill style={{ objectFit: 'cover' }} />
+                                        </div>
+                                    )}
                                     
                                     <div style={{ padding: '30px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                                         <h4 style={{ color: '#002b5e', fontWeight: '800', fontSize: '20px', marginBottom: '15px', lineHeight: '1.4' }}>{event.title}</h4>

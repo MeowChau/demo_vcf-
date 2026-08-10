@@ -28,7 +28,7 @@ const KnowledgeContent = () => {
                         id: item.documentId || item.id,
                         title: item.title,
                         desc: item.desc,
-                        image: getImageUrl(item.image) || item.imageUrl || '/assets/img/baiVietMau/bai1.png',
+                        image: getImageUrl(item.image) || item.imageUrl || null,
                         time: item.time,
                         tags: item.tags,
                         comments: item.comments
@@ -123,14 +123,16 @@ const KnowledgeContent = () => {
                 <div className="row g-4">
                     {gridItems.map((item) => (
                     <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
-                        <Link href={`/tri-thuc/${item.id}`} className="d-block mb-3" style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                fill
-                                style={{ objectFit: 'cover' }}
-                            />
-                        </Link>
+                        {item.image && (
+                            <Link href={`/tri-thuc/${item.id}`} className="d-block mb-3" style={{ position: 'relative', width: '100%', aspectRatio: '16/10', overflow: 'hidden' }}>
+                                <Image
+                                    src={item.image}
+                                    alt={item.title}
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                />
+                            </Link>
+                        )}
                         <Link href={`/tri-thuc/${item.id}`}>
                             <h4 className="news-title mb-2" style={{ fontSize: '22px', lineHeight: '1.4', fontWeight: 700 }}>
                                 {item.title}

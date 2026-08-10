@@ -31,7 +31,7 @@ const KnowledgeDetails = ({ id }) => {
                         id: item.documentId || item.id,
                         title: item.title,
                         desc: item.desc,
-                        image: getImageUrl(item.image) || item.imageUrl || '/assets/img/baiVietMau/bai1.png',
+                        image: getImageUrl(item.image) || item.imageUrl || null,
                         time: item.time,
                         tags: item.tags,
                         comments: item.comments
@@ -48,7 +48,7 @@ const KnowledgeDetails = ({ id }) => {
                         .map(item => ({
                             id: item.documentId || item.id,
                             title: item.title,
-                            image: getImageUrl(item.image) || item.imageUrl || '/assets/img/baiVietMau/bai1.png',
+                            image: getImageUrl(item.image) || item.imageUrl || null,
                             time: item.time
                         })).slice(0, 5);
                     setRelatedArticles(formattedRelated);
@@ -178,14 +178,16 @@ const KnowledgeDetails = ({ id }) => {
                         <span><i className="far fa-calendar-alt"></i> {article.time}</span>
                     </div>
 
-                    <div className="mb-4" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '4px' }}>
-                        <Image 
-                            src={article.image} 
-                            alt={article.title} 
-                            fill 
-                            style={{ objectFit: 'cover' }} 
-                        />
-                    </div>
+                    {article.image && (
+                        <div className="mb-4" style={{ position: 'relative', width: '100%', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '4px' }}>
+                            <Image 
+                                src={article.image} 
+                                alt={article.title} 
+                                fill 
+                                style={{ objectFit: 'cover' }} 
+                            />
+                        </div>
+                    )}
 
                     <div className="article-content">
                         <ReactMarkdown
@@ -210,14 +212,16 @@ const KnowledgeDetails = ({ id }) => {
                     <div className="related-list">
                         {relatedArticles.map((item) => (
                             <Link href={`/tri-thuc/${item.id}`} key={item.id} className="related-item" style={{ textDecoration: 'none' }}>
-                                <div className="related-thumb">
-                                    <Image 
-                                        src={item.image} 
-                                        alt={item.title}
-                                        fill
-                                        style={{ objectFit: 'cover' }}
-                                    />
-                                </div>
+                                {item.image && (
+                                    <div className="related-thumb">
+                                        <Image 
+                                            src={item.image} 
+                                            alt={item.title}
+                                            fill
+                                            style={{ objectFit: 'cover' }}
+                                        />
+                                    </div>
+                                )}
                                 <div className="related-info">
                                     <div className="related-title">{item.title}</div>
                                     <div className="related-date">{item.time}</div>
