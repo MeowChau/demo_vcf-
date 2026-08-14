@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.8",
     "imagesloaded": "^5.0.0",

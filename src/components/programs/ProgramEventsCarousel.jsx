@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Keyboard, Navigation } from 'swiper/modules';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import BannerStyle1 from '../banner/BannerStyle1';
@@ -184,10 +185,9 @@ const ProgramEventsCarousel = () => {
                                             <span style={{ color: '#da151a', fontWeight: '700', fontSize: '15px' }}>{event.date}</span>
                                         </div>
 
-                                        <div 
-                                            style={{ color: '#666', fontSize: '15px', lineHeight: '1.7', flexGrow: 1, marginBottom: '25px' }} 
-                                            dangerouslySetInnerHTML={{ __html: event.desc || "" }} 
-                                        />
+                                        <div style={{ color: '#666', fontSize: '15px', lineHeight: '1.7', flexGrow: 1, marginBottom: '25px' }}>
+                                            {event.desc ? <BlocksRenderer content={event.desc} /> : null}
+                                        </div>
                                         
                                         <div className="mt-auto">
                                             <Link href="/ceo-mentoring" className="btn-register">
