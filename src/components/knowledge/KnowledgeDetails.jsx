@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 
 const KnowledgeDetails = ({ id }) => {
     const [article, setArticle] = useState(null);
@@ -189,20 +188,10 @@ const KnowledgeDetails = ({ id }) => {
                         </div>
                     )}
 
-                    <div className="article-content">
-                        <ReactMarkdown
-                            components={{
-                                img: ({node, ...props}) => (
-                                    <div style={{ margin: '20px 0', textAlign: 'center' }}>
-                                        <img {...props} style={{ maxWidth: '100%', height: 'auto', borderRadius: '4px' }} alt={props.alt || "Article image"} />
-                                    </div>
-                                ),
-                                a: ({node, ...props}) => <a {...props} style={{ color: '#da151a' }} target="_blank" rel="noopener noreferrer" />
-                            }}
-                        >
-                            {article.desc || ""}
-                        </ReactMarkdown>
-                    </div>
+                    <div 
+                        className="article-content" 
+                        dangerouslySetInnerHTML={{ __html: article.desc || "" }}
+                    />
                 </div>
 
                 {/* Sidebar */}
