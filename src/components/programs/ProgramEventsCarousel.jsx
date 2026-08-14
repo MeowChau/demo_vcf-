@@ -142,8 +142,9 @@ const ProgramEventsCarousel = () => {
                             </div>
                         </div>
                     ) : (
-                    <Swiper
-                        modules={[Keyboard, Autoplay, Navigation]}
+                        <>
+                            <Swiper
+                                modules={[Keyboard, Autoplay, Navigation]}
                         spaceBetween={30}
                         slidesPerView={4}
                         loop={false}
@@ -204,6 +205,7 @@ const ProgramEventsCarousel = () => {
                     <div className="program-swiper-button-next d-none d-md-flex">
                         <i className="fas fa-chevron-right"></i>
                     </div>
+                        </>
                     )}
                 </div>
 
