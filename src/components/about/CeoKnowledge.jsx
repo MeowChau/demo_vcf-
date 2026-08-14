@@ -32,6 +32,14 @@ const CeoKnowledge = () => {
                         time: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
                         image: imageUrl
                     };
+                }).sort((a, b) => {
+                    const parseDateStr = (dStr) => {
+                        if (!dStr) return 0;
+                        const m = dStr.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]).getTime();
+                        return new Date(dStr).getTime() || 0;
+                    };
+                    return parseDateStr(b.time) - parseDateStr(a.time);
                 });
                 setKnowledgeData(formattedData);
             } catch (error) {
@@ -90,11 +98,7 @@ const CeoKnowledge = () => {
                                     <h3 className="knowledge-title" style={{ color: '#002b5e', fontWeight: '800', fontSize: '26px', marginBottom: '15px', transition: 'color 0.3s' }}>
                                         {featuredPost.title}
                                     </h3>
-                                    <div 
-                                        style={{ color: '#666', fontSize: '16px', lineHeight: '1.7', marginBottom: '20px', flexGrow: 1, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}
-                                        dangerouslySetInnerHTML={{ __html: featuredPost.desc }}
-                                    />
-                                    <div style={{ display: 'flex', alignItems: 'center', color: '#888', fontSize: '14px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', color: '#888', fontSize: '14px', marginTop: 'auto' }}>
                                         <span style={{ fontWeight: '600' }}>Admin</span>
                                         <span style={{ margin: '0 10px' }}>•</span>
                                         <span>{featuredPost.time}</span>

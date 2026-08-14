@@ -13,26 +13,40 @@ const KnowledgeContent = () => {
         const fetchArticles = async () => {
             try {
                 const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
-                const response = await fetch(`${API_URL}/api/articles?populate=*&pagination[limit]=100&sort[0]=createdAt:desc`);
-                const data = await response.json();
+                const response = await fetch(`${API_URL}/api/articles?populate=*&pagination[limit]=100`);
+                const json = await response.json();
                 
-                if (data && data.data) {
-                    const getImageUrl = (imgObj) => {
-                        if (!imgObj) return null;
-                        const url = imgObj.url || imgObj.data?.attributes?.url;
-                        if (!url) return null;
-                        return url.startsWith('http') ? url : `${API_URL}${url}`;
+                if (json.data) {
+                    const parseDateStr = (dStr) => {
+                        if (!dStr) return 0;
+                        const m = String(dStr).match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]).getTime();
+                        return new Date(dStr).getTime() || 0;
                     };
-
-                    const formattedData = data.data.map(item => ({
-                        id: item.documentId || item.id,
-                        title: item.title,
-                        desc: item.desc,
-                        image: getImageUrl(item.image) || item.imageUrl || null,
-                        time: item.time,
-                        tags: item.tags,
-                        comments: item.comments
-                    }));
+                    const formattedData = json.data
+                        .map(item => {
+                            const attr = item.attributes || item;
+                            let imageUrl = '/assets/img/baiVietMau/bai1.png';
+                            if (attr.image && attr.image.data) {
+                                imageUrl = `${API_URL}${attr.image.data.attributes.url}`;
+                            } else if (attr.image && attr.image.url) {
+                                imageUrl = `${API_URL}${attr.image.url}`;
+                            } else if (attr.imageUrl) {
+                                imageUrl = attr.imageUrl;
+                            }
+                            
+                            return {
+                                id: item.documentId || item.id,
+                                title: attr.title,
+                                desc: attr.desc || attr.title,
+                                tags: attr.tags,
+                                time: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
+                                comments: attr.comments || 0,
+                                image: imageUrl
+                            };
+                        })
+                        .sort((a, b) => parseDateStr(b.time) - parseDateStr(a.time));
+                    
                     setAllNews(formattedData);
                 }
             } catch (error) {

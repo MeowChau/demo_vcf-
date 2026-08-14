@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Keyboard, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import BannerStyle1 from '../banner/BannerStyle1';
 
 const ProgramEventsCarousel = () => {
     const [eventsData, setEventsData] = useState([]);
@@ -27,13 +26,36 @@ const ProgramEventsCarousel = () => {
                         return url.startsWith('http') ? url : `${API_URL}${url}`;
                     };
 
-                    const formattedData = data.data.map(item => ({
-                        id: item.documentId || item.id,
-                        title: item.title,
-                        date: item.date,
-                        desc: item.desc,
-                        image: getImageUrl(item.image) || item.imageUrl || null,
-                    }));
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    const parseDateStr = (d) => {
+                        if (!d) return null;
+                        const m = d.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]);
+                        return null;
+                    };
+
+                    const formattedData = data.data
+                        .filter(item => {
+                            const ed = parseDateStr(item.date);
+                            if (!ed) return true;
+                            return ed >= today;
+                        })
+                        .sort((a, b) => {
+                            const dateA = parseDateStr(a.date) || new Date(8640000000000000);
+                            const dateB = parseDateStr(b.date) || new Date(8640000000000000);
+                            return dateA - dateB;
+                        })
+                        .map(item => ({
+                            id: item.documentId || item.id,
+                            title: item.title,
+                            date: item.date,
+                            desc: item.desc,
+                            location: item.location,
+                            mentor: item.mentor,
+                            image: getImageUrl(item.image) || item.imageUrl || null,
+                        }));
                     setEventsData(formattedData);
                 }
             } catch (error) {
@@ -131,8 +153,6 @@ const ProgramEventsCarousel = () => {
                 </div>
             </div>
 
-            <BannerStyle1 />
-
             <div className="container pt-4 pb-4" style={{ maxWidth: '1400px' }}>
                 <div style={{ position: 'relative', padding: '0 10px' }}>
                     {isLoading ? (
@@ -184,13 +204,21 @@ const ProgramEventsCarousel = () => {
                                             <span style={{ color: '#da151a', fontWeight: '700', fontSize: '15px' }}>{event.date}</span>
                                         </div>
 
-                                        <div 
-                                            style={{ color: '#666', fontSize: '15px', lineHeight: '1.7', flexGrow: 1, marginBottom: '25px' }} 
-                                            dangerouslySetInnerHTML={{ __html: event.desc || "" }} 
-                                        />
+                                        {event.location && (
+                                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px', color: '#666', fontSize: '14px' }}>
+                                                <i className="fas fa-map-marker-alt" style={{ marginRight: '10px', color: '#888' }}></i>
+                                                <span>{event.location}</span>
+                                            </div>
+                                        )}
+                                        
+                                        {event.mentor && (
+                                            <p style={{ color: '#666', fontSize: '15px', lineHeight: '1.7', flexGrow: 1, marginBottom: '25px' }}>
+                                                <strong>Mentor:</strong> {event.mentor.replace(/^Mentor:\s*/i, '')}
+                                            </p>
+                                        )}
                                         
                                         <div className="mt-auto">
-                                            <Link href="/ceo-mentoring" className="btn-register">
+                                            <Link href={`/ceo-mentoring/${event.id}`} className="btn-register">
                                                 Xem thêm
                                             </Link>
                                         </div>

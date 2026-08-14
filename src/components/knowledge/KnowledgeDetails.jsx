@@ -38,19 +38,33 @@ const KnowledgeDetails = ({ id }) => {
                 }
 
                 // Fetch related articles
-                const relRes = await fetch(`${API_URL}/api/articles?populate=*&sort[0]=createdAt:desc&pagination[limit]=6`);
-                const relData = await relRes.json();
-                
-                if (relData && relData.data) {
-                    const formattedRelated = relData.data
-                        .filter(item => (item.documentId || item.id) !== id)
-                        .map(item => ({
-                            id: item.documentId || item.id,
-                            title: item.title,
-                            image: getImageUrl(item.image) || item.imageUrl || null,
-                            time: item.time
-                        })).slice(0, 5);
-                    setRelatedArticles(formattedRelated);
+                const relRes = await fetch(`${API_URL}/api/articles?populate=*`);
+                const relJson = await relRes.json();
+                if (relJson.data) {
+                    const parseDateStr = (dStr) => {
+                        if (!dStr) return 0;
+                        const m = String(dStr).match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]).getTime();
+                        return new Date(dStr).getTime() || 0;
+                    };
+                    const formattedRelData = relJson.data
+                        .filter(item => (item.documentId || item.id) != id)
+                        .map(item => {
+                            const attr = item.attributes || item;
+                            return {
+                                id: item.documentId || item.id,
+                                title: attr.title,
+                                time: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
+                                image: attr.image?.data?.attributes?.url 
+                                    ? `${API_URL}${attr.image.data.attributes.url}`
+                                    : attr.image?.url 
+                                        ? `${API_URL}${attr.image.url}` 
+                                        : attr.imageUrl || '/assets/img/baiVietMau/bai1.png'
+                            };
+                        })
+                        .sort((a, b) => parseDateStr(b.time) - parseDateStr(a.time))
+                        .slice(0, 6);
+                    setRelatedArticles(formattedRelData);
                 }
             } catch (error) {
                 console.error("Error fetching article details:", error);

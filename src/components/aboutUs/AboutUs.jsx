@@ -1,7 +1,37 @@
-import React from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import CeoMentors from '@/components/about/CeoMentors';
 
 const AboutUs = () => {
+    const [stats, setStats] = useState([
+        { num: '200+', label: 'CEO tham gia thường xuyên', icon: 'fas fa-book-open' },
+        { num: '50+', label: 'CEO nòng cốt', icon: 'fas fa-briefcase' },
+        { num: '1000+', label: 'Tài khoản nền tảng số', icon: 'fas fa-graduation-cap' },
+        { num: '5+', label: 'Kỳ Forum/sự kiện/năm', icon: 'fas fa-pencil-ruler' }
+    ]);
+
+    useEffect(() => {
+        const fetchStats = async () => {
+            try {
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                const res = await fetch(`${API_URL}/api/statistic`);
+                const json = await res.json();
+                if (json.data) {
+                    const data = json.data.attributes || json.data;
+                    setStats([
+                        { num: data.regularCeoCount || '200+', label: 'CEO tham gia thường xuyên', icon: 'fas fa-book-open' },
+                        { num: data.coreCeoCount || '50+', label: 'CEO nòng cốt', icon: 'fas fa-briefcase' },
+                        { num: data.digitalAccounts || '1000+', label: 'Tài khoản nền tảng số', icon: 'fas fa-graduation-cap' },
+                        { num: data.eventsPerYear || '5+', label: 'Kỳ Forum/sự kiện/năm', icon: 'fas fa-pencil-ruler' }
+                    ]);
+                }
+            } catch (error) {
+                console.error("Error fetching stats:", error);
+            }
+        };
+        fetchStats();
+    }, []);
+
     return (
         <div className="about-us-page-area pb-100" style={{ backgroundColor: '#fff', paddingTop: '150px' }}>
             <style>{`
@@ -175,12 +205,7 @@ const AboutUs = () => {
                 <div className="mb-50">
                     
                     <div className="row">
-                        {[
-                            { num: '200+', label: 'CEO tham gia thường xuyên', icon: 'fas fa-book-open' },
-                            { num: '50+', label: 'CEO nòng cốt', icon: 'fas fa-briefcase' },
-                            { num: '1000+', label: 'Tài khoản nền tảng số', icon: 'fas fa-graduation-cap' },
-                            { num: '5+', label: 'Kỳ Forum/sự kiện/năm', icon: 'fas fa-pencil-ruler' }
-                        ].map((stat, index) => (
+                        {stats.map((stat, index) => (
                             <div className="col-lg-3 col-md-6 mb-4" key={index}>
                                 <div style={{ 
                                     backgroundColor: '#f6e8d8', 

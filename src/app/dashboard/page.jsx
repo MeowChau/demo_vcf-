@@ -37,28 +37,40 @@ const DashboardPage = () => {
                 const eventsRes = await fetch(`${API_URL}/api/courses?populate=*`);
                 
                 // Fetch recommended articles
-                const articlesRes = await fetch(`${API_URL}/api/articles?populate=*&sort=createdAt:desc&pagination[limit]=3`);
+                const articlesRes = await fetch(`${API_URL}/api/articles?populate=*`);
                 
                 if (articlesRes.ok) {
                     const articlesData = await articlesRes.json();
-                    const mappedArticles = (articlesData.data || []).map(item => {
-                        const attr = item.attributes || item;
-                        let imgUrl = '/assets/img/baiVietMau/bai1.png';
-                        if (attr.image && attr.image.data) {
-                            imgUrl = `${API_URL}${attr.image.data.attributes.url}`;
-                        } else if (attr.image && attr.image.url) {
-                            imgUrl = `${API_URL}${attr.image.url}`;
-                        } else if (attr.imageUrl) {
-                            imgUrl = attr.imageUrl;
-                        }
-                        
-                        return {
-                            id: item.documentId || item.id,
-                            title: attr.title,
-                            date: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
-                            image: imgUrl
-                        };
-                    });
+                    
+                    const parseDateStr = (dStr) => {
+                        if (!dStr) return 0;
+                        const m = String(dStr).match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]).getTime();
+                        return new Date(dStr).getTime() || 0;
+                    };
+
+                    const mappedArticles = (articlesData.data || [])
+                        .map(item => {
+                            const attr = item.attributes || item;
+                            let imgUrl = '/assets/img/baiVietMau/bai1.png';
+                            if (attr.image && attr.image.data) {
+                                imgUrl = `${API_URL}${attr.image.data.attributes.url}`;
+                            } else if (attr.image && attr.image.url) {
+                                imgUrl = `${API_URL}${attr.image.url}`;
+                            } else if (attr.imageUrl) {
+                                imgUrl = attr.imageUrl;
+                            }
+                            
+                            return {
+                                id: item.documentId || item.id,
+                                title: attr.title,
+                                date: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
+                                image: imgUrl
+                            };
+                        })
+                        .sort((a, b) => parseDateStr(b.date) - parseDateStr(a.date))
+                        .slice(0, 3);
+
                     setArticles(mappedArticles);
                 }
 

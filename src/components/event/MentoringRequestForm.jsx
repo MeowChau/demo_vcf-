@@ -18,6 +18,7 @@ const MentoringRequestForm = () => {
     const [success, setSuccess] = useState(false);
     const [jwt, setJwt] = useState(null);
     const [registeredClasses, setRegisteredClasses] = useState([]);
+    const [availableClasses, setAvailableClasses] = useState([]);
 
     useEffect(() => {
         // Retrieve JWT to check if user is logged in
@@ -53,7 +54,43 @@ const MentoringRequestForm = () => {
             }
         };
 
+        const fetchAvailableClasses = async () => {
+            try {
+                const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+                const res = await fetch(`${API_URL}/api/events?sort=createdAt:desc`);
+                const json = await res.json();
+                if (json.data) {
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    const parseDateStr = (d) => {
+                        if (!d) return null;
+                        const m = d.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                        if (m) return new Date(m[3], m[2] - 1, m[1]);
+                        return null;
+                    };
+
+                    const classNames = json.data
+                        .filter(e => {
+                            const ed = parseDateStr(e.date);
+                            if (!ed) return true;
+                            return ed >= today;
+                        })
+                        .sort((a, b) => {
+                            const dateA = parseDateStr(a.date) || new Date(8640000000000000);
+                            const dateB = parseDateStr(b.date) || new Date(8640000000000000);
+                            return dateA - dateB;
+                        })
+                        .map(event => event.title);
+                    setAvailableClasses(classNames);
+                }
+            } catch (err) {
+                console.error("Failed to fetch available classes:", err);
+            }
+        };
+
         fetchUserEvents();
+        fetchAvailableClasses();
     }, []);
 
     const handleChange = (e) => {
@@ -259,7 +296,8 @@ const MentoringRequestForm = () => {
                     </div>
                     <div style={styles.questionSub}>Vui lòng lựa chọn tất cả những ngày có thể tham gia</div>
                     
-                    {['Lớp 17', 'Lớp 18', 'Lớp 19', 'Lớp 20'].map((lop) => {
+                    {availableClasses.length === 0 && <div style={{ fontSize: '14px', color: '#666', marginTop: '10px' }}>Đang tải danh sách chương trình...</div>}
+                    {availableClasses.map((lop) => {
                         const isRegistered = registeredClasses.includes(lop);
                         return (
                             <label key={lop} style={{...styles.radioLabel, color: isRegistered ? '#999' : '#202124'}}>
