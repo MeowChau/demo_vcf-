@@ -4,31 +4,12 @@ import LayoutStyle1 from '@/components/Layouts/LayoutStyle1';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-// Mock Data for Articles
-const MOCK_ARTICLES = [
-    {
-        id: 1,
-        title: 'Thực thi chiến lược hiệu quả',
-        date: '03/08/2026',
-        image: '/assets/img/baiVietMau/bai1.png'
-    },
-    {
-        id: 2,
-        title: 'Thay đổi tư duy, văn hoá và hành vi của tổ chức',
-        date: '02/08/2026',
-        image: '/assets/img/baiVietMau/bai2.png'
-    },
-    {
-        id: 3,
-        title: '[CEO DIALOGUE] Trực 1 - Khi CEO không có mặt, hệ thống có tiếp tục vận hành?',
-        date: '31/07/2026',
-        image: '/assets/img/baiVietMau/bai3.png'
-    }
-];
+// No mock articles, we will fetch from API
 
 const DashboardPage = () => {
     const [user, setUser] = useState(null);
     const [events, setEvents] = useState([]);
+    const [articles, setArticles] = useState([]);
     const router = useRouter();
     const [isLoading, setIsLoading] = useState(true);
 
@@ -55,6 +36,32 @@ const DashboardPage = () => {
                 // Fetch all events from the new Course API
                 const eventsRes = await fetch(`${API_URL}/api/courses?populate=*`);
                 
+                // Fetch recommended articles
+                const articlesRes = await fetch(`${API_URL}/api/articles?populate=*&sort=createdAt:desc&pagination[limit]=3`);
+                
+                if (articlesRes.ok) {
+                    const articlesData = await articlesRes.json();
+                    const mappedArticles = (articlesData.data || []).map(item => {
+                        const attr = item.attributes || item;
+                        let imgUrl = '/assets/img/baiVietMau/bai1.png';
+                        if (attr.image && attr.image.data) {
+                            imgUrl = `${API_URL}${attr.image.data.attributes.url}`;
+                        } else if (attr.image && attr.image.url) {
+                            imgUrl = `${API_URL}${attr.image.url}`;
+                        } else if (attr.imageUrl) {
+                            imgUrl = attr.imageUrl;
+                        }
+                        
+                        return {
+                            id: item.documentId || item.id,
+                            title: attr.title,
+                            date: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
+                            image: imgUrl
+                        };
+                    });
+                    setArticles(mappedArticles);
+                }
+
                 if (requestsRes.ok) {
                     const requestsData = await requestsRes.json();
                     let registeredClasses = [];
@@ -352,7 +359,7 @@ const DashboardPage = () => {
                     </div>
 
                     <div className="row">
-                        {MOCK_ARTICLES.map(article => (
+                        {articles.map(article => (
                             <div className="col-lg-4 col-md-6 mb-4" key={article.id}>
                                 <a href={`/tri-thuc/${article.id}`} style={{ textDecoration: 'none' }}>
                                     <div style={styles.articleCard} className="hover-lift">

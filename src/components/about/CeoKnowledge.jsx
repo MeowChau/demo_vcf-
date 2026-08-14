@@ -1,9 +1,50 @@
-﻿import React from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { knowledgeData } from '@/components/knowledge/knowledgeData';
 
 const CeoKnowledge = () => {
+    const [knowledgeData, setKnowledgeData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchKnowledge = async () => {
+            try {
+                const res = await fetch('http://localhost:1337/api/articles?populate=*&sort=createdAt:desc');
+                const json = await res.json();
+                
+                const formattedData = (json.data || []).map(item => {
+                    const attr = item.attributes || item;
+                    let imageUrl = '/assets/img/baiVietMau/bai1.png';
+                    if (attr.image && attr.image.data) {
+                        imageUrl = `http://localhost:1337${attr.image.data.attributes.url}`;
+                    } else if (attr.image && attr.image.url) {
+                        imageUrl = `http://localhost:1337${attr.image.url}`;
+                    } else if (attr.imageUrl) {
+                        imageUrl = attr.imageUrl;
+                    }
+                    
+                    return {
+                        id: item.documentId || item.id,
+                        title: attr.title,
+                        desc: attr.desc || attr.title,
+                        tags: attr.tags,
+                        time: attr.time || new Date(attr.createdAt).toLocaleDateString('vi-VN'),
+                        image: imageUrl
+                    };
+                });
+                setKnowledgeData(formattedData);
+            } catch (error) {
+                console.error("Error fetching knowledge data:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchKnowledge();
+    }, []);
+
+    if (loading || knowledgeData.length === 0) return null;
+
     const featuredPost = knowledgeData[0];
     const olderPosts = knowledgeData.slice(1, 5);
     return (
@@ -49,9 +90,10 @@ const CeoKnowledge = () => {
                                     <h3 className="knowledge-title" style={{ color: '#002b5e', fontWeight: '800', fontSize: '26px', marginBottom: '15px', transition: 'color 0.3s' }}>
                                         {featuredPost.title}
                                     </h3>
-                                    <p style={{ color: '#666', fontSize: '16px', lineHeight: '1.7', marginBottom: '20px', flexGrow: 1 }}>
-                                        {featuredPost.desc}
-                                    </p>
+                                    <div 
+                                        style={{ color: '#666', fontSize: '16px', lineHeight: '1.7', marginBottom: '20px', flexGrow: 1, overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}
+                                        dangerouslySetInnerHTML={{ __html: featuredPost.desc }}
+                                    />
                                     <div style={{ display: 'flex', alignItems: 'center', color: '#888', fontSize: '14px' }}>
                                         <span style={{ fontWeight: '600' }}>Admin</span>
                                         <span style={{ margin: '0 10px' }}>•</span>
