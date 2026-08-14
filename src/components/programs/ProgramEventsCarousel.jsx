@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Keyboard, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -186,23 +185,9 @@ const ProgramEventsCarousel = () => {
                                         </div>
 
                                         <div 
-                                            style={{ 
-                                                color: '#666', 
-                                                lineHeight: '1.7', 
-                                                flexGrow: 1, 
-                                                marginBottom: '25px',
-                                                fontSize: event.fontSize || '15px',
-                                                fontFamily: event.fontFamily || 'Inter, sans-serif'
-                                            }} 
-                                        >
-                                            <ReactMarkdown
-                                                components={{
-                                                    a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'underline' }} />
-                                                }}
-                                            >
-                                                {event.desc || ""}
-                                            </ReactMarkdown>
-                                        </div>
+                                            style={{ color: '#666', fontSize: '15px', lineHeight: '1.7', flexGrow: 1, marginBottom: '25px' }} 
+                                            dangerouslySetInnerHTML={{ __html: event.desc || "" }} 
+                                        />
                                         
                                         <div className="mt-auto">
                                             <Link href="/ceo-mentoring" className="btn-register">

@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 
 const KnowledgeDetails = ({ id }) => {
     const [article, setArticle] = useState(null);
@@ -191,19 +190,8 @@ const KnowledgeDetails = ({ id }) => {
 
                     <div 
                         className="article-content" 
-                        style={{
-                            fontSize: article.fontSize || '16px',
-                            fontFamily: article.fontFamily || 'Inter, sans-serif'
-                        }}
-                    >
-                        <ReactMarkdown
-                            components={{
-                                a: ({ node, ...props }) => <a {...props} target="_blank" rel="noopener noreferrer" style={{ color: 'blue', textDecoration: 'underline' }} />
-                            }}
-                        >
-                            {article.desc || ""}
-                        </ReactMarkdown>
-                    </div>
+                        dangerouslySetInnerHTML={{ __html: article.desc || "" }}
+                    />
                 </div>
 
                 {/* Sidebar */}
