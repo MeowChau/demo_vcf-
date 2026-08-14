@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 const KnowledgeDetails = ({ id }) => {
     const [article, setArticle] = useState(null);
@@ -189,11 +188,10 @@ const KnowledgeDetails = ({ id }) => {
                         </div>
                     )}
 
-                    <div className="article-content">
-                        {article.desc ? (
-                            <BlocksRenderer content={article.desc} />
-                        ) : null}
-                    </div>
+                    <div 
+                        className="article-content" 
+                        dangerouslySetInnerHTML={{ __html: article.desc || "" }}
+                    />
                 </div>
 
                 {/* Sidebar */}
